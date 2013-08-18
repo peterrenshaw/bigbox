@@ -1,0 +1,29 @@
+
+
+        __     _         __                
+       / /_   (_)____ _ / /_   ____   _  __
+      / __ \ / // __ `// __ \ / __ \ | |/_/
+     / /_/ // // /_/ // /_/ // /_/ /_>  <
+    /_.___//_/ \__, //_.___/ \____//_/|_| [1]
+              /____/                       
+
+
+  name BUGS.txt
+  date 2013AUG18
+  prog @peterrenshaw
+  desc BIGBOX: A easy to use front end for socsim.
+
+
+2013AUG18
+* none... yet.
+
+
+Resources
+
+[1] Title created with an ASCII text generator using 'slant' and 'stretch=Yes". 
+The code is based on Figlet which can be found here ~ <http://www.figlet.org/>
+[Last accessed: Sunday 4th August, 2013]
+<http://www.network-science.de/ascii/>
+
+
+# vim: ff=unix:ts=4:sw=4:tw=78:noai:expandtab

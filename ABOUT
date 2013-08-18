@@ -1,0 +1,64 @@
+
+
+        __     _         __                
+       / /_   (_)____ _ / /_   ____   _  __
+      / __ \ / // __ `// __ \ / __ \ | |/_/
+     / /_/ // // /_/ // /_/ // /_/ /_>  <
+    /_.___//_/ \__, //_.___/ \____//_/|_| [1]
+              /____/                       
+
+
+  name ABOUT.txt
+  date 2013AUG18
+  prog @peterrenshaw
+  desc BIGBOX: A easy to use front end for socsim.
+
+
+Abstract
+
+    Big Box or 'bb' is a set of easy to use front end to
+    tools like SOCSIM via the browser.
+
+
+Why?
+
+    Brad Lemon @tyabblemons 17 Aug
+    @geehall1 @peterrenshaw @SkillsyOz I will admit, it's all going past me - 
+    the detail. I just rely on the finished product being usable.
+    https://twitter.com/tyabblemons/status/368647354586365952
+
+    George Hall ‏@geehall1 17 Aug
+    @peterrenshaw @SkillsyOz @tyabblemons The front-end sounds good...something 
+    that helps the non-coders use this effectively.
+    https://twitter.com/geehall1/status/368642014021038080
+
+    George Hall ‏@geehallone 17 Aug
+    @peterrenshaw @SkillsyOz @geehall1 @tyabblemons Very good project, Peter, 
+    though as a non-coder, it still reads semi-Greek to me.
+    https://twitter.com/geehallone/status/368635594231910400
+
+
+What it is not
+
+    At the moment I'm looking into creating something you download and 
+run on your own PC as apposed to an online web service.
+
+
+Explained quickly
+How this will work
+Application
+Requirements
+Keywords
+Usage
+License
+
+
+Resources
+
+[1] Title created with an ASCII text generator using 'slant' and 'stretch=Yes". 
+The code is based on Figlet which can be found here ~ <http://www.figlet.org/>
+[Last accessed: Sunday 4th August, 2013]
+<http://www.network-science.de/ascii/>
+
+
+# vim: ff=unix:ts=4:sw=4:tw=78:noai:expandtab
