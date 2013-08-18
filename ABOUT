@@ -16,9 +16,11 @@
 
 Abstract
 
-    Big Box or 'bb' is a set of easy to use front end to
-    tools like SOCSIM via the browser.
+    I was at a birthday party today, munching on some Pav, "Johnny Cash"
+    was playing in the background and I whipped up a demo.
 
+    It's called Big Box or 'bb' for short. An easy to use set of tools, 
+    made accessible via a web browser.
 
 Why?
 
@@ -41,16 +43,37 @@ Why?
 What it is not
 
     At the moment I'm looking into creating something you download and 
-run on your own PC as apposed to an online web service.
+run on your own PC via a browser as apposed to an online web service.
 
 
 Explained quickly
+
+    I was at a birthday party today, munching on some Pav, "Johnny Cash" 
+was playing in the background and I whipped up a demo. It's called Big Box 
+or 'bb' for short. An easy to use set of tools, made accessible via a web 
+browser.
+
+
 How this will work
+
+    A web page created in HTML has a JavaScript application embedded in the
+page. The web page is served as a static page and the application reads data
+from the file system. Interactivity between the application and data is done
+via JavaScript. Any extra data processing is to be done via a Python program.
+
+The web server requried can be as simple as standard calls to Python or a fully
+functioning server such as Tornado. The JavaScript engine being looked at is 
+Angular.
+
+
 Application
 Requirements
 Keywords
 Usage
 License
+
+   Not decided but moving towards GPL 3. Have to consider any extra open source
+code I use. 
 
 
 Resources
