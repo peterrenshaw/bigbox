@@ -1,9 +1,10 @@
-        __ _ __
-       / /_ (_)____ _ / /_ ____ _ __
+
+        __     _         __                
+       / /_   (_)____ _ / /_   ____   _  __
       / __ \ / // __ `// __ \ / __ \ | |/_/
-     / /_/ // // /_/ // /_/ // /_/ /_> <
+     / /_/ // // /_/ // /_/ // /_/ /_>  <
     /_.___//_/ \__, //_.___/ \____//_/|_| [1]
-              /____/
+              /____/                       
 
 
   name hack-bigbox-search.txt
@@ -17,7 +18,8 @@
 abstract
 
     A simple search form for N, where N is something to search. A seach
-	could be externally for twitter or a search engine. Search could be
+	could be externally for twitter ls
+	or a search engine. Search could be
 	offline and be something local. 	
 	
 why?
