@@ -11,20 +11,19 @@
   date 2013AUG18
   prog @peterrenshaw
   desc BIGBOX: A easy to use front end for socsim. This 
-       hack, BIGBOX search allows for search within or 
-	   external to you local system.
+       hack, BIGBOX search allows for search within or external 
+	   to you local system.
 
 
 abstract
 
-    A simple search form for N, where N is something to search. A seach
-	could be externally for twitter ls
-	or a search engine. Search could be
+    A simple search form for N, where N is something to search. A search
+	could be externally for twitter or a search engine. Search could be
 	offline and be something local. 	
 	
 why?
 
-    Need a way to search external resources. This component will allow a
+  Need a way to search external resources. This component will allow a
 typical user to look for things inside the application. This has the
 advantages of: 
 
@@ -35,7 +34,7 @@ advantages of:
 
 What it is not
 
-    For the moment search will be limited to external twitter and internal 
+  For the moment search will be limited to external twitter and internal 
 data in memory. At the moment this is not a generic plugable search engine
 that allows the creation of plug-ins to search other external services. This
 is howerver a future aim.
@@ -43,7 +42,7 @@ is howerver a future aim.
 
 Explained quickly
 
-    A big box that allows you to input text. A couple of simple options (
+  A big box that allows you to input text. A couple of simple options (
 yet to be discovered, possibley OR) that are dependent on type of search 
 being done.
 
@@ -54,7 +53,7 @@ processes it. User can continue search or leave.
 
 How this works
 
-    AngularJS front end with a text entry box and big button to press. There
+  AngularJS front end with a text entry box and big button to press. There
 may/may not be other options to choose from but these are optional. If 
 the user is online, the search option allows the user to search for items
 and return results.
