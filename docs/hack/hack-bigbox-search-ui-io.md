@@ -162,7 +162,12 @@ search for George on twitter. The logic is something like this:
 
 What I would enter into the bigbox would be:
 
-    twitter: person:@geehall1
+    #==================================================================#
+    #                                                                  #
+    #  twitter: person:@geehall1                                       #
+    #                                                                  #
+    #==================================================================#
+
 
    What happens now, is the line is parsed. We know the service we want to 
 search is Twitter by the service keyword, 'twitter:' and anything after this 
@@ -181,7 +186,12 @@ Example: search for George on the Open Web and see if we can find any URLs?
 
   Brad enters the following into the BigBox:
 
-    ddg: george hall url:
+    #==================================================================#
+    #                                                                  #
+    #  ddg: george hall url:                                           #
+    #                                                                  #
+    #==================================================================#
+
 
    BigBox reads the service and sees it's looking for all returns of *george
 hall* (note no explicit quotes) and returns all the url's associated with
@@ -198,8 +208,13 @@ Example: search for Peter on the Open Web and see if twitter name
 
   So Brad enters the following into BigBox:
 
-    ddg: @bootload and: peter renshaw all:
+    #==================================================================#
+    #                                                                  #
+    #   ddg: @bootload and: peter renshaw all:                         #
+    #                                                                  #
+    #==================================================================#
 
+    
   The result should be a match showing any relationship between the Twitter
 handle, *@bootload* and *peter renshaw*.
 
@@ -213,7 +228,12 @@ Example: search Twitter for a hashtag.
 
   So Brad enters into the BigBox,
 
-    twitter: #TTFN text: created:
+    #==================================================================#
+    #                                                                  #
+    #     twitter: #TTFN text: created:                                #
+    #                                                                  #
+    #==================================================================#
+
 
   The results should return the hashtag, *TTFN* and the associated text and
 time it was created.
