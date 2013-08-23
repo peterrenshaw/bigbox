@@ -40,13 +40,15 @@ a simple box with minimal controls and a list of results.
 ### What happened to the simplicity of search?
 
   The simplicity of a single control is obvious, it just works. As you add
-more and more services if you aren't careful, the screen real-estate is eaten
-up with links, controls. Crap.  Now you can't use google without the threat 
-of being diverted from your original link. Google has done this for a good 
-reason though, there are more things to search for. That and the marketing 
-department got involved. Underneath, it's still that simple to use google.
-Currently the best example of *old-school* search is DuckDuckGo (DDG). DDG 
-also doesn't keep logs, so you also get less spying, for free.
+more and more services if you aren't careful, the screen real-estate is 
+eaten up with links, controls. Crap.  Now you can't use google without the 
+threat of being diverted from your original link. Google has done this for 
+a good reason though, there are more things to search for. That and the 
+marketing department got involved. 
+
+Underneath, it's still that simple to use google. Currently the best example 
+of *old-school* search is DuckDuckGo (DDG). *DDG* also doesn't keep logs, so 
+you also get less spying, for free.
 
 
 ### Bang keywords 
@@ -56,13 +58,13 @@ text box, a list of search results and BANGS. You can read more about Bangs
 keywords here. Bangs is just another way to control how you search using 
 text controls. Using controls in search has the following advantages:
 
-    simplicity of controls
-    reduces valuable on-screen clutter
-    growth of controls
+* simplicity of controls
+* reduces valuable on-screen clutter
+* growth of controls
     
 The idea of Bang keyword controls also has a key disadvantage:
 
-    introduction of exta complexity to the user,
+* introduce exta complexity to user
 
 The key idea behind bigbox is to simplify the interface but maintain the
 ability to do complex things behind the scenes. The downside is the 
@@ -92,7 +94,7 @@ Output
 
 
 
-Resources
+### Resources
 
 [1] Title created with an ASCII text generator using 'slant' and 
 'stretch=Yes". The code is based on Figlet which can be found 
@@ -101,6 +103,6 @@ here ~ <http://www.figlet.org/>
 <http://www.network-science.de/ascii/>
 
 
-# vim: ff=unix:ts=4:sw=4:tw=78:noai:expandtab
+vim: ff=unix:ts=4:sw=4:tw=78:noai:expandtab
 
 
