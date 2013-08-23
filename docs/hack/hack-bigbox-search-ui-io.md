@@ -1,12 +1,12 @@
-        __   _           __
-       / /_ (_)____ _   / /_   ____   _  __  
-      / __ \ / // __ `// __ \ / __ \ | |/_/
+        __     _         __
+       / /_   (_)____ _ / /_   ____  _  __  
+      / __ \ / // __ `// __ \ / __ \| |/_/
      / /_/ // // /_/ // /_/ // /_/ /_> <
     /_.___//_/ \__, //_.___/ \____//_/|_| [1]
               /____/
 
 
-  name hack-bigbox-search.txt
+  name hack-bigbox-search-ui-io.md
   date 2013AUG18
   prog @peterrenshaw
   desc BIGBOX: A easy to use front end for socsim. This 
