@@ -230,13 +230,13 @@ Example: search Twitter for a hashtag.
 
     Service    Search item    Keyword 1    Keyword 2    Logic
 	---------------------------------------------------------
-    twitter    #TTFN          text:        created:     ----
+    twitter    #TTFN          tag:         created:     ----
 
   So Brad enters into the BigBox,
 
     #==================================================================#
     #                                                                  #
-    #     twitter! #TTFN text: created:                                #
+    #     twitter! TTFN tag: created:                                  #
     #                                                                  #
     #==================================================================#
 
