@@ -30,7 +30,7 @@ working out a way to handle search with bigbox.
 
   Remember google when it first come out? 
   
-  I did. It was during the late 90's and it was so simple. You just put 
+  I do. It was during the late 90's and it was so simple. You just put 
 stuff you wanted to search for in a plain text box, hit a button and instant 
 results. It was a big step from the complicated, text orientated, pre-web 
 search engines like GOPHER. An ecosystem of search grew on the back of the
