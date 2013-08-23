@@ -140,14 +140,16 @@ concept of AND/OR Union of results.
 
 ### More input
 
-    So lets put all the theory into a concrete example and show how to use the
+  So lets put all the theory into a concrete example and show how to use the
 ideas of services, search items, keywords and logic for the Input control.
+
 
     #==================================================================#
     #                                                                  #
     #                                                                  #
     #                                                                  #
     #==================================================================#
+
 
 Example: search for George on twitter
 
