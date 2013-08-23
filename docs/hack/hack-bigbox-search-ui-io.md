@@ -6,12 +6,12 @@
               /____/
 
 
-  name hack-bigbox-search-ui-io.md
-  date 2013AUG18
-  prog @peterrenshaw
-  desc BIGBOX: A easy to use front end for socsim. This 
-       hack, BIGBOX search allows for search within or 
-	   external to you local system.
+    name hack-bigbox-search-ui-io.md
+    date 2013AUG18
+    prog @peterrenshaw
+    desc BIGBOX: A easy to use front end for socsim. This 
+         hack, BIGBOX search allows for search within or 
+	     external to you local system.
 
 
 ### abstract
