@@ -16,7 +16,7 @@
 
 ### abstract
 
-    A simple search form for N, where N is something to search. A seach
+    A simple search form for N, where N is something to search. A search
 	could be externally for twitter or a search engine. Search could be
 	offline and be something local. 	
 	
