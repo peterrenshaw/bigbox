@@ -229,11 +229,12 @@ time it was created.
 
 [1] Title created with an ASCII text generator using 'slant' and 
 'stretch=Yes". The code is based on Figlet which can be found 
-here ~ <http://www.figlet.org/>
+here:
+
+  <http://www.figlet.org/>
+
 [Last accessed: Sunday 4th August, 2013]
+
 <http://www.network-science.de/ascii/>
 
-
 vim: ff=unix:ts=4:sw=4:tw=78:noai:expandtab
-
-
