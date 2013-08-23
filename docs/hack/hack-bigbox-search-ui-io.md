@@ -97,6 +97,8 @@ key ideas.
 
 ##### Service
 
+  usage: service!
+
   It's quite possible we may want to look for many different things. For
 example we might want to search for something on twitter and somewhere else 
 on the Open Web.  The idea of a service is simple a name for a place we want
@@ -134,6 +136,10 @@ of WHERE they want to search with the supplied, 'search item'.
 
 ##### Logic
 
+  usage: Foo and: Bar    (union: everything related to foo as well as bar)
+         Foo or: bar     (restriction: everything related to foo OR everything
+		                               related to bar) 
+
   For search an example of logic is a boolean search which introduces the
 concept of AND/OR Union of results.
 
@@ -158,13 +164,13 @@ search for George on twitter. The logic is something like this:
 
     Service    Search item    Keyword    Logic
     ------------------------------------------
-    twitter    @geehall1      person:    ----
+    twitter!   @geehall1      person:    ----
 
 What I would enter into the bigbox would be:
 
     #==================================================================#
     #                                                                  #
-    #  twitter: person:@geehall1                                       #
+    #  twitter! person:@geehall1                                       #
     #                                                                  #
     #==================================================================#
 
@@ -182,20 +188,20 @@ Example: search for George on the Open Web and see if we can find any URLs?
 
     Service    Search item    Keyword    Logic
     ------------------------------------------
-    DDG        George Hall    url:       ----
+    DDG!       George Hall    url:       ----
 
   Brad enters the following into the BigBox:
 
     #==================================================================#
     #                                                                  #
-    #  ddg: george hall url:                                           #
+    #  ddg! george hall url:                                           #
     #                                                                  #
     #==================================================================#
 
 
    BigBox reads the service and sees it's looking for all returns of *george
 hall* (note no explicit quotes) and returns all the url's associated with
-George.
+George. 
 
 Example: search for Peter on the Open Web and see if twitter name
          matches OpenWeb search for Peter.
@@ -210,7 +216,7 @@ Example: search for Peter on the Open Web and see if twitter name
 
     #==================================================================#
     #                                                                  #
-    #   ddg: @bootload and: peter renshaw all:                         #
+    #   ddg! @bootload and: peter renshaw all:                         #
     #                                                                  #
     #==================================================================#
 
@@ -230,7 +236,7 @@ Example: search Twitter for a hashtag.
 
     #==================================================================#
     #                                                                  #
-    #     twitter: #TTFN text: created:                                #
+    #     twitter! #TTFN text: created:                                #
     #                                                                  #
     #==================================================================#
 
