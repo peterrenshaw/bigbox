@@ -1,5 +1,4 @@
 
-
         __     _         __                
        / /_   (_)____ _ / /_   ____   _  __
       / __ \ / // __ `// __ \ / __ \ | |/_/
@@ -83,5 +82,8 @@ The code is based on Figlet which can be found here ~ <http://www.figlet.org/>
 [Last accessed: Sunday 4th August, 2013]
 <http://www.network-science.de/ascii/>
 
+
+Comment: Brad Lemon - This structure more usable. A javascript app would be ideal. 
+Just so long as the front end is dummy-proof.
 
 # vim: ff=unix:ts=4:sw=4:tw=78:noai:expandtab
