@@ -97,15 +97,15 @@ key ideas.
 
 ##### Service
 
-    It's quite possible we may want to look for many different things. For
-example we might want to search for something on twitter and somewhere else on
-the Open Web.  The idea of a service is simple a name for a place we want to
-search. Twitter is a service. We want to search Twitter for particular people,
-tags or information.  
+  It's quite possible we may want to look for many different things. For 
+example we might want to search for something on twitter and somewhere else 
+on the Open Web.  The idea of a service is simple a name for a place we want
+to search. Twitter is a service. We want to search Twitter for particular 
+people, tags or information.  
 
   What about if we want to search for something on the Open Web? The
 DuckDuckGo search engine is another service we could use. Each service
-requires some code behind it to look into the guts to extact useful
+requires some code behind it to look into the guts to extact useful 
 information. I'm not talking screen-scraping here. I'm really talking about
 talking directly to the exposed programming interfaces known as API's (or
 Application Progarmming Interfaces.)  For Search we will start with the
@@ -119,9 +119,11 @@ following services:
 
 These three services are crucial to find and search for information.
 
+
 ##### Search item
 
   A search item or key, is the text you are looking for. Nothing complex here.
+
 
 ##### Keyword
 
@@ -189,6 +191,7 @@ Example: search for Peter on the Open Web and see if twitter name
     The logic would be something like this,
 
     Service    Search item 1    Search item 2    Keyword    Logic
+	-------------------------------------------------------------
     DDG        @bootload        peter renshaw    all:       and:
 
   So Brad enters the following into BigBox:
@@ -203,6 +206,7 @@ Example: search Twitter for a hashtag.
   The logic would be something like,
 
     Service    Search item    Keyword 1    Keyword 2    Logic
+	---------------------------------------------------------
     twitter    #TTFN          text:        created:     ----
 
   So Brad enters into the BigBox,
@@ -213,12 +217,7 @@ Example: search Twitter for a hashtag.
 time it was created.
 
 
-
-Input  
-    input description
-
-Output
-    output description
+### Output
     
 
 
