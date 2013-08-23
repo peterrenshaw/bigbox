@@ -97,7 +97,7 @@ key ideas.
 
 ##### Service
 
-  It's quite possible we may want to look for many different things. For 
+  It's quite possible we may want to look for many different things. For
 example we might want to search for something on twitter and somewhere else 
 on the Open Web.  The idea of a service is simple a name for a place we want
 to search. Twitter is a service. We want to search Twitter for particular 
