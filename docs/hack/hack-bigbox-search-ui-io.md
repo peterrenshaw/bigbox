@@ -28,13 +28,15 @@ working out a way to handle search with bigbox.
 
 ## Big picture
 
-  Remember google when it first come out? I did. It was during the late 90's
-and it was so simple. You just put stuff you wanted to search for in a plain 
-text box, hit a button and instant results. It was a big step from the 
-complicated, text orientated, pre-web search engines like GOPHER. An ecosystem 
-of search grew on the back of the instroduction of the web. Yahoo, Ask Jeeves, 
-AltaVista. It was google that managed to break free from the rest by using 
-a simple box with minimal controls and a list of results.
+  Remember google when it first come out? 
+  
+  I did. It was during the late 90's and it was so simple. You just put 
+stuff you wanted to search for in a plain text box, hit a button and instant 
+results. It was a big step from the complicated, text orientated, pre-web 
+search engines like GOPHER. An ecosystem of search grew on the back of the
+instroduction of the web. Yahoo, Ask Jeeves, AltaVista. It was google that 
+managed to break free from the rest by using a simple box with minimal 
+controls and a list of results.
 
 
 ### What happened to the simplicity of search?
