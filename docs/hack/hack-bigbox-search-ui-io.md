@@ -28,7 +28,7 @@ working out a way to handle search with bigbox.
 
 ## Big picture
 
-[google circa 1998/99 ![](http://farm4.staticflickr.com/3263/2835866392_0ff87c073c.jpg)](http://www.flickr.com/photos/bootload/2835866392/)
+[![](http://farm4.staticflickr.com/3263/2835866392_0ff87c073c.jpg)](http://www.flickr.com/photos/bootload/2835866392/)
 
   Remember google when it first come out? 
   
