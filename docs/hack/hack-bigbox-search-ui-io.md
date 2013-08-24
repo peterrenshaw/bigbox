@@ -249,8 +249,43 @@ time it was created.
 
 ### Output
    
-   
-    
+  To find something using bigbox we have to do a bit of work. Remember the
+three ideas discussed above with Input?
+
+* service
+* key
+* restriction
+
+To search for something we need to use a service, key, a string of a term or thing
+we are looking. This will hopefully return something to look at. The most
+likely scenario will be a lot of information and most of it, not what we want to
+read.  So how do we reduce the output?
+
+We can do this using the idea of restriction.
+
+
+##### Restriction
+
+    It's reasonable to assume, that since we don't know what we are searching
+for, we want to be able to select from all available information. Restriction
+is simply a way to choose less or specific retreived information. To do this
+we have to look at two further ideas, discovery and selection.
+
+* discovery: for a given service, there are N things we can specify to look at
+* selection: we can select all OR select by name, what a search provices
+
+##### Discovery
+
+For any given service there will be a number of different things we can return
+and specify. Exactly what is service dependent.
+
+##### Selection
+
+Using discovery, we can now choose to view all or selected fields available to
+use. 
+
+
+### More output
 
 
 
