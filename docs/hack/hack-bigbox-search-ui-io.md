@@ -287,6 +287,15 @@ use.
 
 ### More output
 
+Example: search Twitter using a hashtag, return all
+
+Example: search twitter using a hashtag, return b/w before datetime
+
+Example: search twitter for all conversations by George, today
+
+Example: search ddg for a place called Melbourne
+
+Example: search ddg for images of a place called Melbourne
 
 
 
