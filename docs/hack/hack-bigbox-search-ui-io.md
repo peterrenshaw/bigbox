@@ -266,7 +266,7 @@ We can do this using the idea of restriction.
 
 ##### Restriction
 
-    It's reasonable to assume, that since we don't know what we are searching
+  It's reasonable to assume, that since we don't know what we are searching
 for, we want to be able to select from all available information. Restriction
 is simply a way to choose less or specific retreived information. To do this
 we have to look at two further ideas, discovery and selection.
