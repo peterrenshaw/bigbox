@@ -1,6 +1,21 @@
 #!/usr/bin/env python
 # ~*~ encoding: utf-8 ~*~
 
+
+#===
+# name  duckduckgo.py
+# date: 2013AUG30
+# prog: pr
+# desc: tools to query the ddg instant answer API
+# lisc: moving towards GPL3
+# use:  python duckduckgo.py -q "some random query"
+#                            -v version information
+#                            -h help
+#
+# copy: copyright (C) 2013 Peter Renshaw
+#===
+
+
 #---
 # TODO optional parameter build
 #      only supply parameters that have been set
@@ -18,6 +33,7 @@
 
 import sys
 import json
+from optparse import OptionParser
 
 
 __version__ = "0.1.0"
@@ -217,16 +233,35 @@ class Duckduckgo:
             return False
 
 
+#---
+# main: cli entry point
+#---
 def main():
     """main cli entry point"""
-    ddg = Duckduckgo('duckduckgo')
+    usage = "usage: %prog [v] -t -d"
+    parser = OptionParser(usage)
+    parser.add_option("-q", "--query", dest="query", \
+                      help="query duckduckgo")
+    parser.add_option("-v", "--version", dest="version", \
+                      action="store_true",
+                      help="current version")    
+    options, args = parser.parse_args()
+
+
+    if options.version:
+        print("%s v%s %s %s" % ('bigbox.tools.duckduckgo', __version__, '2013AUG30', '(C) 2013'))
+        sys.exit(0)
+    elif options.query:
+        ddg = Duckduckgo('duckduckgo')
                           #query, is_json,
                           #safesearch,  callback, pretty, no_html, 
                           #no_redirect, skip_disambig
-    ddg.build_parms('melbourne', True, True, False, True, True, True, True)
-    query_url = ddg.build_query_url()
-    print("query <%s>" % query_url)
-    print(ddg.request())
+        ddg.build_parms('melbourne', True, True, False, True, True, True, True)
+        query_url = ddg.build_query_url()
+        print(ddg.request())
+    else:
+        parser.print_help()
+
 
 if __name__ == "__main__":
     main()

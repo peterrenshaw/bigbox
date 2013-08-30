@@ -1,4 +1,3 @@
-query <http://api.duckduckgo.com/?no_html=1&d=1&o=json&q=melbourne&callback=0&no_redirect=1&pretty=1&kp=1>
 {
    "Definition" : "",
    "DefinitionSource" : "",
