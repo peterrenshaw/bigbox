@@ -8,9 +8,16 @@
 # prog: pr
 # desc: tools to query the ddg instant answer API
 # lisc: moving towards GPL3
-# use:  python duckduckgo.py -q "some random query"
-#                            -v version information
-#                            -h help
+# use:  python duckduckgo.py
+#                        -h, --help            show this help message and exit
+#                        -q  --query           search query
+#                        -j, --json            return json?
+#                        -s, --safesearch      only return safe queries
+#                        -p, --pretty          if returned json can prettify json
+#                        -c, --callback        if returned json, can callback
+#                        -d, --skipdisambig    skip the disambiguation of a query?
+#                        -r, --noredirect      do not redirect
+#                        -v, --version         current version
 #
 # copy: copyright (C) 2013 Peter Renshaw
 #===
@@ -304,7 +311,7 @@ def main():
 
         #--- 
         # not the best way to do this, but one way. here's another:
-        #    ddg = Duckduckgo(query, rest,of,args,...)
+        #    ddg = Duckduckgo("", rest,of,args,...)
         #    ddg.query('a term')
         #---
 
