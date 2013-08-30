@@ -14,6 +14,15 @@
   desc BIGBOX: A easy to use front end for socsim.
 
 
+* 2013AUG30
+- work on tools/duckduckgo.py
++ more testing
++ docs
++ data & examples
+- fix bug
+- more work on options
+- duckduckgo.Duckduckgo.parameter
++ work out defaults & optional inputs
 * 2013AUG23
 - specs
 - work on docs/hack/hack-bigbox-search-ui-io.md

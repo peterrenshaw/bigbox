@@ -2,6 +2,17 @@
 # ~*~ encoding: utf-8 ~*~
 
 
+#===
+# name  test_duckduckgo.py
+# date: 2013AUG30
+# prog: pr
+# desc: test ddg instant answer API code
+# lisc: moving towards GPL3
+# use:  python test_duckduckgo.py
+# copy: copyright (C) 2013 Peter Renshaw
+#===
+
+
 #---
 # copy: copyright (C) 2013 Peter Renshaw
 #---
@@ -13,7 +24,9 @@ import unittest
 import duckduckgo
 
 
-
+#---
+# TestDuckduckgo: test ddg code
+#---
 class TestDuckduckgo(unittest.TestCase):
     def setUp(self):
         self.query = "I'm searching for stuff"

@@ -13,6 +13,22 @@
   prog @peterrenshaw
   desc BIGBOX: A easy to use front end for socsim.
 
+2013AUG30
+* tools/test_duckduckgo.py
+- one bug, document & fix
+
+    ..........F
+    ======================================================================
+    FAIL: test_parms_args_ok (__main__.TestDuckduckgo)
+    test each argument has correct value and same as test
+    ----------------------------------------------------------------------
+    Traceback (most recent call last):
+      File "test_duckduckgo.py", line 97, in test_parms_args_ok
+        self.assertTrue(self.parameters[item] == self.ddg.parameters[item])
+    AssertionError: False is not true
+
+    ----------------------------------------------------------------------
+    Ran 11 tests in 0.002s
 
 2013AUG18
 * none... yet.

@@ -2,9 +2,16 @@
 # ~*~ encoding: utf-8 ~*~
 
 
-#---
+#===
+# name  test_all.py
+# date: 2013AUG30
+# prog: pr
+# desc: test all, will move to test
+# lisc: moving towards GPL3
+# use:  python test_all.py
 # copy: copyright (C) 2013 Peter Renshaw
-#---
+#===
+
 
 import unittest
 
