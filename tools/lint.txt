@@ -1,25 +1,30 @@
 ************* Module duckduckgo
-W: 60,0: TODO urlencode
+C:277,0: Line too long (97/80)
+C:312,0: Line too long (121/80)
+W: 20,0: TODO optional parameter build
+W: 43,0: TODO call fromm socsim.tools.
+W:198,0: TODO: work out way to stop key order change
 C:  1,0: Missing docstring
-E: 36,8: No name 'request' in module 'urllib'
-F: 38,4: Unable to import 'urllib.parse'
-E: 38,4: No name 'parse' in module 'urllib'
-R: 83,0:Duckduckgo: Too many instance attributes (14/7)
-W: 85,33:Duckduckgo.__init__: Unused argument 'is_json'
-R:114,4:Duckduckgo.build_parms: Too many arguments (9/5)
-E:179,19:Duckduckgo.__request_pydefault: Undefined variable 'urlopen'
-C:188,8:Duckduckgo.__request_requests: Invalid name "r" (should match [a-z_][a-z0-9_]{2,30}$)
-E:190,11:Duckduckgo.__request_requests: Instance of 'Request' has no 'text' member (but some types could not be inferred)
-C:190,19:Duckduckgo.__request_requests: More than one statement on a single line
-E:190,26:Duckduckgo.__request_requests: Instance of 'Request' has no 'text' member (but some types could not be inferred)
-E:198,4:Duckduckgo.query: An attribute affected in duckduckgo line 88 hide this method
-C:213,0:main: Missing docstring
-W:  6,0: Unused import json
+E: 74,8: No name 'request' in module 'urllib'
+F: 75,8: Unable to import 'urllib.request'
+E: 75,8: No name 'request' in module 'urllib'
+F: 76,4: Unable to import 'urllib.parse'
+E: 76,4: No name 'parse' in module 'urllib'
+R:114,0:Duckduckgo: Too many instance attributes (14/7)
+W:116,33:Duckduckgo.__init__: Unused argument 'is_json'
+R:144,4:Duckduckgo.build_parms: Too many arguments (9/5)
+E:220,11:Duckduckgo.__request_requests: Instance of 'Request' has no 'text' member (but some types could not be inferred)
+C:220,25:Duckduckgo.__request_requests: More than one statement on a single line
+E:220,32:Duckduckgo.__request_requests: Instance of 'Request' has no 'text' member (but some types could not be inferred)
+E:228,4:Duckduckgo.query: An attribute affected in duckduckgo line 119 hide this method
+W:273,13:main: Unused variable 'args'
+W: 35,0: Unused import json
+W: 76,4: Unused import encode
 
 
 Report
 ======
-112 statements analysed.
+151 statements analysed.
 
 Messages by category
 --------------------
@@ -31,7 +36,7 @@ Messages by category
 +-----------+-------+---------+-----------+
 |refactor   |2      |2        |=          |
 +-----------+-------+---------+-----------+
-|warning    |3      |3        |=          |
+|warning    |7      |8        |-1.00      |
 +-----------+-------+---------+-----------+
 |error      |6      |6        |=          |
 +-----------+-------+---------+-----------+
@@ -44,38 +49,46 @@ Messages
 +-----------+------------+
 |message id |occurrences |
 +===========+============+
+|W0511      |3           |
++-----------+------------+
+|E0611      |3           |
++-----------+------------+
+|W0611      |2           |
++-----------+------------+
+|F0401      |2           |
++-----------+------------+
 |E1103      |2           |
 +-----------+------------+
-|E0611      |2           |
-+-----------+------------+
-|C0111      |2           |
+|C0301      |2           |
 +-----------+------------+
 |W0613      |1           |
 +-----------+------------+
-|W0611      |1           |
-+-----------+------------+
-|W0511      |1           |
+|W0612      |1           |
 +-----------+------------+
 |R0913      |1           |
 +-----------+------------+
 |R0902      |1           |
 +-----------+------------+
-|F0401      |1           |
-+-----------+------------+
-|E0602      |1           |
-+-----------+------------+
 |E0202      |1           |
 +-----------+------------+
 |C0321      |1           |
 +-----------+------------+
-|C0103      |1           |
+|C0111      |1           |
 +-----------+------------+
 
 
 
 Global evaluation
 -----------------
-Your code has been rated at 6.52/10 (previous run: 6.49/10)
+Your code has been rated at 7.15/10 (previous run: 7.09/10)
+
+External dependencies
+---------------------
+::
+
+    requests (duckduckgo)
+
+
 
 Duplication
 -----------
@@ -102,16 +115,8 @@ Statistics by type
 +---------+-------+-----------+-----------+------------+---------+
 |method   |9      |9          |=          |100.00      |0.00     |
 +---------+-------+-----------+-----------+------------+---------+
-|function |1      |1          |=          |0.00        |0.00     |
+|function |1      |1          |=          |100.00      |0.00     |
 +---------+-------+-----------+-----------+------------+---------+
-
-
-
-External dependencies
----------------------
-::
-
-    requests (duckduckgo)
 
 
 
@@ -121,13 +126,13 @@ Raw metrics
 +----------+-------+------+---------+-----------+
 |type      |number |%     |previous |difference |
 +==========+=======+======+=========+===========+
-|code      |137    |64.32 |134      |+3.00      |
+|code      |192    |62.54 |192      |=          |
 +----------+-------+------+---------+-----------+
-|docstring |12     |5.63  |12       |=          |
+|docstring |13     |4.23  |13       |=          |
 +----------+-------+------+---------+-----------+
-|comment   |51     |23.94 |54       |-3.00      |
+|comment   |83     |27.04 |83       |=          |
 +----------+-------+------+---------+-----------+
-|empty     |13     |6.10  |13       |=          |
+|empty     |19     |6.19  |19       |=          |
 +----------+-------+------+---------+-----------+
 
 

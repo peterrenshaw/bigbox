@@ -39,7 +39,9 @@ from optparse import OptionParser
 __version__ = "0.1.0"
 PYTHON3 = "30000f0"
 PYTHON273 = "20703f0" 
-PYVER = "%x" % sys.hexversion  # not hex, readable
+
+# TODO call fromm socsim.tools.
+PYVER = "%x" % sys.hexversion  # not hex, readable 
 
 
 #---
@@ -103,7 +105,12 @@ else:
 #       <http://help.dukgo.com/customer/portal/articles/216399>
 # test: <https://mashape.com/duckduckgo/
 #                duckduckgo-zero-click-info#!documentation>
-##---
+#
+# todo: * default parms
+#       - minimum parameters
+#       * stop parm sort on encoding
+#       * cli options for setting parms
+#---
 class Duckduckgo:
     """query duckduckgo instant answer API"""
     def __init__(self, query="", is_json=True, version=__version__):
@@ -242,6 +249,24 @@ def main():
     parser = OptionParser(usage)
     parser.add_option("-q", "--query", dest="query", \
                       help="query duckduckgo")
+    parser.add_option("-j", "--json", dest="json", \
+                      action="store_true", 
+                      help="return json?")
+    parser.add_option("-s", "--safesearch", dest="safe_search", \
+                      action="store_true",
+                      help="only return safe queries")
+    parser.add_option("-p", "--pretty", dest="pretty", \
+                      action="store_true", 
+                      help="if returned json then we can prettify json")
+    parser.add_option("-c", "--callback", dest="callback", \
+                      action="store_true", 
+                      help="if returned json, can callback")
+    parser.add_option("-d", "--skipdisambig", dest="skip_disambig", \
+                      action="store_true", 
+                      help="skip the disambiguation of a query?")
+    parser.add_option("-r", "--noredirect", dest="no_redirect", \
+                      action="store_true", 
+                      help="do not redirect")
     parser.add_option("-v", "--version", dest="version", \
                       action="store_true",
                       help="current version")    
@@ -252,12 +277,43 @@ def main():
         print("%s v%s %s %s" % ('bigbox.tools.duckduckgo', __version__, '2013AUG30', '(C) 2013'))
         sys.exit(0)
     elif options.query:
-        ddg = Duckduckgo('duckduckgo')
-                          #query, is_json,
-                          #safesearch,  callback, pretty, no_html, 
-                          #no_redirect, skip_disambig
-        ddg.build_parms('melbourne', True, True, False, True, True, True, True)
-        query_url = ddg.build_query_url()
+        ddg = Duckduckgo()
+
+        # options
+        is_json = False
+        is_pretty = False
+        no_html = False
+        is_callback = False
+        no_redirect = False
+        skip_disambig = False
+        safe_search = False
+
+        # selection options
+        if options.json:
+            is_json = True
+            if options.pretty:
+                is_pretty = True
+            if options.callback:
+                is_callback = True
+        if options.no_redirect:
+            no_redirect = True
+        if options.skip_disambig:
+            skip_disambig = True
+        if options.safe_search:
+            safe_search = True
+
+        #--- 
+        # not the best way to do this, but one way. here's another:
+        #    ddg = Duckduckgo(query, rest,of,args,...)
+        #    ddg.query('a term')
+        #---
+
+        # build parms
+        ddg.build_parms(options.query, is_json, safe_search, is_callback, is_pretty, no_html, no_redirect, skip_disambig)
+        # query
+        ddg.build_query_url()
+
+        # display
         print(ddg.request())
     else:
         parser.print_help()

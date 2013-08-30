@@ -17,12 +17,13 @@
 * 2013AUG30
 - work on tools/duckduckgo.py
 + more testing
-+ docs
+[x] docs
 + data & examples
 - fix bug
-- more work on options
+[x] more work on options
 - duckduckgo.Duckduckgo.parameter
-+ work out defaults & optional inputs
+[x] work out defaults & optional inputs
+
 * 2013AUG23
 - specs
 - work on docs/hack/hack-bigbox-search-ui-io.md
