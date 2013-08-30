@@ -1,2 +1,151 @@
-requests
 query <http://api.duckduckgo.com/?no_html=1&d=1&o=json&q=melbourne&callback=0&no_redirect=1&pretty=1&kp=1>
+{
+   "Definition" : "",
+   "DefinitionSource" : "",
+   "Heading" : "Melbourne",
+   "AbstractSource" : "Wikipedia",
+   "Image" : "https://i.duckduckgo.com/i/bb3d7bdc.jpg",
+   "RelatedTopics" : [
+      {
+         "Result" : "<a href=\"http://duckduckgo.com/d/Melbourne?kp=1\">Melbourne Meanings</a>",
+         "Icon" : {
+            "URL" : "",
+            "Height" : "",
+            "Width" : ""
+         },
+         "FirstURL" : "http://duckduckgo.com/d/Melbourne?kp=1",
+         "Text" : "Melbourne Meanings"
+      },
+      {
+         "Result" : "<a href=\"http://duckduckgo.com/c/Melbourne?kp=1\">Melbourne Category</a>",
+         "Icon" : {
+            "URL" : "",
+            "Height" : "",
+            "Width" : ""
+         },
+         "FirstURL" : "http://duckduckgo.com/c/Melbourne?kp=1",
+         "Text" : "Melbourne Category"
+      },
+      {
+         "Result" : "<a href=\"http://duckduckgo.com/Melbourne_City_Centre?kp=1\">Melbourne City Centre</a> - Melbourne City Centre (sometimes referred to as \"Central City\", and colloquially known as simply \"The City\") is an area of Melbourne, Victoria, Australia.",
+         "Icon" : {
+            "URL" : "",
+            "Height" : "",
+            "Width" : ""
+         },
+         "FirstURL" : "http://duckduckgo.com/Melbourne_City_Centre?kp=1",
+         "Text" : "Melbourne City Centre - Melbourne City Centre (sometimes referred to as \"Central City\", and colloquially known as simply \"The City\") is an area of Melbourne, Victoria, Australia."
+      },
+      {
+         "Result" : "<a href=\"http://duckduckgo.com/City_of_Melbourne?kp=1\">City of Melbourne</a> - The City of Melbourne is a local government area in Victoria, Australia, located in the central city area of Melbourne.",
+         "Icon" : {
+            "URL" : "",
+            "Height" : "",
+            "Width" : ""
+         },
+         "FirstURL" : "http://duckduckgo.com/City_of_Melbourne?kp=1",
+         "Text" : "City of Melbourne - The City of Melbourne is a local government area in Victoria, Australia, located in the central city area of Melbourne."
+      },
+      {
+         "Result" : "<a href=\"http://duckduckgo.com/Crime_in_Melbourne?kp=1\">Crime in Melbourne</a> - Crime in Melbourne refers to criminal activity in Melbourne, Victoria, Australia.",
+         "Icon" : {
+            "URL" : "",
+            "Height" : "",
+            "Width" : ""
+         },
+         "FirstURL" : "http://duckduckgo.com/Crime_in_Melbourne?kp=1",
+         "Text" : "Crime in Melbourne - Crime in Melbourne refers to criminal activity in Melbourne, Victoria, Australia."
+      },
+      {
+         "Result" : "<a href=\"http://duckduckgo.com/Education_in_Victoria?kp=1\">Education in Victoria</a> - Education in Victoria, Australia is supervised by the Department of Education and Early Childhood Development (DEECD), which is part of the State Government and whose role is to 'provide policy ...",
+         "Icon" : {
+            "URL" : "",
+            "Height" : "",
+            "Width" : ""
+         },
+         "FirstURL" : "http://duckduckgo.com/Education_in_Victoria?kp=1",
+         "Text" : "Education in Victoria - Education in Victoria, Australia is supervised by the Department of Education and Early Childhood Development (DEECD), which is part of the State Government and whose role is to 'provide policy ..."
+      },
+      {
+         "Result" : "<a href=\"http://duckduckgo.com/Melway?kp=1\">Melway</a> (the native street directory and general information source in Melbourne)",
+         "Icon" : {
+            "URL" : "",
+            "Height" : "",
+            "Width" : ""
+         },
+         "FirstURL" : "http://duckduckgo.com/Melway?kp=1",
+         "Text" : "Melway (the native street directory and general information source in Melbourne)"
+      },
+      {
+         "Result" : "<a href=\"http://duckduckgo.com/c/Populated_places_established_in_the_19th_century?kp=1\">Populated places established in the 19th century</a>",
+         "Icon" : {
+            "URL" : "",
+            "Height" : "",
+            "Width" : ""
+         },
+         "FirstURL" : "http://duckduckgo.com/c/Populated_places_established_in_the_19th_century?kp=1",
+         "Text" : "Populated places established in the 19th century"
+      },
+      {
+         "Result" : "<a href=\"http://duckduckgo.com/c/Australian_capital_cities?kp=1\">Australian capital cities</a>",
+         "Icon" : {
+            "URL" : "",
+            "Height" : "",
+            "Width" : ""
+         },
+         "FirstURL" : "http://duckduckgo.com/c/Australian_capital_cities?kp=1",
+         "Text" : "Australian capital cities"
+      },
+      {
+         "Result" : "<a href=\"http://duckduckgo.com/c/Coastal_cities_in_Australia?kp=1\">Coastal cities in Australia</a>",
+         "Icon" : {
+            "URL" : "",
+            "Height" : "",
+            "Width" : ""
+         },
+         "FirstURL" : "http://duckduckgo.com/c/Coastal_cities_in_Australia?kp=1",
+         "Text" : "Coastal cities in Australia"
+      },
+      {
+         "Result" : "<a href=\"http://duckduckgo.com/c/Port_cities_in_Australia?kp=1\">Port cities in Australia</a>",
+         "Icon" : {
+            "URL" : "",
+            "Height" : "",
+            "Width" : ""
+         },
+         "FirstURL" : "http://duckduckgo.com/c/Port_cities_in_Australia?kp=1",
+         "Text" : "Port cities in Australia"
+      },
+      {
+         "Result" : "<a href=\"http://duckduckgo.com/c/Former_national_capitals?kp=1\">Former national capitals</a>",
+         "Icon" : {
+            "URL" : "",
+            "Height" : "",
+            "Width" : ""
+         },
+         "FirstURL" : "http://duckduckgo.com/c/Former_national_capitals?kp=1",
+         "Text" : "Former national capitals"
+      }
+   ],
+   "AbstractText" : "Melbourne  is the capital and most populous city in the state of Victoria, and the second most populous city in Australia.",
+   "Abstract" : "Melbourne  is the capital and most populous city in the state of Victoria, and the second most populous city in Australia.",
+   "AnswerType" : "",
+   "Redirect" : "",
+   "Type" : "A",
+   "DefinitionURL" : "",
+   "Answer" : "",
+   "Results" : [
+      {
+         "Result" : "<a href=\"http://www.melbourne.vic.gov.au/\">Official site</a><a href=\"http://www.melbourne.vic.gov.au/\"></a>",
+         "Icon" : {
+            "URL" : "https://i.duckduckgo.com/i/melbourne.vic.gov.au.ico",
+            "Height" : 16,
+            "Width" : 16
+         },
+         "FirstURL" : "http://www.melbourne.vic.gov.au/",
+         "Text" : "Official site"
+      }
+   ],
+   "AbstractURL" : "https://en.wikipedia.org/wiki/Melbourne"
+}
+
