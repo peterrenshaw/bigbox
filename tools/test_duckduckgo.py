@@ -47,19 +47,17 @@ class TestDuckduckgo(unittest.TestCase):
                            'pretty':self.pretty,
                            'callback':self.callback,
                            'kp':self.safesearch,
-                           'no_direct':self.no_redirect,
+                           'no_redirect':self.no_redirect,
                            'no_html':self.no_html,
                            'd':self.skip_disambig}
         else:
             self.parameters = {'q':self.query,
                            'o':self.ret_format,
                            'kp':self.safesearch,
-                           'no_direct':self.no_redirect,
+                           'no_redirect':self.no_redirect,
                            'no_html':self.no_html,
                            'd':self.skip_disambig}
 
-        self.meaning = 0           # F
-        self.skip_disambig = self.meaning
     def tearDown(self):
         self.ddg = None
 
@@ -71,7 +69,7 @@ class TestDuckduckgo(unittest.TestCase):
     # parameter tests
     def test_build_parms_ok(self):
         """is building parameters ok"""
-        status = self.ddg.build_parms(self.query, 
+        status = self.ddg.build_parms(    self.query, 
                                           self.is_json,
                                           self.safesearch,
                                           self.callback,
@@ -90,10 +88,11 @@ class TestDuckduckgo(unittest.TestCase):
                                           self.no_html, 
                                           self.no_redirect,
                                           self.skip_disambig)
-        key_actual = self.ddg.parameters
 
         # test keys in actual exists in both and values equal
-        for item in key_actual:
+        for item in self.ddg.parameters:
+            #print(item, self.parameters[item], self.ddg.parameters[item], 
+            #            (self.parameters[item] == self.ddg.parameters[item]))
             self.assertTrue(self.parameters[item] == self.ddg.parameters[item])
     def test_param_args_fail(self):
         """invalid data should return F"""
