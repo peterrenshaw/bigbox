@@ -43,6 +43,9 @@ import json
 from optparse import OptionParser
 
 
+import socsim.tools
+
+
 __version__ = "0.1.0"
 PYTHON3 = "30000f0"
 PYTHON273 = "20703f0" 
@@ -322,7 +325,16 @@ def main():
         ddg.build_query_url()
 
         # display
-        print(ddg.request())
+        data = ddg.request()
+        if is_json:
+            if data: 
+                d = socsim.tools.json2py(data)
+                for items in d:
+                    print("%s\n\n" % d[items])
+            else:
+                print("no data <%s>" % data)
+        else:
+           print("xml dude...")
     else:
         parser.print_help()
 
