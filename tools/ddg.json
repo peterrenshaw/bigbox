@@ -3,368 +3,106 @@
    "DefinitionSource" : "",
    "Heading" : "Neil Young",
    "AbstractSource" : "Wikipedia",
-   "Image" : "https://i.duckduckgo.com/i/617d287f.jpg",
+   "Image" : "",
    "RelatedTopics" : [
       {
-         "Result" : "<a href=\"http://duckduckgo.com/d/Neil_Young?kp=1\">Neil Young Meanings</a>",
+         "Result" : "<a href=\"http://duckduckgo.com/Neil_Young\">Neil Young</a> is a Canadian singer/songwriter and guitarist.",
          "Icon" : {
-            "URL" : "",
+            "URL" : "https://i.duckduckgo.com/i/bbb37013.jpg",
             "Height" : "",
             "Width" : ""
          },
-         "FirstURL" : "http://duckduckgo.com/d/Neil_Young?kp=1",
-         "Text" : "Neil Young Meanings"
+         "FirstURL" : "http://duckduckgo.com/Neil_Young",
+         "Text" : "Neil Young is a Canadian singer/songwriter and guitarist."
       },
       {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Neil_Young?kp=1\">Neil Young Category</a>",
+         "Result" : "<a href=\"http://duckduckgo.com/Neil_Young_(album)\">Neil Young (album)</a>, the debut album of Neil Young",
          "Icon" : {
-            "URL" : "",
+            "URL" : "https://i.duckduckgo.com/i/72dec391.jpg",
             "Height" : "",
             "Width" : ""
          },
-         "FirstURL" : "http://duckduckgo.com/c/Neil_Young?kp=1",
-         "Text" : "Neil Young Category"
+         "FirstURL" : "http://duckduckgo.com/Neil_Young_(album)",
+         "Text" : "Neil Young (album), the debut album of Neil Young"
       },
       {
-         "Result" : "<a href=\"http://duckduckgo.com/Canadian_rock?kp=1\">Canadian rock</a> - Canadian rock describes a wide and diverse variety of music produced by Canadians, beginning  with American style rock 'n' roll in the mid-20th century.",
+         "Result" : "<a href=\"http://duckduckgo.com/Neil_Young_(politician)\">Neil Young (politician)</a>, former Canadian politician",
          "Icon" : {
             "URL" : "",
             "Height" : "",
             "Width" : ""
          },
-         "FirstURL" : "http://duckduckgo.com/Canadian_rock?kp=1",
-         "Text" : "Canadian rock - Canadian rock describes a wide and diverse variety of music produced by Canadians, beginning  with American style rock 'n' roll in the mid-20th century."
+         "FirstURL" : "http://duckduckgo.com/Neil_Young_(politician)",
+         "Text" : "Neil Young (politician), former Canadian politician"
       },
       {
-         "Result" : "<a href=\"http://duckduckgo.com/Music_of_Canada?kp=1\">Music of Canada</a> - The music of Canada has reflected the diverse influences that have shaped the country.",
+         "Result" : "<a href=\"http://duckduckgo.com/Neil_Young_(footballer_born_1944)\">Neil Young (footballer born 1944)</a>, former English football player",
          "Icon" : {
-            "URL" : "",
+            "URL" : "https://i.duckduckgo.com/i/c9ce63ef.jpg",
             "Height" : "",
             "Width" : ""
          },
-         "FirstURL" : "http://duckduckgo.com/Music_of_Canada?kp=1",
-         "Text" : "Music of Canada - The music of Canada has reflected the diverse influences that have shaped the country."
+         "FirstURL" : "http://duckduckgo.com/Neil_Young_(footballer_born_1944)",
+         "Text" : "Neil Young (footballer born 1944), former English football player"
       },
       {
-         "Result" : "<a href=\"http://duckduckgo.com/Neil_Young%3A_Heart_of_Gold?kp=1\">Neil Young: Heart of Gold</a> - Neil Young: Heart of Gold is a 2006 documentary and concert film by Jonathan Demme, featuring Neil Young.",
+         "Result" : "<a href=\"http://duckduckgo.com/Neil_Young_(footballer_born_1973)\">Neil Young (footballer born 1973)</a>, former English football player",
          "Icon" : {
             "URL" : "",
             "Height" : "",
             "Width" : ""
          },
-         "FirstURL" : "http://duckduckgo.com/Neil_Young%3A_Heart_of_Gold?kp=1",
-         "Text" : "Neil Young: Heart of Gold - Neil Young: Heart of Gold is a 2006 documentary and concert film by Jonathan Demme, featuring Neil Young."
+         "FirstURL" : "http://duckduckgo.com/Neil_Young_(footballer_born_1973)",
+         "Text" : "Neil Young (footballer born 1973), former English football player"
       },
       {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Canadian_country_rock_musicians?kp=1\">Canadian country rock musicians</a>",
+         "Result" : "<a href=\"http://duckduckgo.com/Neil_Young_(footballer_born_1975)\">Neil Young (footballer born 1975)</a>, former English football player and current <a href=\"http://duckduckgo.com/?q=Chester%20F.C.\">Chester F.C.</a> manager",
          "Icon" : {
             "URL" : "",
             "Height" : "",
             "Width" : ""
          },
-         "FirstURL" : "http://duckduckgo.com/c/Canadian_country_rock_musicians?kp=1",
-         "Text" : "Canadian country rock musicians"
+         "FirstURL" : "http://duckduckgo.com/Neil_Young_(footballer_born_1975)",
+         "Text" : "Neil Young (footballer born 1975), former English football player and current Chester F.C. manager"
       },
       {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Canadian_country_guitarists?kp=1\">Canadian country guitarists</a>",
+         "Result" : "<a href=\"http://duckduckgo.com/Neil_Young_(footballer_born_1979)\">Neil Young (footballer born 1979)</a>, Australian football goalkeeper",
          "Icon" : {
             "URL" : "",
             "Height" : "",
             "Width" : ""
          },
-         "FirstURL" : "http://duckduckgo.com/c/Canadian_country_guitarists?kp=1",
-         "Text" : "Canadian country guitarists"
+         "FirstURL" : "http://duckduckgo.com/Neil_Young_(footballer_born_1979)",
+         "Text" : "Neil Young (footballer born 1979), Australian football goalkeeper"
       },
       {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Buffalo_Springfield_members?kp=1\">Buffalo Springfield members</a>",
+         "Result" : "<a href=\"http://duckduckgo.com/Neil_Young_(film_critic)\">Neil Young</a> , film critic for <a href=\"http://duckduckgo.com/?q=The%20Hollywood%20Reporter\">The Hollywood Reporter</a>",
          "Icon" : {
             "URL" : "",
             "Height" : "",
             "Width" : ""
          },
-         "FirstURL" : "http://duckduckgo.com/c/Buffalo_Springfield_members?kp=1",
-         "Text" : "Buffalo Springfield members"
+         "FirstURL" : "http://duckduckgo.com/Neil_Young_(film_critic)",
+         "Text" : "Neil Young , film critic for The Hollywood Reporter"
       },
       {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Rock_singer-songwriters?kp=1\">Rock singer-songwriters</a>",
+         "Result" : "<a href=\"http://duckduckgo.com/Neil_Young_(British_film_critic)\">Neil Young</a>, film critic for <a href=\"http://duckduckgo.com/?q=British%20Film%20Institute\">British Film Institute</a>",
          "Icon" : {
             "URL" : "",
             "Height" : "",
             "Width" : ""
          },
-         "FirstURL" : "http://duckduckgo.com/c/Rock_singer-songwriters?kp=1",
-         "Text" : "Rock singer-songwriters"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Canadian_Music_Hall_of_Fame_inductees?kp=1\">Canadian Music Hall of Fame inductees</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Canadian_Music_Hall_of_Fame_inductees?kp=1",
-         "Text" : "Canadian Music Hall of Fame inductees"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Canadian_rock_keyboardists?kp=1\">Canadian rock keyboardists</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Canadian_rock_keyboardists?kp=1",
-         "Text" : "Canadian rock keyboardists"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Canadian_expatriate_musicians_in_the_United_States?kp=1\">Canadian expatriate musicians in the United States</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Canadian_expatriate_musicians_in_the_United_States?kp=1",
-         "Text" : "Canadian expatriate musicians in the United States"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Canadian_folk_guitarists?kp=1\">Canadian folk guitarists</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Canadian_folk_guitarists?kp=1",
-         "Text" : "Canadian folk guitarists"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Writers_from_Manitoba?kp=1\">Writers from Manitoba</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Writers_from_Manitoba?kp=1",
-         "Text" : "Writers from Manitoba"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Members_of_the_Order_of_Manitoba?kp=1\">Members of the Order of Manitoba</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Members_of_the_Order_of_Manitoba?kp=1",
-         "Text" : "Members of the Order of Manitoba"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Crosby%2C_Stills%2C_Nash_%26_Young_members?kp=1\">Crosby, Stills, Nash & Young members</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Crosby%2C_Stills%2C_Nash_%26_Young_members?kp=1",
-         "Text" : "Crosby, Stills, Nash & Young members"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Reprise_Records_artists?kp=1\">Reprise Records artists</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Reprise_Records_artists?kp=1",
-         "Text" : "Reprise Records artists"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/People_with_epilepsy?kp=1\">People with epilepsy</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/People_with_epilepsy?kp=1",
-         "Text" : "People with epilepsy"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Canadian_environmentalists?kp=1\">Canadian environmentalists</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Canadian_environmentalists?kp=1",
-         "Text" : "Canadian environmentalists"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/People_with_poliomyelitis?kp=1\">People with poliomyelitis</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/People_with_poliomyelitis?kp=1",
-         "Text" : "People with poliomyelitis"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Canadian_folk_singers?kp=1\">Canadian folk singers</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Canadian_folk_singers?kp=1",
-         "Text" : "Canadian folk singers"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Canadian_activists?kp=1\">Canadian activists</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Canadian_activists?kp=1",
-         "Text" : "Canadian activists"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Canadian_rock_guitarists?kp=1\">Canadian rock guitarists</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Canadian_rock_guitarists?kp=1",
-         "Text" : "Canadian rock guitarists"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/American_folk_guitarists?kp=1\">American folk guitarists</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/American_folk_guitarists?kp=1",
-         "Text" : "American folk guitarists"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Canadian_country_singers?kp=1\">Canadian country singers</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Canadian_country_singers?kp=1",
-         "Text" : "Canadian country singers"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Writers_from_Ontario?kp=1\">Writers from Ontario</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Writers_from_Ontario?kp=1",
-         "Text" : "Writers from Ontario"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Rock_and_Roll_Hall_of_Fame_inductees?kp=1\">Rock and Roll Hall of Fame inductees</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Rock_and_Roll_Hall_of_Fame_inductees?kp=1",
-         "Text" : "Rock and Roll Hall of Fame inductees"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Canadian_rock_singers?kp=1\">Canadian rock singers</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Canadian_rock_singers?kp=1",
-         "Text" : "Canadian rock singers"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Juno_Award_winners?kp=1\">Juno Award winners</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Juno_Award_winners?kp=1",
-         "Text" : "Juno Award winners"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Musicians_from_Toronto?kp=1\">Musicians from Toronto</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Musicians_from_Toronto?kp=1",
-         "Text" : "Musicians from Toronto"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Lead_guitarists?kp=1\">Lead guitarists</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Lead_guitarists?kp=1",
-         "Text" : "Lead guitarists"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Canadian_film_directors?kp=1\">Canadian film directors</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Canadian_film_directors?kp=1",
-         "Text" : "Canadian film directors"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Canadian_singer-songwriters?kp=1\">Canadian singer-songwriters</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Canadian_singer-songwriters?kp=1",
-         "Text" : "Canadian singer-songwriters"
-      },
-      {
-         "Result" : "<a href=\"http://duckduckgo.com/c/Canadian_male_singers?kp=1\">Canadian male singers</a>",
-         "Icon" : {
-            "URL" : "",
-            "Height" : "",
-            "Width" : ""
-         },
-         "FirstURL" : "http://duckduckgo.com/c/Canadian_male_singers?kp=1",
-         "Text" : "Canadian male singers"
+         "FirstURL" : "http://duckduckgo.com/Neil_Young_(British_film_critic)",
+         "Text" : "Neil Young, film critic for British Film Institute"
       }
    ],
-   "AbstractText" : "Neil Percival Young OC, OM (born November 12, 1945) is a Canadian singer-songwriter.",
-   "Abstract" : "Neil Percival Young OC, OM (born November 12, 1945) is a Canadian singer-songwriter.",
+   "AbstractText" : "",
+   "Abstract" : "",
    "AnswerType" : "",
    "Redirect" : "",
-   "Type" : "A",
+   "Type" : "D",
    "DefinitionURL" : "",
    "Answer" : "",
-   "Results" : [
-      {
-         "Result" : "<a href=\"http://neilyoung.com\"><b>Official site</b></a><a href=\"http://neilyoung.com\"></a>",
-         "Icon" : {
-            "URL" : "https://i.duckduckgo.com/i/neilyoung.com.ico",
-            "Height" : 16,
-            "Width" : 16
-         },
-         "FirstURL" : "http://neilyoung.com",
-         "Text" : "Official site"
-      }
-   ],
-   "AbstractURL" : "https://en.wikipedia.org/wiki/Neil_Young"
+   "Results" : [],
+   "AbstractURL" : "https://en.wikipedia.org/wiki/Neil_Young_(disambiguation)"
 }
-

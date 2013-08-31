@@ -19,6 +19,8 @@
 #                        -r, --noredirect      do not redirect
 #                        -v, --version         current version
 #
+#  eg:  python query.py -q "Neil Young" -j -p -r -y -f /file/path/to/file/ddg.json
+#
 # copy: copyright (C) 2013 Peter Renshaw
 #===
 
@@ -48,10 +50,11 @@ import socsim.tools
 
 __version__ = "0.1.0"
 PYTHON3 = "30000f0"
-PYTHON273 = "20703f0" 
+PYTHON273 = "20703f0"
+USER_AGENT = "bigbox-tools-ddg"
 
 
-# TODO call fromm socsim.tools.
+# TODO call from socsim.tools.
 PYVER = "%x" % sys.hexversion  # not hex, readable 
 
 
@@ -124,7 +127,9 @@ else:
 #---
 class Duckduckgo:
     """query duckduckgo instant answer API"""
-    def __init__(self, query="", is_json=True, version=__version__):
+    def __init__(self, query="", is_json=True, 
+                       user_agent=USER_AGENT,
+                       version=__version__):
         """initialise ddg object"""
         # query
         self.query = query
@@ -141,11 +146,12 @@ class Duckduckgo:
         self.skip_disambig = 1     # T
 
         # parameters
-        self.parameters = {}       
+        self.query_param = {}
+        self.parameters = {}
         
         self.api_url = 'http://api.duckduckgo.com/?'
         self.query_url = ""
-        self.useragent = "bigbox-tools-ddg-%s" % version
+        self.user_agent = "%s-%s" % (user_agent, version)
         self.data = ""
 
         # build parameter
@@ -154,7 +160,7 @@ class Duckduckgo:
                          self.no_html, self.no_redirect, self.skip_disambig)
     def build_parms(self, query, is_json,
                           safesearch,  callback, pretty, no_html, 
-                          no_redirect, skip_disambig):
+                          no_redirect, skip_disambig, user_agent=USER_AGENT):
         """
         build parameters from scratch, fail if no query supplied
         """
@@ -180,23 +186,24 @@ class Duckduckgo:
         self.no_html = 1 if no_html else 0
         self.no_redirect = 1 if no_redirect else 0
         self.skip_disambig = 1 if skip_disambig else 0
-       
+
+        self.query_param = dict(q=self.query) 
         if is_json:
-            self.parameters = dict(q=self.query,
-                                   o=self.ret_format,
+            self.parameters = dict(o=self.ret_format,
                                    callback=self.callback,
                                    pretty=self.pretty,
                                    kp=self.safesearch,
                                    no_redirect=self.no_redirect,
                                    no_html=self.no_html,
-                                   d=self.skip_disambig)
+                                   d=self.skip_disambig,
+                                   t=self.user_agent)
         else:
-            self.parameters = dict(q=self.query,
-                                   o=self.ret_format,
+            self.parameters = dict(o=self.ret_format,
                                    kp=self.safesearch,
                                    no_redirect=self.no_redirect,
                                    no_html=self.no_html,
-                                   d=self.skip_disambig)
+                                   d=self.skip_disambig,
+                                   t=self.user_agent)
         return True
     def query_parm(self, key):
         """return value set to parameter"""
@@ -207,8 +214,11 @@ class Duckduckgo:
         """build final query url"""
         if self.parameters:
             # TODO: work out way to stop key order change
+            query_param = urlencode(self.query_param)
             url_enc_params = urlencode(self.parameters)
-            self.query_url = "%s%s" % (self.api_url, url_enc_params)
+            self.query_url = "%s%s&%s" % (self.api_url,
+                                       query_param,
+                                       url_enc_params)
             return self.query_url
         else:
             return False
@@ -216,7 +226,7 @@ class Duckduckgo:
         """request made using urlib (py3) or urllib2 (py2.7.3)"""
         data = ""
         request = Request(self.query_url, 
-                          headers={'User-Agent': self.useragent})
+                          headers={'User-Agent': self.user_agent})
         response = urlopen(request)
         if response: 
             data = response.read()
@@ -227,7 +237,7 @@ class Duckduckgo:
     def __request_requests(self):
         """request using superior Requests library"""
         request = requests.get(self.query_url, 
-                         headers={'User-Agent': self.useragent})
+                         headers={'User-Agent': self.user_agent})
         if request.text: return request.text
         else: return False
     def request(self, is_librequest=LIB_REQUEST):
@@ -251,93 +261,10 @@ class Duckduckgo:
             return False
 
 
-#---
 # main: cli entry point
-#---
 def main():
     """main cli entry point"""
-    usage = "usage: %prog [v] -t -d"
-    parser = OptionParser(usage)
-    parser.add_option("-q", "--query", dest="query", \
-                      help="query duckduckgo")
-    parser.add_option("-j", "--json", dest="json", \
-                      action="store_true", 
-                      help="return json?")
-    parser.add_option("-s", "--safesearch", dest="safe_search", \
-                      action="store_true",
-                      help="only return safe queries")
-    parser.add_option("-p", "--pretty", dest="pretty", \
-                      action="store_true", 
-                      help="if returned json then we can prettify json")
-    parser.add_option("-c", "--callback", dest="callback", \
-                      action="store_true", 
-                      help="if returned json, can callback")
-    parser.add_option("-d", "--skipdisambig", dest="skip_disambig", \
-                      action="store_true", 
-                      help="skip the disambiguation of a query?")
-    parser.add_option("-r", "--noredirect", dest="no_redirect", \
-                      action="store_true", 
-                      help="do not redirect")
-    parser.add_option("-v", "--version", dest="version", \
-                      action="store_true",
-                      help="current version")    
-    options, args = parser.parse_args()
-
-
-    if options.version:
-        print("%s v%s %s %s" % ('bigbox.tools.duckduckgo', __version__, '2013AUG30', '(C) 2013'))
-        sys.exit(0)
-    elif options.query:
-        ddg = Duckduckgo()
-
-        # options
-        is_json = False
-        is_pretty = False
-        no_html = False
-        is_callback = False
-        no_redirect = False
-        skip_disambig = False
-        safe_search = False
-
-        # selection options
-        if options.json:
-            is_json = True
-            if options.pretty:
-                is_pretty = True
-            if options.callback:
-                is_callback = True
-        if options.no_redirect:
-            no_redirect = True
-        if options.skip_disambig:
-            skip_disambig = True
-        if options.safe_search:
-            safe_search = True
-
-        #--- 
-        # not the best way to do this, but one way. here's another:
-        #    ddg = Duckduckgo("", rest,of,args,...)
-        #    ddg.query('a term')
-        #---
-
-        # build parms
-        ddg.build_parms(options.query, is_json, safe_search, is_callback, is_pretty, no_html, no_redirect, skip_disambig)
-        # query
-        ddg.build_query_url()
-
-        # display
-        data = ddg.request()
-        if is_json:
-            if data: 
-                d = socsim.tools.json2py(data)
-                for items in d:
-                    print("%s\n\n" % d[items])
-            else:
-                print("no data <%s>" % data)
-        else:
-           print("xml dude...")
-    else:
-        parser.print_help()
-
+    pass
 
 if __name__ == "__main__":
     main()

@@ -13,14 +13,30 @@
   prog @peterrenshaw
   desc BIGBOX: A easy to use front end for socsim.
 
-* 2013AUG31
-- more testing
-- duckduckgo.Duckduckgo.parameter (default & extensive)
-- story of bigbox
-+ twitter
-+ bottle vs tornado
-+ why not use python-duckduckgo?
-- 
+2013SEP01
+* bigbox
+[-] test parameters against spec
+[-] duckduckgo.Duckduckgo.parameter 
+ - default: just select -d & most settings are selected, instead
+   of having to re-do confusing options
+[-] more testing
+[-] story of bigbox
+[+] twitter
+[+] bottle vs tornado
+[+] explain why not using python-duckduckgo?
+[+] where are you *storing* the data?
+[+] how are you *recalling* the data?
+
+* bb server
+[-] planning for server
+
+2013AUG31
+* bigbox
+[x] fix querystring order problem
+[x] add "&t=nameofapp" to parameter list
+
+* bb server
+[x] bottle installed on python2/3 
 
 * 2013AUG30
 [x] work on tools/duckduckgo.py
