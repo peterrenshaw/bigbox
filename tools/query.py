@@ -143,14 +143,16 @@ def main():
         data = ddg.request()
         if is_json:
             # save
-            if not socsim.tools.save(options.filepath, data):
-                print("error: can't save to <%s>" % options.filepath)
+            if options.filepath: 
+                if not socsim.tools.save(options.filepath, data):
+                    print("error: can't save to <%s>" % options.filepath)
+                    sys.exit(1)
+                print("saved to <%s>" % options.filepath)
                 sys.exit(1)
-            print("saved to <%s>" % options.filepath)
 
             # extract data
             # gotta write a way to do this :(
-
+            print(data)
         else:
            print("can't grok, xml dude...")
     else:
