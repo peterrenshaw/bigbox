@@ -81,8 +81,8 @@ moment. Concentrate instead on what's happening.
    
 
 
-Easy to read?  Lets make it easier. Here is a fragment from
-neilyoung.json:
+Easy to read?  Lets make it easier. Here is a fragment, 
+
 
   {
    "Definition" : "He began his career as a folksinger in 
