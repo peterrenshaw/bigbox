@@ -124,6 +124,12 @@ extraction...
     python query.py -k -f /path/2file/ny.json > neilyoung.txt
  
 
+Here's what is going on:
+       
+    Process      key                       switch
+    cache                                  -k
+    read        /path/2file/neilyoung.json -f
+   
 Now we've done some tricky things. We haven't queried ddg on the Internet.
 We are reading from a file. In fact we now have a primative database of 
 sorts. A discrete query saved with a unique name. This is good. It not 
@@ -131,10 +137,9 @@ only speeds things up but reduces the hit on the Duckduckgo API.
 
 There's one last detail. 
 
-
 I havent't written a save the extracted data so I'm sending the data to a
-new text file to read. It wouldn't be hard to do this. I'm just saving 
-time.
+new text file to read. This is called re-direction. It's the same as saveing
+a file. It wouldn't be hard to do this. I'm just saving time.
 
 
 Now what do we have? 
