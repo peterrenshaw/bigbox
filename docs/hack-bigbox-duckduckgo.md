@@ -73,9 +73,9 @@ This sucks! Also the urllib code pretty rusty. Is there a replacement or better 
 #### Request
 
 Why use urllib2/urllib? Is there a better, more reliable, easier to use piece of code I can use? 
-Yes. It's called [python-requests](http://docs.python-requests.org/en/latest/). So I'll
-use this. The reason is the simplicity of the code. It's that simple. However this means 
-a dependency. One of the advantages of the *python-duckduckgo* code is it's simplicity. It's 
+Yes. It's called [python-requests](http://docs.python-requests.org/en/latest/). It also works the 
+same way on Python2X and Python3. So I'll use this. The reason is the simplicity of the code. It's that simple. 
+However this means a dependency. One of the advantages of the *python-duckduckgo* code is it's simplicity. It's 
 all there in the code. You don't need any downloads to use it. Hats off for this.
 
 
