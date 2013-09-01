@@ -42,6 +42,7 @@
 
 import sys
 import json
+from string import Template
 from optparse import OptionParser
 
 
@@ -272,8 +273,9 @@ class Duckduckgo:
 #
 #---
 class Result:
-    def __init__(self, data, is_py=True):
-        self.data = data
+    def __init__(self, pythonic_data):
+        """init result object"""
+        self.data = pythonic_data # data is pythonic
         self.category = {'A':'article',  'D':'disambiguation',
                          'C':'category', 'N':'name', 
                          'E':'exclusive','':'nothing'}
@@ -326,13 +328,48 @@ class Result:
     def definition_url(self):
         """return definition url or F"""
         return self.search('DefinitionURL')
-    # related
-    def related_topics(self):
-        pass
+    def display(self, rao, results, template):
+        """
+        funky default template,data driven display routine
+        for related_topics and results;
+
+        uses string.Template so it's inbuilt and uses the 
+        idea of keys from the dictionary to relace the $key
+        notation in the template. It's not foolproof but it
+        works for simple data output. You can just ignore it
+        and write a fancy one with the data returned form 
+        both related_topics and results.
+        """
+        if template: tpl = template
+        else: 
+            tpl = """<img height='$iconheight' width='$iconwidth' src='$iconurl'> $result $text <$firsturl>"""
+        if rao:
+            stubs = []
+            for topic in results:
+                rao.new(topic)
+                data = dict(result=rao.result(),
+                            firsturl=rao.first_url(),
+                            iconurl=rao.icon()['url'],
+                            iconheight=rao.icon()['height'],
+                            iconwidth=rao.icon()['width'],
+                            text=rao.text())
+                stub = Template(tpl).substitute(data)
+                stubs.append(stub)
+                for stub in stubs:
+                    print stub
+        return False
+    # related topics (many)
+    def related_topics(self, rao="", template=""):
+        """return related topic as list or F"""
+        topics = self.search('RelatedTopics')
+        if rao: return self.display(rao, topics, template)
+        return self.search('RelatedTopics')
     # results
-    def results(self):
+    def results(self, rao="", template=""):
         """return list of results or F"""
-        return self.search('Results')
+        results = self.search('Results')
+        if rao: return self.display(rao, results, template)
+        return results
     # --- 
     def response_type(self):
         """return response category"""
@@ -344,6 +381,67 @@ class Result:
     def redirect(self):
         """return redirect ? or F"""
         return self.search('Redirect')
+
+#---
+# name: ResultAbstract
+# date: 2013SEP01
+# prog: pr
+# desc: process the 'RelatedTopics' or 
+#       'Results' stubs spat out from
+#       Results.related_topics and 
+#       Results.results
+#
+#       possible to use injection (pass obj
+#       into Results. Also possible to just
+#       pass the data to the object and process
+#
+#       import duckduckgo
+#       import socisim.tools
+#
+#       pydat = socsim.tools.json2py(data)
+#       r = duckduckgo.Result(pydat)
+#       pydat = r.results()
+#       ra = ResultAbstract(pydat)
+#       for item in ra:
+#           if item:
+#               print("%s - %s" % (ra.first_url_text(),ra.first_url())
+#     
+#---
+class ResultAbstract:
+    def __init__(self, data=""):
+        """init Relatedtopics object"""
+        self.data = data
+    def new(self, data):
+        """clear and start new search"""
+        self.data = data
+    # --- general query ---
+    def search(self, key):
+        """generalised query by key on list data, find or F"""
+        if key:
+            for title in self.data:
+                if key == title:
+                    return self.data[title]
+        return False
+    # --- specific query
+    def result(self):
+        """return result url link or F"""
+        return self.search('Result')
+    def first_url(self):
+        """return first url in result or F"""
+        return self.search('FirstURL')
+    def icon(self):
+        """return icon details or F"""
+        icon = self.search('Icon')
+        if icon:
+            iurl =    icon['URL'] if ('URL' in icon) else False
+            iheight = icon['Height'] if ('Height' in icon) else False
+            iwidth =  icon['Width'] if ('Width' in icon) else False
+            return dict(url=iurl, height=iheight, width=iwidth)
+        else: 
+            return False
+    def text(self):
+        """return text or F"""
+        return self.search('Text')
 
 
 # main: cli entry point

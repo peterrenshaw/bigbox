@@ -26,6 +26,7 @@
 #                        -r, --noredirect      do not redirect
 #
 #                        Admin
+#                        -k  --cache           query & save to cachec/read from cache
 #                        -e  --extract         extact data from file
 #                        -v, --version         current version
 #                        -y  --querystring     show querystring information
@@ -79,6 +80,9 @@ def main():
                       help="do not redirect")
     # --- admin --- 
     #
+    parser.add_option("-k", "--cache", dest="cache", 
+                      action="store_true",
+                      help="read query from cache, not duckduckgo")
     parser.add_option("-e", "--extract", dest="extract",
                       action="store_true",
                       help="extract data from the query")
@@ -97,16 +101,11 @@ def main():
         print("%s v%s %s %s" % ('bigbox.tools.query', __version__, 
                                  '2013AUG31', '(C) 2013'))
         sys.exit(0)
-    elif options.query:
-        ddg = duckduckgo.Duckduckgo()
-
-        
-        # caching:
-        # unless forced, use local version
-        # if present, readable, (recent)
-        if options.filepath and options.extract:
+    elif options.cache:
+        # caching: use local version, if present, readable, (recent)
+        if options.filepath:
             if not os.path.isfile(options.filepath):
-                print("error: can open file <%s>" % options.filepath)
+                print("error: no caching... cant open file <%s>" % options.filepath)
                 sys.exit(1)
             
             # read from cache
@@ -118,21 +117,32 @@ def main():
             r = duckduckgo.Result(pydat)
 
             # results
-            print(r.response_type())
-            print(r.definition())
-            print(r.definition_source())
             print(r.heading())
-            print(r.abstract_source())
-            print(r.image())
-            print(r.abstract_text())
-            print(r.abstract())
-            print(r.answer_type())
-            print(r.redirect())
-            print(r.definition_url())
             print(r.answer())
-            print(r.results())
-            print(r.abstract_url())
+            print(r.abstract())
+
+            print("Results Abstract")
+            ra = duckduckgo.ResultAbstract()
+            for topic in r.related_topics():
+                ra.new(topic)
+                print("\t%s - %s" % (ra.text(), ra.first_url()))
+            ra = None
+
+            print("Related Topics")
+            ra = duckduckgo.ResultAbstract()
+            r.results(ra, "$result $text <$firsturl>")
+            r.related_topics(ra, "$result $text <$firsturl>")
+
+
             sys.exit(1)
+        else:
+            print("error: no caching... supply a file and filepath <%s>" % options.filepath)
+            print("query contining....")
+            sys.exit(1)
+
+
+    elif options.query:
+        ddg = duckduckgo.Duckduckgo()
 
         # options
         is_json = False
@@ -190,12 +200,14 @@ def main():
 
 
             # extract data
-            # gotta write a way to do this :(
             if options.extract:
                 pydat = socsim.tools.json2py(data)
                 r = duckduckgo.Result(pydat)
-
+                ra = duckduckgo.ResultAbstract()
+                
                 # results
+                print(r.answer())
+
                 print(r.response_type())
                 print(r.definition())
                 print(r.definition_source())
@@ -207,12 +219,11 @@ def main():
                 print(r.answer_type())
                 print(r.redirect())
                 print(r.definition_url())
-                print(r.answer())
-                print(r.results())
+                r.results(ra)
                 print(r.abstract_url())
 
         else:
-           print("can't grok, xml dude...")
+           print("I don't grok xml dude...")
     else:
         parser.print_help()
 
