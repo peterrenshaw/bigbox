@@ -8,18 +8,6 @@
 # prog: pr
 # desc: tools to query the ddg instant answer API
 # lisc: moving towards GPL3
-# use:  python duckduckgo.py
-#                        -h, --help            show this help message and exit
-#                        -q  --query           search query
-#                        -j, --json            return json?
-#                        -s, --safesearch      only return safe queries
-#                        -p, --pretty          if returned json can prettify json
-#                        -c, --callback        if returned json, can callback
-#                        -d, --skipdisambig    skip the disambiguation of a query?
-#                        -r, --noredirect      do not redirect
-#                        -v, --version         current version
-#
-#  eg:  python query.py -q "Neil Young" -j -p -r -y -f /file/path/to/file/ddg.json
 #
 # copy: copyright (C) 2013 Peter Renshaw
 #===
@@ -261,6 +249,7 @@ class Duckduckgo:
         else:
             return False
 
+
 #---
 # name: Result
 # date: 2013SEP01
@@ -270,7 +259,6 @@ class Duckduckgo:
 #       <http://help.dukgo.com/customer/portal/articles/216399>
 # test: <https://mashape.com/duckduckgo/
 #                duckduckgo-zero-click-info#!documentation>
-#
 #---
 class Result:
     def __init__(self, pythonic_data):
@@ -343,7 +331,7 @@ class Result:
         if template: tpl = template
         else: 
             tpl = """<img height='$iconheight' width='$iconwidth' src='$iconurl'> $result $text <$firsturl>"""
-        if rao:
+        if rao:  # TODO test explicit ResultAbstract injected
             stubs = []
             for topic in results:
                 rao.new(topic)
@@ -381,6 +369,7 @@ class Result:
     def redirect(self):
         """return redirect ? or F"""
         return self.search('Redirect')
+
 
 #---
 # name: ResultAbstract

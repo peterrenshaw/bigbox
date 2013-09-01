@@ -1,0 +1,179 @@
+
+        __     _         __                
+       / /_   (_)____ _ / /_   ____   _  __
+      / __ \ / // __ `// __ \ / __ \ | |/_/
+     / /_/ // // /_/ // /_/ // /_/ /_>  <
+    /_.___//_/ \__, //_.___/ \____//_/|_| [1]
+              /____/                       
+
+
+  name hack-the-story-so-far.txt
+  date 2013SEP01
+  prog @peterrenshaw
+  desc BIGBOX: A easy to use front end for socsim. This 
+       hack, BIGBOX search allows for search within or external 
+       to you local system.
+
+abstract
+
+        A simple search form for N, where N is something to search. A search
+	could be externally for twitter or a search engine. Search could be
+	offline and be something local.
+
+        The story so far with duckduckgo search. It's good.
+
+
+The story so far.
+
+I want to use the Duckduckgo Instant answers API to grab information
+from the Internet but the code that's available isn't suitable. So 
+I've been writing a replacement.
+
+
+I have a module to query duckduckgo using a search key. It returns a
+json object filled with data from that search OR nothing.
+
+    duckduckgo.Duckduckgo()
+
+
+With this module I can save the data extracted to a simple text file 
+filled with json. So far so good.
+
+
+But we can't read JSON easily. I need a way to extract the data from 
+the JSON file to be readable. So I wrote a module that extracts the 
+data from the JSON module. You could do anything with this data, send
+it as a tweet; cut+paste it; store in a database. I chose to save it
+as a text file.
+
+This is a good process.
+
+* query ddg with a search key
+* retreive the ddg JSON data
+* save the JSON data to a text file
+* read the text file and extract the data
+* save the extracted data to another file.
+
+
+This can be simplified as 
+
+    Query
+    Retrieve data
+    Save to file
+    Read file at later date
+    Extrct from file useful data
+    Save extacted data
+
+
+Now lets do this using a query. Lets go...
+
+    python query.py -q 'neil young' -e -k -d -j -p -r 
+                    -f /path/to/file/neilyoung.json
+
+
+This query does a lot of things. Forget the switches for the 
+moment. Concentrate instead on what's happening.
+       
+    Process  key                           switch
+    Query    'neil young'                  -q
+    Extract  JSON to text                  -e
+    Save     /path/2file/neilyoung.json    -s
+    
+This gives us some JSON. Hard to read by people, easier in software. Our 
+objective is to store as human readable text. Now lets do some 
+extraction...
+
+    python query.py -k -f /path/2file/ny.json > neilyoung.txt
+ 
+
+Now we've done some tricky things. We haven't queried ddg on the Internet.
+We are reading from a file. In fact we now have a primative database of 
+sorts. A discrete query saved with a unique name. This is good. It not 
+only speeds things up but reduces the hit on the Duckduckgo API. 
+
+There's one last detail. 
+
+
+I havent't written a save the extracted data so I'm sending the data to a
+new text file to read. It wouldn't be hard to do this. I'm just saving 
+time.
+
+
+Now what do we have? 
+
+  We have the original query:                   "neil young'     Interet
+  We have a query response as a file:           'neilyoung.json' file
+  We have an extracted data from the json file, 'neilyoung.txt'. file
+
+
+We can now load this data and re-use it any way we like and for bigbox this
+is good. I've controlled all this output. It's quite possible to manipulate
+the data shown here with a great degree of granularity. This is what the 
+results from ny.txt looks like:
+
+    reading </media/S/code/bigbox/tools/neilyoung.json> from cache...
+
+    Neil Young
+    Neil Percival Young OC, OM (born November 12, 1945) is a Canadian 
+    singer-songwriter.
+    
+    Results Abstract
+        Neil Young Meanings - http://duckduckgo.com/d/Neil_Young
+        Neil Young Category - http://duckduckgo.com/c/Neil_Young
+        Canadian rock - Canadian rock describes a wide and diverse variety
+                        of music produced by Canadians, beginning  with 
+                        American style rock 'n' roll in the mid-20th 
+                        century. - http://duckduckgo.com/Canadian_rock
+        Music of Canada - The music of Canada has reflected the diverse 
+                        influences that have shaped the country. 
+                        - http://duckduckgo.com/Music_of_Canada
+        continues....
+
+    Related Topics
+    <a href="http://neilyoung.com"><b>Official site</b></a>
+    <a href="http://neilyoung.com"></a> Official site 
+    <http://neilyoung.com>
+
+    <a href="http://duckduckgo.com/d/Neil_Young">Neil Young Meanings</a>
+        Neil Young Meanings 
+        <http://duckduckgo.com/d/Neil_Young>
+    <a href="http://duckduckgo.com/c/Neil_Young">Neil Young Category</a> 
+        Neil Young Category 
+        <http://duckduckgo.com/c/Neil_Young>
+    <a href="http://duckduckgo.com/Canadian_rock">Canadian rock</a> - 
+        Canadian rock describes a wide and diverse variety of music 
+    produced by Canadians, beginning  with American style rock 'n' roll 
+    in the mid-20th century. Canadian rock - Canadian rock 
+    describes a wide and diverse variety of music produced by Canadians, 
+    beginning  with American style rock 'n' roll in the 
+    mid-20th century. <http://duckduckgo.com/Canadian_rock>
+    
+    continues....
+
+
+There a more details to work on, mainly testing. But what we have here is now enough to do:
+
+    #=============================#
+    #    neil young               #    
+    #=============================#
+
+to 
+
+    #=============================#
+    #    neil young               #    
+    #=============================#
+
+     <bNeil Young</b>: Neil Percival Young OC, OM (born November 12, 1945) is a Canadian singer-songwriter.
+     
+     <a href="http://neilyoung.com"><b>Official site</b></a><a href="http://neilyoung.com"></a> Official site <http://neilyoung.com>
+     <a href="http://duckduckgo.com/d/Neil_Young">Neil Young Meanings</a> Neil Young Meanings <http://duckduckgo.com/d/Neil_Young>
+     <a href="http://duckduckgo.com/c/Neil_Young">Neil Young Category</a> Neil Young Category <http://duckduckgo.com/c/Neil_Young>
+ 
+
+That's it for now.
+
+PR
+
+
+
+# vim: ff=unix:ts=4:sw=4:tw=78:noai:expandtab

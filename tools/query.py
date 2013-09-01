@@ -7,16 +7,22 @@
 # date: 2013AUG30
 # prog: pr
 # desc: query the ddg instant answer API
+#       this is a throw away bit of code to test/demonstate and use the 
+#       modules I'm working on.
+#
 # lisc: moving towards GPL3
 # use:  python query.py
 #                        -h, --help            show this help message and exit
 #                        -q  --query           search query
+#                        --- TODO urgent do this now --- 
 #                        -d  --default         assume json, set default opts
 #                                                safesearch=T
 #                                                pretty=T
 #                                                callback=F
 #                                                noredirect=T
 #                                                callback=F
+#                        --- TODO urgent do this now --- 
+#
 #                        Options
 #                        -j, --json            return json?
 #                        -s, --safesearch      only return safe queries
@@ -99,7 +105,7 @@ def main():
 
     if options.version:
         print("%s v%s %s %s" % ('bigbox.tools.query', __version__, 
-                                 '2013AUG31', '(C) 2013'))
+                                '2013AUG31', '(C) 2013'))
         sys.exit(0)
     elif options.cache:
         # caching: use local version, if present, readable, (recent)
@@ -109,7 +115,7 @@ def main():
                 sys.exit(1)
             
             # read from cache
-            print("reading <%s> from cache..." % options.filepath)
+            print("reading <%s> from cache...\n" % options.filepath)
             with file(options.filepath, 'r') as f:
                 data = f.read()
             
@@ -117,20 +123,24 @@ def main():
             r = duckduckgo.Result(pydat)
 
             # results
-            print(r.heading())
-            print(r.answer())
-            print(r.abstract())
+            if r.heading(): print(r.heading())
+            if r.answer(): print(r.answer())
+            if r.abstract(): print(r.abstract())
 
+            # display results abstract from list
             print("Results Abstract")
             ra = duckduckgo.ResultAbstract()
             for topic in r.related_topics():
                 ra.new(topic)
                 print("\t%s - %s" % (ra.text(), ra.first_url()))
+            print("")
             ra = None
 
+            # display related topics using ResultAbstract object
             print("Related Topics")
             ra = duckduckgo.ResultAbstract()
             r.results(ra, "$result $text <$firsturl>")
+            print("")
             r.related_topics(ra, "$result $text <$firsturl>")
 
 
@@ -188,6 +198,7 @@ def main():
             print("Q '%s'" % options.query)
             print("S <%s>" % query_url)
             sys.exit(1)
+
         # display
         data = ddg.request()
         if is_json:
@@ -198,31 +209,31 @@ def main():
                     sys.exit(1)
                 print("saved to <%s>" % options.filepath)
 
-
             # extract data
             if options.extract:
                 pydat = socsim.tools.json2py(data)
                 r = duckduckgo.Result(pydat)
 
                 # results
-                print(r.heading())
-                print(r.answer())
-                print(r.abstract())
+                if r.heading(): print(r.heading())
+                if r.answer(): print(r.answer())
+                if r.abstract(): print(r.abstract())
 
-                print("Related topics")
+                print("Results Abstract")
                 ra = duckduckgo.ResultAbstract()
                 for topic in r.related_topics():
-                    ra.new(topic)
-                    print("\t%s - %s" % (ra.text(), ra.first_url()))
+                     ra.new(topic)
+                     print("\t%s - %s" % (ra.text(), ra.first_url()))
+                print("")
                 ra = None
 
-                print("Results")
+                print("Related Topics")
                 ra = duckduckgo.ResultAbstract()
                 r.results(ra, "$result $text <$firsturl>")
-                ra = None
+                print("")
+                r.related_topics(ra, "$result $text <$firsturl>")
 
                 r = None
-
         else:
            print("I don't grok xml dude...")
     else:

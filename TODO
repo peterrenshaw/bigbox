@@ -13,8 +13,8 @@
   prog @peterrenshaw
   desc BIGBOX: A easy to use front end for socsim.
 
-2013SEP01
-* bigbox
+
+2013SEP02
 [-] test parameters against spec
 [-] duckduckgo.Duckduckgo.parameter 
  - default: just select -d & most settings are selected, instead
@@ -26,9 +26,45 @@
 [x] explain why not using python-duckduckgo?
 [+] where are you *storing* the data?
 [+] how are you *recalling* the data?
-
 * bb server
 [-] planning for server
+
+
+2013SEP01
+* bigbox
+[x] explain why not using python-duckduckgo?
+[x] created duckduckgo.Result
+[x] created duckduckgo.ResultAbstract
+[x] significant upgrade to query
+[x] write up
+
+  big one, learned a lot during this hack session¬
+
+* duckduckgo.Result
+- when we query the ddg instant answer api we get back a json file.
+  so we need a way to query it. The Result object does this.
+- it grabs the input data (pythonic) and for each item does a simple
+  search.
+- the bulk of the search is powered by 5 lines of code
+- the stubs simply return the found data by name
+- there are 2 methods that are complex requiring more processing.
+ 
+* duckduckgo.ResultAbstract
+- for duckduckgo.Result().related_topics() and 
+  duckduckgo.Result().results() we get back multiple results as a 
+  list
+- this requires a further breakdown.
+- so ResultAbstract breaks down both these lists of data extracting
+  the data
+- again finding the data is 5 lines of code.
+- We inject this object into duckduckgo.Result where we want to 
+  process the list of data.
+ 
+* query
+- now caches data with -k so you can query locally or live
+- demonstrates how to use lists with ResultAbstract
+- demonstrates how to use ResultAbstract injection into Results object
+
 
 2013AUG31
 * bigbox
