@@ -15,10 +15,11 @@
 
 
 2013SEP02
+[-] license to tools code
 [-] test parameters against spec
 [-] duckduckgo.Duckduckgo.parameter 
- - default: just select -d & most settings are selected, instead
-   of having to re-do confusing options
+[-] default: just select -d & most settings are selected, instead
+    of having to re-do confusing options
 [-] more testing
 [-] story of bigbox
 [+] twitter
