@@ -61,11 +61,11 @@ Here's what I found. The code utilises *urllib2*. Urllib2 is not supported in
 Python3. Well it is, but Python3 consolidates the code into urllib. So code that
 works in Python2X
 
-    from urllib import request as Request
+    from urllib2 import Request
 
 becomes this code in Python3...
 
-    from urllib2 import Request
+    from urllib import request as Request
 
 This sucks! Also the urllib code pretty rusty. Is there a replacement or better choices?
 
