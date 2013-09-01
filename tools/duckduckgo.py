@@ -122,8 +122,8 @@ else:
 #
 # todo: * default parms
 #       - minimum parameters
-#       * stop parm sort on encoding
-#       * cli options for setting parms
+#       [x] stop parm sort on encoding
+#       [x] cli options for setting parms
 #---
 class Duckduckgo:
     """query duckduckgo instant answer API"""
@@ -259,6 +259,91 @@ class Duckduckgo:
             return self.data
         else:
             return False
+
+#---
+# name: Result
+# date: 2013SEP01
+# prog: pr
+# desc: query Duckduckgo zero click api
+# cite: <https://api.duckduckgo.com/api>>
+#       <http://help.dukgo.com/customer/portal/articles/216399>
+# test: <https://mashape.com/duckduckgo/
+#                duckduckgo-zero-click-info#!documentation>
+#
+#---
+class Result:
+    def __init__(self, data, is_py=True):
+        self.data = data
+        self.category = {'A':'article',  'D':'disambiguation',
+                         'C':'category', 'N':'name', 
+                         'E':'exclusive','':'nothing'}
+    # --- general query ---
+    def search(self, key):
+        """generalised query by key on list data, find or F"""
+        if key:
+            for title in self.data:
+                if key == title:
+                    return self.data[title]
+        return False
+
+    # --- specific query ---
+    #
+    # abstract
+    def abstract(self):
+        """return abstract or F"""
+        return self.search('Abstract')
+    def abstract_text(self):
+        """return abstract text or F"""
+        return self.search("AbstractText")
+    def abstract_source(self):
+        """return abstract source or F"""
+        return self.search('AbstractSource')
+    def abstract_url(self):
+        """return abstract url or F"""
+        return self.search('AbstractURL')
+    # image
+    def image(self):
+        """return image info or F"""
+        return self.search('Image')
+    # --- 
+    def heading(self):
+        """return heading or F"""
+        return self.search('Heading')
+    # answer 
+    def answer(self):
+        """return answer or F"""
+        return self.search('Answer')
+    def answer_type(self):
+        """return answer type or F"""
+        return self.search('AnswerType')
+    # definition
+    def definition(self):
+        """return definition"""
+        return self.search('Definition')
+    def definition_source(self):
+        """return definition source or F"""
+        return self.search('DefinitionSource')
+    def definition_url(self):
+        """return definition url or F"""
+        return self.search('DefinitionURL')
+    # related
+    def related_topics(self):
+        pass
+    # results
+    def results(self):
+        """return list of results or F"""
+        return self.search('Results')
+    # --- 
+    def response_type(self):
+        """return response category"""
+        rtype = self.search('Type')
+        if rtype in self.category:
+            return self.category[rtype]
+        else: 
+            return False
+    def redirect(self):
+        """return redirect ? or F"""
+        return self.search('Redirect')
 
 
 # main: cli entry point

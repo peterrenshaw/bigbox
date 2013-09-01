@@ -26,6 +26,7 @@
 #                        -r, --noredirect      do not redirect
 #
 #                        Admin
+#                        -e  --extract         extact data from file
 #                        -v, --version         current version
 #                        -y  --querystring     show querystring information
 #
@@ -77,12 +78,15 @@ def main():
                       help="do not redirect")
     # --- admin --- 
     #
-    parser.add_option("-f", "--file", dest="filepath", \
+    parser.add_option("-e", "--extract", dest="extract",
+                      action="store_true",
+                      help="extract data from the query")
+    parser.add_option("-f", "--file", dest="filepath",
                       help="supply filepath and filename to save to file")
-    parser.add_option("-y", "--querystring", dest="querystring", \
+    parser.add_option("-y", "--querystring", dest="querystring",
                       action="store_true",
                       help="show query string")
-    parser.add_option("-v", "--version", dest="version", \
+    parser.add_option("-v", "--version", dest="version",
                       action="store_true",
                       help="current version")    
     options, args = parser.parse_args()
@@ -148,11 +152,30 @@ def main():
                     print("error: can't save to <%s>" % options.filepath)
                     sys.exit(1)
                 print("saved to <%s>" % options.filepath)
-                sys.exit(1)
+
 
             # extract data
             # gotta write a way to do this :(
-            print(data)
+            if options.extract:
+                pydat = socsim.tools.json2py(data)
+                r = duckduckgo.Result(pydat)
+
+                # results
+                print(r.response_type())
+                print(r.definition())
+                print(r.definition_source())
+                print(r.heading())
+                print(r.abstract_source())
+                print(r.image())
+                print(r.abstract_text())
+                print(r.abstract())
+                print(r.answer_type())
+                print(r.redirect())
+                print(r.definition_url())
+                print(r.answer())
+                print(r.results())
+                print(r.abstract_url())
+
         else:
            print("can't grok, xml dude...")
     else:
