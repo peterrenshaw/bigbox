@@ -125,7 +125,9 @@ def main():
             # results
             if r.heading(): print(r.heading())
             if r.answer(): print(r.answer())
+            if r.definition(): print(r.definition())
             if r.abstract(): print(r.abstract())
+
 
             # display results abstract from list
             print("Results Abstract")
@@ -217,7 +219,9 @@ def main():
                 # results
                 if r.heading(): print(r.heading())
                 if r.answer(): print(r.answer())
+                if r.definition(): print(r.definition())
                 if r.abstract(): print(r.abstract())
+
 
                 print("Results Abstract")
                 ra = duckduckgo.ResultAbstract()
