@@ -1,0 +1,89 @@
+
+        __     _         __                
+       / /_   (_)____ _ / /_   ____   _  __
+      / __ \ / // __ `// __ \ / __ \ | |/_/
+     / /_/ // // /_/ // /_/ // /_/ /_>  <
+    /_.___//_/ \__, //_.___/ \____//_/|_| [1]
+              /____/                       
+
+
+  name hack-ddg-instant-api-extact.txt
+  date 2013AUG31
+  prog @peterrenshaw
+  desc duckduckgo instant api extraction
+
+
+abstract
+
+    build a module to extract this
+
+--- START ---    
+Abstract: topic summary (can contain HTML, e.g. italics)
+AbstractText: topic summary (with no HTML)
+AbstractSource: name of Abstract source
+AbstractURL: deep link to expanded topic page in AbstractSource
+Image: link to image that goes with Abstract
+Heading: name of topic that goes with Abstract
+
+Answer: instant answer
+AnswerType: type of Answer, e.g. calc, color, digest, info, ip, iploc, phone, pw, rand, regexp, unicode, upc, or zip (see goodies & tech pages for examples).
+
+Definition: dictionary definition (may differ from Abstract)
+DefinitionSource: name of Definition source
+DefinitionURL: deep link to expanded definition page in DefinitionSource
+
+RelatedTopics: array of internal links to related topics associated with Abstract
+  Result: HTML link(s) to related topic(s)
+  FirstURL: first URL in Result
+  Icon: icon associated with related topic(s)
+    URL: URL of icon
+    Height: height of icon (px)
+    Width: width of icon (px)
+  Text: text from first URL
+
+Results: array of external links associated with Abstract
+  Result: HTML link(s) to external site(s)
+  FirstURL: first URL in Result
+  Icon: icon associated with FirstURL
+    URL: URL of icon
+    Height: height of icon (px)
+    Width: width of icon (px)
+  Text: text from FirstURL
+
+Type: response category, i.e. A (article), D (disambiguation), C (category), N (name), E (exclusive), or nothing.
+
+Redirect: !bang redirect URL
+--- END ---
+
+In json format.
+
+Abstract
+AbstractText
+AbstractSource
+AbstractURL
+
+Image
+
+Heading
+
+Definition
+DefinitionSource
+DefinitionURL
+
+RelatedTopics
+
+Results
+
+
+
+Resources
+
+[1] Title created with an ASCII text generator using 'slant' and 'stretch=Yes".
+The code is based on Figlet which can be found here ~ <http://www.figlet.org/>
+[Last accessed: Sunday 4th August, 2013]
+<http://www.network-science.de/ascii/>
+
+
+# vim: ff=unix:ts=4:sw=4:tw=78:noai:expandtab
+
+

@@ -20,9 +20,9 @@
 
 ## Abstract
 
-    Why write python code for the Duckduckgo Instant Answers API,
-when there's a perfectly good bit of existing code that can do the 
-job?  Explain why not using the [python-duckduckgo module](https://github.com/crazedpsyc/python-duckduckgo)? [2]
+Why write python code for the Duckduckgo Instant Answers API, when 
+there's a perfectly good bit of existing code that can do the job?  
+Explain why not using the [python-duckduckgo module](https://github.com/crazedpsyc/python-duckduckgo)? [2]
 
 
 ### New over old
