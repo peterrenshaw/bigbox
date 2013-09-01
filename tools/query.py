@@ -203,24 +203,25 @@ def main():
             if options.extract:
                 pydat = socsim.tools.json2py(data)
                 r = duckduckgo.Result(pydat)
-                ra = duckduckgo.ResultAbstract()
-                
-                # results
-                print(r.answer())
 
-                print(r.response_type())
-                print(r.definition())
-                print(r.definition_source())
+                # results
                 print(r.heading())
-                print(r.abstract_source())
-                print(r.image())
-                print(r.abstract_text())
+                print(r.answer())
                 print(r.abstract())
-                print(r.answer_type())
-                print(r.redirect())
-                print(r.definition_url())
-                r.results(ra)
-                print(r.abstract_url())
+
+                print("Related topics")
+                ra = duckduckgo.ResultAbstract()
+                for topic in r.related_topics():
+                    ra.new(topic)
+                    print("\t%s - %s" % (ra.text(), ra.first_url()))
+                ra = None
+
+                print("Results")
+                ra = duckduckgo.ResultAbstract()
+                r.results(ra, "$result $text <$firsturl>")
+                ra = None
+
+                r = None
 
         else:
            print("I don't grok xml dude...")

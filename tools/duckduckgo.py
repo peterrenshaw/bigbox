@@ -355,8 +355,8 @@ class Result:
                             text=rao.text())
                 stub = Template(tpl).substitute(data)
                 stubs.append(stub)
-                for stub in stubs:
-                    print stub
+            for stub in stubs:
+                print stub
         return False
     # related topics (many)
     def related_topics(self, rao="", template=""):
@@ -406,6 +406,18 @@ class Result:
 #           if item:
 #               print("%s - %s" % (ra.first_url_text(),ra.first_url())
 #     
+#       OR
+# 
+#       # use ResultAbstract object
+#       ra = duckduckgo.ResultAbstract()
+#
+#       # returns raw list of data
+#       print("Results")
+#       r.results(ra) 
+#
+#       # returns list of data, processed with a simple template
+#       r.related_topics(ra, "$result $text <$firsturl>")
+#
 #---
 class ResultAbstract:
     def __init__(self, data=""):
