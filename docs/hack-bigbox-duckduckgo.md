@@ -67,7 +67,16 @@ becomes this code in Python3...
 
     from urllib2 import Request
 
-This sucks! The urllib code pretty rusty. There are better choices, in my opinion. So there's one problem. 
+This sucks! Also the urllib code pretty rusty. Is there a replacement or better choices?
+
+
+#### Request
+
+Why use urllib? Is there a better, more reliable, easier to use piece of code I can use? 
+Yes. It's called [python-requests](http://docs.python-requests.org/en/latest/). So I'll
+use this. The reason is the simplicity of the code. It's that simple. However this means 
+a dependency. One of the advantages of the *python-duckduckgo* code is it's simplicity. It's 
+all there in the code. You don't need any downloads to use it. Hats off for this.
 
 
 #### Rewrite everything?
@@ -84,15 +93,6 @@ read the data... still digesting the structure.:if expand("%") == ""|browse conf
 The *python-duckduckgo* module has no testing. So if I use the code I'm going to be
 writing some test code just to measure any side effects I might make modifing the code. 
 That sucks. So I'm going to be writing test code.
-
-
-#### Request
-
-Why use urllib? Is there a better, more reliable, easier to use piece of code I can use? 
-Yes. It's called [python-requests](http://docs.python-requests.org/en/latest/). So I'll
-use this. The reason is the simplicity of the code. It's that simple. However this means 
-a dependency. One of the advantages of the *python-duckduckgo* code is it's simplicity. It's 
-all there in the code. You don't need any downloads to use it. Hats off for this.
 
 
 #### Permission
