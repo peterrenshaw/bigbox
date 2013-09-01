@@ -63,12 +63,11 @@ works in Python2X
 
     from urllib import request as Request
 
-becomes ...
+becomes this code in Python3...
 
     from urllib2 import Request
 
-in Python3. This sucks! The urllib code pretty rusty. There are better choices, 
-in my opinion. So there's one problem. 
+This sucks! The urllib code pretty rusty. There are better choices, in my opinion. So there's one problem. 
 
 
 #### Rewrite everything?
