@@ -78,7 +78,45 @@ moment. Concentrate instead on what's happening.
     Query    'neil young'                  -q
     Extract  JSON to text                  -e
     Save     /path/2file/neilyoung.json    -s
-    
+   
+
+
+Easy to read?  Lets make it easier. Here is a fragment, 
+
+
+  {
+   "Definition" : "He began his career as a folksinger in 
+                   Winnipeg and later moved to Los Angeles, 
+                   Calif., U.S., where he formed the rock 
+                   group Buffalo Springfield with Stephen 
+                   Stills.",
+   "DefinitionSource" : "",
+   "Heading" : "Neil Young",
+   "AbstractSource" : "Wikipedia",
+   "Image" : "https://i.duckduckgo.com/i/617d287f.jpg",
+   "RelatedTopics" : [
+      {
+         "Result" : "<a href=\"http://duckduckgo.com/d/Neil_Young\">Neil Young Meanings</a>",
+         "Icon" : {
+            "URL" : "",
+            "Height" : "",
+            "Width" : ""
+         },
+         "FirstURL" : "http://duckduckgo.com/d/Neil_Young",
+         "Text" : "Neil Young Meanings"
+      },
+      {
+         "Result" : "<a href=\"http://duckduckgo.com/c/Neil_Young\">Neil Young Category</a>",
+         "Icon" : {
+            "URL" : "",
+            "Height" : "",
+            "Width" : ""
+         },
+         "FirstURL" : "http://duckduckgo.com/c/Neil_Young",
+         "Text" : "Neil Young Category"
+      },
+
+ 
 This gives us some JSON. Hard to read by people, easier in software. Our 
 objective is to store as human readable text. Now lets do some 
 extraction...
