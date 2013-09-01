@@ -84,8 +84,7 @@ all there in the code. You don't need any downloads to use it. Hats off for this
 Do I rewrite all the code or just some? At the moment I've re-written the basic query 
 building and request engine, nothing else. I still haven't written any way to extract 
 the data nor have I written a the useful *get_zci* module. I'm still working on how to 
-read the data... still digesting the structure.:if expand("%") == ""|browse confirm w|else|confirm w|endif
-
+read the data... still digesting the structure.
 
 
 #### Testing
