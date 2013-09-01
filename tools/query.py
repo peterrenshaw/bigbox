@@ -37,6 +37,7 @@
 __version__ = "0.1.0"
 
 
+import os
 import sys
 import json
 from optparse import OptionParser
@@ -98,6 +99,40 @@ def main():
         sys.exit(0)
     elif options.query:
         ddg = duckduckgo.Duckduckgo()
+
+        
+        # caching:
+        # unless forced, use local version
+        # if present, readable, (recent)
+        if options.filepath and options.extract:
+            if not os.path.isfile(options.filepath):
+                print("error: can open file <%s>" % options.filepath)
+                sys.exit(1)
+            
+            # read from cache
+            print("reading <%s> from cache..." % options.filepath)
+            with file(options.filepath, 'r') as f:
+                data = f.read()
+            
+            pydat = socsim.tools.json2py(data)
+            r = duckduckgo.Result(pydat)
+
+            # results
+            print(r.response_type())
+            print(r.definition())
+            print(r.definition_source())
+            print(r.heading())
+            print(r.abstract_source())
+            print(r.image())
+            print(r.abstract_text())
+            print(r.abstract())
+            print(r.answer_type())
+            print(r.redirect())
+            print(r.definition_url())
+            print(r.answer())
+            print(r.results())
+            print(r.abstract_url())
+            sys.exit(1)
 
         # options
         is_json = False
