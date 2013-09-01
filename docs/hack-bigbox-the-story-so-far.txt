@@ -81,8 +81,8 @@ moment. Concentrate instead on what's happening.
    
 
 
-Easy to read?  Lets make it easier. Here is a fragment, 
-
+Easy to read?  Lets make it easier. Here is a fragment from
+neilyoung.json:
 
   {
    "Definition" : "He began his career as a folksinger in 
@@ -115,7 +115,8 @@ Easy to read?  Lets make it easier. Here is a fragment,
          "FirstURL" : "http://duckduckgo.com/c/Neil_Young",
          "Text" : "Neil Young Category"
       },
-
+      continues, on and on ....
+      ....
  
 This gives us some JSON. Hard to read by people, easier in software. Our 
 objective is to store as human readable text. Now lets do some 
@@ -137,9 +138,10 @@ only speeds things up but reduces the hit on the Duckduckgo API.
 
 There's one last detail. 
 
-I havent't written a save the extracted data so I'm sending the data to a
-new text file to read. This is called re-direction. It's the same as saveing
-a file. It wouldn't be hard to do this. I'm just saving time.
+I havent't written a save extracted data bit of code, so I'm sending the 
+data to a new text file to read. This is called re-direction. It's the 
+same as saveing a file. It wouldn't be hard to do this. I'm just saving 
+time.
 
 
 Now what do we have? 
@@ -152,7 +154,7 @@ Now what do we have?
 We can now load this data and re-use it any way we like and for bigbox this
 is good. I've controlled all this output. It's quite possible to manipulate
 the data shown here with a great degree of granularity. This is what the 
-results from ny.txt looks like:
+results from neilyoung.txt looks like:
 
     reading </media/S/code/bigbox/tools/neilyoung.json> from cache...
 
