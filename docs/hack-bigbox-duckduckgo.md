@@ -121,7 +121,7 @@ to do this. At the time I don't have this luxury.
 
 ### Conclusions
 
-I'm writing a module that queries the DUckduckgo Instant Answers API that works on both Python2X and Python3.
+I'm writing a module that queries the Duckduckgo Instant Answers API that works on both Python2X and Python3.
 It will utilise the simplier python-requests in preference to the Python3 *urllib.request* and the Python2X 
 *urllib2.request* calls. I'm aware of the restrictions Duckduckgo requires with this access and at some time
 in the future work to improve the existing python-duckduckgo module.
