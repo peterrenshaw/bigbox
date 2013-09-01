@@ -23,7 +23,7 @@
 [-] story of bigbox
 [+] twitter
 [+] bottle vs tornado
-[+] explain why not using python-duckduckgo?
+[x] explain why not using python-duckduckgo?
 [+] where are you *storing* the data?
 [+] how are you *recalling* the data?
 
