@@ -6,296 +6,126 @@
               /____/
 
 
-    name hack-bigbox-search-ui-io.md
+    name hack-bigbox-duckduckgo.md
     date 2013AUG18
     prog @peterrenshaw
     desc BIGBOX: A easy to use front end for socsim. This 
          hack, BIGBOX search allows for search within or 
-	     external to you local system.
+         external to you local system.
+
+         I want to use the Duckduckgo instant answers API to 
+         make queries. Here's my reasoning in re-writing some/all
+         of an existing bit of open source code.
 
 
 ## Abstract
 
-    A simple search form for N, where N is something to search. A search
-    could be externally for twitter or a search engine. Search could be
-    offline and be something local. 	
-	
+Why write python code for the Duckduckgo Instant Answers API, when 
+there's a perfectly good bit of existing code that can do the job?  Explain why not using the [python-duckduckgo module](https://github.com/crazedpsyc/python-duckduckgo)? [2]
 
-I've been knee-deep looking into how I need to connect the back-end to the 
-front-end. So while I'm thinking about this, I'll divert some time into 
-working out a way to handle search with bigbox.
 
+### New over old
 
-## Big picture
+I want some kind of basic search interaction on a local client tool
+I'm working and so I looked for existing code to do this. It wasn't hard, 
+the Duckduckgo instant answers API has quite a collection of code to do this.
+So I downloaded the code, played with it for a while. It works and is easy 
+enough to understand.
 
-[![](http://farm4.staticflickr.com/3263/2835866392_0ff87c073c.jpg)](http://www.flickr.com/photos/bootload/2835866392/)
+Then I pressed a little harder... can I install and use the code with Python3 
+and Python2? What about testing? Is there any test code if I want to change 
+or make some modifications? Oh.
 
-  Remember google when it first come out? 
-  
-  I do. It was during the late 90's and it was so simple. You just put 
-stuff you wanted to search for in a plain text box, hit a button and instant 
-results. It was a big step from the complicated, text orientated, pre-web 
-search engines like GOPHER. An ecosystem of search grew on the back of the
-instroduction of the web. Yahoo, Ask Jeeves, AltaVista. It was google that 
-managed to break free from the rest by using a simple box with minimal 
-controls and a list of results.
 
+* Installing
+* Python 3
+* Rewrite everything?
+* Testing
+* Request
+* Permission
+* Restrictions
+* Giving back
 
-### What happened to the simplicity of search?
 
-  The simplicity of a single control is obvious, it just works. As you add
-more and more services if you aren't careful, the screen real-estate is 
-eaten up with links, controls. Crap.  Now you can't use google without the 
-threat of being diverted from your original link. Google has done this for 
-a good reason though, there are more things to search for. That and the 
-marketing department got involved. 
+#### Installing
 
-Underneath, it's still that simple to use google. Currently the best example 
-of *old-school* search is DuckDuckGo (DDG). *DDG* also doesn't keep logs, so 
-you also get less spying, for free.
+No install script. Have to write a new install script. Do-able. Not hard.
 
 
-### Bang keywords 
+#### Python3
 
-  And so it's from DDG that I'm taking my cues for BigBox. A clean simple
-text box, a list of search results and BANGS. You can read more about Bangs 
-keywords here. Bangs is just another way to control how you search using 
-text controls. Using controls in search has the following advantages:
+When I used the existing code in python2X it works. When I used the code
+in Python3 it breaks. Bugger, why?
 
-* simplicity of controls
-* reduces valuable on-screen clutter
-* growth of controls
-    
-The idea of Bang keyword controls also has a key disadvantage:
+Here's what I found. The code utilises *urllib2*. Urllib2 is not supported in
+Python3. Well it is, but Python3 consolidates the code into urllib. So code that
+works in Python2X
 
-* introduce exta complexity to user
+    from urllib import request as Request
 
-The key idea behind bigbox is to simplify the interface but maintain the
-ability to do complex things behind the scenes. The downside is the 
-operator will have to know what they are doing and be explicit.
+becomes this code in Python3...
 
+    from urllib2 import Request
 
-### How?
+This sucks! Also the urllib code pretty rusty. Is there a replacement or better choices?
 
-The interface consists of a big text entry box and results box underneath. To
-enter information you type into the box. The results are displayed under the
-input box. There is nothing new about this.
 
-#### Input
+#### Request
 
-So how do we SPECIFY what we want to search for? How do we select WHAT service
-we want to search? How do we RESTICT or CONTROL the output? For the moment
-lets restrict our discussion to Input and while we are at it introduce a few
-key ideas.
+Why use urllib2/urllib? Is there a better, more reliable, easier to use piece of code I can use? 
+Yes. It's called [python-requests](http://docs.python-requests.org/en/latest/). It also works the 
+same way on Python2X and Python3. So I'll use this. The reason is the simplicity of the code. It's that simple. 
+However this means a dependency. One of the advantages of the *python-duckduckgo* code is it's simplicity. It's 
+all there in the code. You don't need any downloads to use it. Hats off for this.
 
-* Service
 
-* Search item
+#### Rewrite everything?
 
-* keywords
+Do I rewrite all the code or just some? At the moment I've re-written the basic query 
+building and request engine, nothing else. I still haven't written any way to extract 
+the data nor have I written a the useful *get_zci* module. I'm still working on how to 
+read the data... still digesting the structure.
 
-* logic
 
+#### Testing
 
-##### Service
+The *python-duckduckgo* module has no testing. So if I use the code I'm going to be
+writing some test code just to measure any side effects I might make modifing the code. 
+That sucks. So I'm going to be writing test code.
 
-  usage: service!
 
-  It's quite possible we may want to look for many different things. For
-example we might want to search for something on twitter and somewhere else 
-on the Open Web.  The idea of a service is simple a name for a place we want
-to search. Twitter is a service. We want to search Twitter for particular 
-people, tags or information.  
+#### Permission
 
-  What about if we want to search for something on the Open Web? The
-DuckDuckGo search engine is another service we could use. Each service
-requires some code behind it to look into the guts to extact useful 
-information. I'm not talking screen-scraping here. I'm really talking about
-talking directly to the exposed programming interfaces known as API's (or
-Application Progarmming Interfaces.)  For Search we will start with the
-following services:
+    R 18 'It's better to seek forgiveness than ask permission.' #gibbsrules #ncis S3E04
 
-* Twitter
+I'm new to the idea of hacking *"other peoples code"*. You need to get permission to make the 
+changes, explain the reasons and get things moving. For the moment I can't afford this. I need 
+to work and fast. So I'm just going to hack on my code without asking permission.
 
-* DuckDuckGo
+#### Restrictions
 
-* Local
+Duckduckgo is a commercial organisation. But it's roots are [pure hacker](https://dukgo.com/). Started by [Gabriel Weinberg](http://about.gabrielweinberg.com/)
+this search engine allows non-human access to search results, but with restrictions. Details of the 
+restrictions can be found at the [Duckduckgo, Instant Answer API](https://api.duckduckgo.com/api). [3] There are quite a few caveats and 
+I'll be sticking to the requirements and the intent to the best of my ability.  
 
-These three services are crucial to find and search for information.
 
+#### Giving back
 
-##### Search item
+One of the reasons I'm writing this quick note is to remind myself that building this code is at the 
+expense of the original code. So it's my intention to look into improving the existing code for the
+[python-duckduckgo]() code when I get the chance. Move it to Python3 and add some testing. This is important
+as the code works, is simple to understand and already exists. It's going to take a bit of time and discussion
+to do this. At the time I don't have this luxury.
 
-  A search item or key, is the text you are looking for. Nothing complex here.
 
+### Conclusions
 
-##### Keyword
+I'm writing a module that queries the DUckduckgo Instant Answers API that works on both Python2X and Python3.
+It will utilise the simplier python-requests in preference to the Python3 *urllib.request* and the Python2X 
+*urllib2.request* calls. I'm aware of the restrictions Duckduckgo requires with this access and at some time
+in the future work to improve the existing python-duckduckgo module.
 
-  The Bang keyword syntax, used in DuckDuckGo illustrates how we can use a
-simple text command followed by a search item to give the user extra control
-of WHERE they want to search with the supplied, 'search item'.
-
-
-##### Logic
-
-  usage: Foo and: Bar    (union: everything related to foo as well as bar)
-         Foo or: bar     (restriction: everything related to foo OR everything
-		                               related to bar) 
-
-  For search an example of logic is a boolean search which introduces the
-concept of AND/OR Union of results.
-
-
-### More input
-
-  So lets put all the theory into a concrete example and show how to use the
-ideas of services, search items, keywords and logic for the Input control.
-
-
-    #==================================================================#
-    #                                                                  #
-    #                                                                  #
-    #                                                                  #
-    #==================================================================#
-
-
-Example: search for George on twitter
-
-  Here's our input box. Lets outline some input using the ideas above. Lets
-search for George on twitter. The logic is something like this:
-
-    Service    Search item    Keyword    Logic
-    ------------------------------------------
-    twitter!   @geehall1      person:    ----
-
-What I would enter into the bigbox would be:
-
-    #==================================================================#
-    #                                                                  #
-    #  twitter! person:@geehall1                                       #
-    #                                                                  #
-    #==================================================================#
-
-
-   What happens now, is the line is parsed. We know the service we want to 
-search is Twitter by the service keyword, 'twitter:' and anything after this 
-is to be read to use this service. The keyword is 'person:' and the search 
-item is Georges' twitter handle, '@geehall1'. There is no logic required.
-Forget the result(s) at the moment.
-
-
-Example: search for George on the Open Web and see if we can find any URLs?
-
-  The logic would be something like this, 
-
-    Service    Search item    Keyword    Logic
-    ------------------------------------------
-    DDG!       George Hall    url:       ----
-
-  Brad enters the following into the BigBox:
-
-    #==================================================================#
-    #                                                                  #
-    #  ddg! george hall url:                                           #
-    #                                                                  #
-    #==================================================================#
-
-
-   BigBox reads the service and sees it's looking for all returns of *george
-hall* (note no explicit quotes) and returns all the url's associated with
-George. 
-
-Example: search for Peter on the Open Web and see if twitter name
-         matches OpenWeb search for Peter.
-
-    The logic would be something like this,
-
-    Service    Search item 1    Search item 2    Keyword    Logic
-	-------------------------------------------------------------
-    DDG        @bootload        peter renshaw    all:       and:
-
-  So Brad enters the following into BigBox:
-
-    #==================================================================#
-    #                                                                  #
-    #   ddg! @bootload and: peter renshaw all:                         #
-    #                                                                  #
-    #==================================================================#
-
-    
-  The result should be a match showing any relationship between the Twitter
-handle, *@bootload* and *peter renshaw*.
-
-Example: search Twitter for a hashtag.
-
-  The logic would be something like,
-
-    Service    Search item    Keyword 1    Keyword 2    Logic
-	---------------------------------------------------------
-    twitter    #TTFN          tag:         created:     ----
-
-  So Brad enters into the BigBox,
-
-    #==================================================================#
-    #                                                                  #
-    #     twitter! TTFN tag: created:                                  #
-    #                                                                  #
-    #==================================================================#
-
-
-  The results should return the hashtag, *TTFN* and the associated text and
-time it was created.
-
-
-### Output
-   
-  To find something using bigbox we have to do a bit of work. Remember the
-three ideas discussed above with Input?
-
-* service
-* key
-* restriction
-
-To search for something we need to use a service, key, a string of a term or thing
-we are looking. This will hopefully return something to look at. The most
-likely scenario will be a lot of information and most of it, not what we want to
-read.  So how do we reduce the output?
-
-We can do this using the idea of restriction.
-
-
-##### Restriction
-
-  It's reasonable to assume, that since we don't know what we are searching
-for, we want to be able to select from all available information. Restriction
-is simply a way to choose less or specific retreived information. To do this
-we have to look at two further ideas, discovery and selection.
-
-* discovery: for a given service, there are N things we can specify to look at
-* selection: we can select all OR select by name, what a search provices
-
-##### Discovery
-
-For any given service there will be a number of different things we can return
-and specify. Exactly what is service dependent.
-
-##### Selection
-
-Using discovery, we can now choose to view all or selected fields available to
-use. 
-
-
-### More output
-
-Example: search Twitter using a hashtag, return all
-
-Example: search twitter using a hashtag, return b/w before datetime
-
-Example: search twitter for all conversations by George, today
-
-Example: search ddg for a place called Melbourne
-
-Example: search ddg for images of a place called Melbourne
 
 
 
@@ -311,4 +141,18 @@ here:
 
 <http://www.network-science.de/ascii/>
 
+[2] python-duckduckgo
+
+<https://github.com/crazedpsyc/python-duckduckgo>
+
+[Last accessed: Sunday 1st September, 2013]
+
+[3] Duckduckgo, Instant Answer API
+
+<https://api.duckduckgo.com/api>
+
+[Last accessed: Sunday 1st September, 2013]
+
+
 vim: ff=unix:ts=4:sw=4:tw=78:noai:expandtab
+
