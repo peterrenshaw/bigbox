@@ -75,6 +75,7 @@ def main():
         rendered = []
         for data in ini_data:
             title = search('title', data)
+            title = title.replace('-',' ')               # remove dash from title
             description = search('description', data)
             date = search('date', data)
             filename = search('filename', data)
