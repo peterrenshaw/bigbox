@@ -15,7 +15,7 @@
 
 abstract
 
-    build a module to extract this
+    build a module to extract the following DDG structure
 
 --- START ---    
 Abstract: topic summary (can contain HTML, e.g. italics)

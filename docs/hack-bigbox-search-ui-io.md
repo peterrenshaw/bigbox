@@ -11,15 +11,15 @@
     prog @peterrenshaw
     desc BIGBOX: A easy to use front end for socsim. This 
          hack, BIGBOX search allows for search within or 
-	     external to you local system.
+         external to you local system.
 
 
 ## Abstract
 
     A simple search form for N, where N is something to search. A search
     could be externally for twitter or a search engine. Search could be
-    offline and be something local. 	
-	
+    offline and be something local.
+
 
 I've been knee-deep looking into how I need to connect the back-end to the 
 front-end. So while I'm thinking about this, I'll divert some time into 

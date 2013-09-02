@@ -7,7 +7,7 @@
 
 
     name hack-bigbox-duckduckgo.md
-    date 2013AUG18
+    date 2013SEP01
     prog @peterrenshaw
     desc BIGBOX: A easy to use front end for socsim. This 
          hack, BIGBOX search allows for search within or 
@@ -21,7 +21,8 @@
 ## Abstract
 
 Why write python code for the Duckduckgo Instant Answers API, when 
-there's a perfectly good bit of existing code that can do the job?  Explain why not using the [python-duckduckgo module](https://github.com/crazedpsyc/python-duckduckgo)? [2]
+there's a perfectly good bit of existing code that can do the job?  
+Explain why not using the [python-duckduckgo module](https://github.com/crazedpsyc/python-duckduckgo)? [2]
 
 
 ### New over old

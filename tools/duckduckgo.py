@@ -328,7 +328,8 @@ class Result:
         and write a fancy one with the data returned form 
         both related_topics and results.
         """
-        if template: tpl = template
+        if template: 
+            tpl = template
         else: 
             tpl = """<img height='$iconheight' width='$iconwidth' src='$iconurl'> $result $text <$firsturl>"""
         if rao:  # TODO test explicit ResultAbstract injected
