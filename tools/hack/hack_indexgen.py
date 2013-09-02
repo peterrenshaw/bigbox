@@ -8,7 +8,8 @@
 # desc: pass in Ini file, export templated data
 #
 # use: python hack_indexgen.py -s /media/S/code/bigbox/docs/title.ini 
-#                             -d /media/S/code/bigbox/docs/README.md
+#                              -d /media/S/code/bigbox/docs/README.md
+#                              -r rendered data shown ...
 #===
 
 
@@ -23,12 +24,23 @@ import socsim.tools
 from socsim.factory import Ini
 
 
+#---
+# search: given a key, 
+#         locate key in data, 
+#         ret value key or F 
+#
+#          key     value
+#         'title'  {'value': 'Hack:-Bigbox-Duckduckgo', 'key': 'title'}
+#---
 def search(key, data):
     if data:
         for d in data:
+            print(d)
             if key in d['key']:
                  return d['value']
     return False
+
+
 #---
 # main: cli entry point
 #---
@@ -38,6 +50,9 @@ def main():
     parser = OptionParser(usage)
     parser.add_option("-s", "--source", dest="source",
                       help="read source '.ini' file")
+    parser.add_option("-r", "--render", dest="render", \
+                      action="store_true",
+                      help="display rendered data")
     parser.add_option("-d", "--destination", dest="destination",
                       help="save destination filename path")
     parser.add_option("-v", "--version", dest="version", \
@@ -46,12 +61,15 @@ def main():
     options, args = parser.parse_args()
 
 
+    # display version info
     if options.version:
         print("%s %s %s %s" % ("hack_indexgen",
                                "0.0.1",
                                "2013",
                                "(C) Copyright Peter Renshaw"))
         sys.exit(0)
+
+    # read ini from file
     if options.source:
         print("source <%s>" % options.source)
 
@@ -89,6 +107,9 @@ def main():
             render = Template(tpl).substitute(data)
             rendered.append(render)
 
+
+        # save to file
+        view = ""
         if options.destination:
             print("destination <%s>" % options.destination)
             
@@ -96,12 +117,18 @@ def main():
             fd = ""
             for r in rendered:
                 fd = "%s%s" % (r, fd)
+            view = fd # if we want to view
 
             status = socsim.tools.save(options.destination, fd)
             if status: 
                 print("saved <%s>" % options.destination)
             else:
                 print("error: can't save to <%s>" % options.destination)
+
+        # display rendered data
+        if options.render:
+            print("converted <%s>" % options.source)
+            print(view)
         
         sys.exit(1)
 
