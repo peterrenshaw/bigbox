@@ -1,6 +1,17 @@
 #!/usr/bin/env python
 # ~*~ encoding: utf-8 ~*~
 
+#===
+# name: hack_indexgen.py
+# date: 2013SEP02
+# prog: pr
+# desc: pass in Ini file, export templated data
+#
+# use: python hack_indexgen.py -s /media/S/code/bigbox/docs/title.ini 
+#                             -d /media/S/code/bigbox/docs/README.md
+#===
+
+
 
 import sys
 import os.path
@@ -83,7 +94,7 @@ def main():
             # render out
             fd = ""
             for r in rendered:
-                fd = "%s%s" % (fd, r)
+                fd = "%s%s" % (r, fd)
 
             status = socsim.tools.save(options.destination, fd)
             if status: 
