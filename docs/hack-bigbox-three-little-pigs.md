@@ -50,17 +50,17 @@ servers in Python.
         tornado.ioloop.IOLoop.instance().start()
 
 The first little pig decided to use a really, really good webserver. It's
-called Tornado. "My REST api is going to withstand a torrent of slashdot
-hacks", said the first little pig.
+called Tornado. *"My REST api is going to withstand a torrent of slashdot
+hacks"*, said the first little pig.
 
 
 And so the pig built a nice little REST api server utilising all the 
 technical resources that **[Tornado](http://www.tornadoweb.org/en/stable/)** has built in. That's right Tornado 
 will run out of the box. And it works with Python 2.6, 2.7, 3.2, and 
-the latest, the holy grail of **Python 3.3**.  It's great thought the first 
-little pig. It's got, "non-blocking network I/O" and  "Tornado can scale 
-to tens of thousands of open connections" and best of all it, "long-lived
- connection to each user".  Just the things I need. And so the first little
+the latest, the holy grail of Python, **version 3.3**.  It's great thought the first 
+little pig. It's got, *"non-blocking network I/O"* and *"Tornado can scale 
+to tens of thousands of open connections"* and best of all it, *"long-lived
+ connection to each user"*.  Just the things I need. And so the first little
 pig sat down and hacked, hacked and hacked.
 
 
@@ -109,7 +109,7 @@ There's no chance of being slashdotted on your own server and you get almost
 as much as tools the second little pig. So the third little pig looked over the 
 second little pigs' shoulder and ported the second little pigs REST api server 
 using a simple framework called [Bottle](http://bottlepy.org). The first little
-pig snorted, the second grunted. "Bottle, wattle" they chanted. The third little
+pig snorted, the second grunted. *"Bottle, wattle"* they chanted. The third little
 pig smiled. He knew a secret and he wasn't about to let it out. So he hacked and
 hacked and hacked away.
 
@@ -137,26 +137,27 @@ her up.
 The wolf looked at the third little pig. The third little pig stared back.
 
 The third little pig then sat down, gave a demo and the wolf smiled. It wasn't 
-that flash but it worked and the complexity was less. There might be bugs and 
-the installation onto other machines hadn't been tried much. But the code worked
-and the wolf was pleased.
+that flash, but it worked, with less complexity. Some bugs might be found but these
+can be sorted along with the installation. 
+
+The demo worked and the wolf was pleased.
 
 
 ### Resources
 
-[0] Tornado
+[0] **Tornado**
 
 <http://www.tornadoweb.org/en/stable/>
 
 [Last accessed: Wednesday 4th September, 2013]
 
-[1] Flask
+[1] **Flask**
 
 <http://flask.pocoo.org/>
 
 [Last accessed: Wednesday 4th September, 2013]
 
-[2] Miguel Grinberg, "Designing a RESTful API with Python and Flask"
+[2] **Miguel Grinberg**, *"Designing a RESTful API with Python and Flask"*
 
 <http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask>
 

@@ -9,7 +9,7 @@
 
 
   name README.txt
-  date 2013AUàG18
+  date 2013AUG18
   prog @peterrenshaw
   desc BIGBOX: A easy to use front end for socsim.
 
@@ -38,7 +38,10 @@ Why?
 
 
 * 2013SEP04
-- working towards added 
+- working towards image added
++ start conversation of what to do with data (onscreen)
++ where to put it
++ what is needed at what time
 - REST api server work
 ...
 
