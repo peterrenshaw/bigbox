@@ -118,16 +118,16 @@ hacked and hacked away.
 
 
 The along comes along the big bad wolf.  The first little pig looked at the wolf
-and scoffed. My REST api is capable of supporting thousands of connections. It 
-works on most version of Python and it's really really good. I'm almost ready.
+and scoffed. *"My REST api is capable of supporting thousands of connections. It 
+works on most version of Python and it's really really good. I'm almost ready."*
 
 The wolf looked at the first pig, shook his head and said, "give it to me now,
 and if you don't I'll eat you up." and promptly ate the first little pig.
 
 The wolf looked at the second little pig, a trotter still in his mouth. The second 
-little pig smiled. It's ready. It's ready right now but I've got a problem install it.
+little pig smiled, *"It's ready. It's ready right now but I've got a problem install it.
 There's all these dependencies you see. I can't put it on other machines without
-finding a way to add all these other modules. Those modules have other modules.
+finding a way to add all these other modules. Those modules have other modules."*
 
 Oh, the dependencies.  The wolf looked at the second little pig and said, "give 
 me the code and if you don't I'll eat you up."  Before the second little pig could
