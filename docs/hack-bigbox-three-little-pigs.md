@@ -83,7 +83,7 @@ pig sat down and hacked, hacked and hacked.
 The second little pig looked over the first little pigs shoulder and 
 grunted, I'll can do much better than this. The second little pig looked 
 for a much simplier way to build the REST api server. The second little pig
-decided to use Flask. Flask is well suited for fast development, runs in 
+decided to use **[Flask](http://flask.pocoo.org/)**. Flask is well suited for fast development, runs in 
 Python 2 and Python 3. I'm set. So the second little pig read a great 
 tutorial by [Miguel Grinberg](http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask) [2] and hacked and hacked and hacked away.
 
@@ -108,7 +108,10 @@ problem and realised that the fastest route might be to use a simple approach.
 There's no chance of being slashdotted on your own server and you get almost
 as much as tools the second little pig. So the third little pig looked over the 
 second little pigs' shoulder and ported the second little pigs REST api server 
-using a simplier framework.
+using a simple framework called [Bottle](http://bottlepy.org). The first little
+pig snorted, the second grunted. "Bottle, wattle" they chanted. The third little
+pig smiled. He knew a secret and he wasn't about to let it out. So he hacked and
+hacked and hacked away.
 
 
 ### The big bad wolf
