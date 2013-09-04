@@ -11,7 +11,7 @@
     prog @peterrenshaw
     desc BIGBOX: A easy to use front end for socsim. This 
          hack, BIGBOX search allows for search within or 
-         external to you local system.
+         external to your local system.
 
 
 # Three little pigs
