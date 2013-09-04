@@ -14,21 +14,33 @@
   desc BIGBOX: A easy to use front end for socsim.
 
 
-2013SEP02
+2013SEP05
+* integration
+- build demo app with server + search
+* front-end time
+* testing
+[-] server
 [-] license to tools code
 [-] test parameters against spec
 [-] duckduckgo.Duckduckgo.parameter 
 [-] default: just select -d & most settings are selected, instead
     of having to re-do confusing options
 [-] more testing
-[-] story of bigbox
-[+] twitter
-[+] bottle vs tornado
 [x] explain why not using python-duckduckgo?
 [+] where are you *storing* the data?
 [+] how are you *recalling* the data?
 * bb server
 [-] planning for server
+
+
+2013SEP04
+[X] build prototype REST api server in python
+ -  bottle, flask
+ -  hack at tornado
+[X] story of bigbox & server
+ -  3 little pigs
+[+] twitter
+[X] bottle vs tornado
 
 
 2013SEP01
