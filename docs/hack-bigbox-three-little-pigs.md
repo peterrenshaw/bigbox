@@ -134,7 +134,7 @@ me the code and if you don't I'll eat you up."*  Before the second little pig co
 say *"but the code is stateless, cacheable, layered and uniform"*, the wolf gobbled 
 her up.
 
-The wolf looked at the third little pig. The third little pig staired back.
+The wolf looked at the third little pig. The third little pig stared back.
 
 The third little pig then sat down, gave a demo and the wolf smiled. It wasn't 
 that flash but it worked and the complexity was less. There might be bugs and 
