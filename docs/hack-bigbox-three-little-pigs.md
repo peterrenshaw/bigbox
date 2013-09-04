@@ -25,10 +25,6 @@
 Once there were three little pigs. They each needed to build REST api 
 servers in Python.
 
-The first little pig decided to use a really, really good webserver. It's
-called Tornado. "My REST api is going to withstand a torrent of slashdot
-hacks", said the first little pig.
-
 
 ### First little pig
 
@@ -53,6 +49,11 @@ hacks", said the first little pig.
         application.listen(8888)
         tornado.ioloop.IOLoop.instance().start()
 
+The first little pig decided to use a really, really good webserver. It's
+called Tornado. "My REST api is going to withstand a torrent of slashdot
+hacks", said the first little pig.
+
+
 And so the pig built a nice little REST api server utilising all the 
 technical resources that **[Tornado](http://www.tornadoweb.org/en/stable/)** has built in. That's right Tornado 
 will run out of the box. And it works with Python 2.6, 2.7, 3.2, and 
@@ -63,7 +64,7 @@ to tens of thousands of open connections" and best of all it, "long-lived
 pig sat down and hacked, hacked and hacked.
 
 
-*** Second little pig
+### Second little pig
 
     # "Flask is a microframework for Python 
     # based on Werkzeug, Jinja 2 & good 
