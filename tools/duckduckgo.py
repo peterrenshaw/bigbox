@@ -331,7 +331,7 @@ class Result:
         if template: 
             tpl = template
         else: 
-            tpl = """<img height='$iconheight' width='$iconwidth' src='$iconurl'> $result $text <$firsturl>"""
+            tpl = """<img height='$iconheight' width='$iconwidth' src='$iconurl'>\n$result $text <$firsturl>"""
         if rao:  # TODO test explicit ResultAbstract injected
             stubs = []
             for topic in results:

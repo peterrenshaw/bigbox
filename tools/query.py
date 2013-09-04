@@ -75,6 +75,9 @@ def main():
     parser.add_option("-p", "--pretty", dest="pretty", \
                       action="store_true", 
                       help="if returned json then we can prettify json")
+    parser.add_option("-n", "--no_html", dest="no_html", \
+                      action="store_true",
+                      help="remove any html")
     parser.add_option("-c", "--callback", dest="callback", \
                       action="store_true", 
                       help="if returned json, can callback")
@@ -141,10 +144,9 @@ def main():
             # display related topics using ResultAbstract object
             print("Related Topics")
             ra = duckduckgo.ResultAbstract()
-            r.results(ra, "$result $text <$firsturl>")
+            r.results(ra, "$text <$first_url>")
             print("")
-            r.related_topics(ra, "$result $text <$firsturl>")
-
+            r.related_topics(ra, "$text <$first_url>")
 
             sys.exit(1)
         else:
@@ -172,6 +174,8 @@ def main():
                 is_pretty = True
             if options.callback:
                 is_callback = True
+        if options.no_html:
+            no_html = True
         if options.no_redirect:
             no_redirect = True
         if options.skip_disambig:
@@ -222,7 +226,6 @@ def main():
                 if r.definition(): print(r.definition())
                 if r.abstract(): print(r.abstract())
 
-
                 print("Results Abstract")
                 ra = duckduckgo.ResultAbstract()
                 for topic in r.related_topics():
@@ -233,9 +236,9 @@ def main():
 
                 print("Related Topics")
                 ra = duckduckgo.ResultAbstract()
-                r.results(ra, "$result $text <$firsturl>")
+                r.results(ra, "$text <$firsturl>")
                 print("")
-                r.related_topics(ra, "$result $text <$firsturl>")
+                r.related_topics(ra, "$text <$firsturl>")
 
                 r = None
         else:

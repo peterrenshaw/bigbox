@@ -1,3 +1,7 @@
+### [Hack: The three little pigs](hack-bigbox-three-little-pigs.md)
+**2013SEP04**
+*Once there were three little pigs. They each needed to build REST api servers in Python, quickly.*
+
 ### [Hack: The story so far](hack-bigbox-the-story-so-far.txt)
 **2013SEP01**
 *The story so far with duckduckgo search. It's good*
