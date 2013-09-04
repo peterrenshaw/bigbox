@@ -129,9 +129,9 @@ little pig smiled, *"It's ready. It's ready right now but I've got a problem ins
 There's all these dependencies you see. I can't put it on other machines without
 finding a way to add all these other modules. Those modules have other modules."*
 
-Oh, the dependencies.  The wolf looked at the second little pig and said, "give 
-me the code and if you don't I'll eat you up."  Before the second little pig could
-say "but the code is stateless, cacheable, layered and uniform", the wolf gobbled 
+Oh, the dependencies.  The wolf looked at the second little pig and said, *"give 
+me the code and if you don't I'll eat you up."*  Before the second little pig could
+say *"but the code is stateless, cacheable, layered and uniform"*, the wolf gobbled 
 her up.
 
 The wolf looked at the third little pig. The third little pig staired back.
