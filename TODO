@@ -14,10 +14,9 @@
   desc BIGBOX: A easy to use front end for socsim.
 
 
-2013SEP05
+2013SEP06
 * integration
 - build demo app with server + search
-* front-end time
 * testing
 [-] server
 [-] license to tools code
@@ -32,6 +31,12 @@
 * bb server
 [-] planning for server
 
+
+2013SEP05
+[x] db research
+[x] front-end time
+[x] server work
+[x] questions on workflow
 
 2013SEP04
 [X] build prototype REST api server in python
