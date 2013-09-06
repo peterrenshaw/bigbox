@@ -86,9 +86,9 @@ ORDER BY
 --- #--- 
 --- # entry by id
 --- #---
-SELECT line,
-       length,
-       datetime
+SELECT Entry.line,
+       Entry.length,
+       Entry.datetime
 FROM 
        Entry
 WHERE
