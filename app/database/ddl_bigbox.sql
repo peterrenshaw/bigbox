@@ -18,6 +18,7 @@ CREATE TABLE Person (
     nick_name TEXT,              -- used if no twitter?
     twitter TEXT,                -- @address
     email_one TEXT,              -- most often used
+    www, TEXT,                   -- web address
     email_two TEXT,              -- backup
     phone_mobile TEXT,           -- fist contact
     phone_land TEXT,             -- backup

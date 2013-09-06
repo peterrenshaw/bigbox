@@ -14,9 +14,23 @@
 -- #---
 -- # Person
 -- #---
-INSERT INTO Person (first_name, last_name, nick_name, 
-                    twitter, email_one, email_two, 
-                    phone_mobile, phone_land)
-VALUES('Peter','Renshaw', 'goon', 'peterrenshaw',
-       'goonmail@netspace.net.au', 'peterrenshaw@selomlogical.com',
-       '','');
+INSERT INTO Person (first_name, 
+                    last_name, 
+                    nick_name, 
+                    bio,
+                    twitter, 
+                    www, 
+                    email_one, 
+                    email_two, 
+                    phone_mobile, 
+                    phone_land)
+VALUES('Peter',
+       'Renshaw', 
+       'goon', 
+       '☮ ♥ ♬ ⌨ ⾛', 
+       'peterrenshaw',
+       'goonmail@netspace.net.au',
+       '',
+       'selomlogical.com',
+       '',
+       '');

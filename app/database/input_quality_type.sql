@@ -22,6 +22,6 @@ VALUES (2, 'Partial Verified: one trusted Source');
 INSERT INTO Quality_type (count, description)
 VALUES (3, 'UN Verified Source');
 INSERT INTO Quality_type (count, description)
-VALUES (4, 'UN Verified Rumour');
+VALUES (4, 'Rumour');
 INSERT INTO Quality_type (count, description)
 VALUES (5, 'UN Verified Rumour');

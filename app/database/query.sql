@@ -8,7 +8,7 @@
 
 -- #---
 -- # USAGE: IN:  sqlite3 bigbox.db < ddl-bigbox.sql
--- #        OUT: sqlite3 -header -column -echo ddl-bigbox.db < query.sql
+-- #        OUT: sqlite3 -header -column -echo bigbox.db < query.sql > query.txt
 -- #---
 
 -- #---
@@ -22,6 +22,7 @@ SELECT person.id,
        person.first_name, 
        person.nick_name, 
        person.last_name, 
+       person.bio,
        person.twitter, 
        person.email_one
 FROM   person;
