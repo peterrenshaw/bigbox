@@ -17,10 +17,11 @@ CREATE TABLE Person (
     last_name TEXT,
     nick_name TEXT,              -- used if no twitter?
     twitter TEXT,                -- @address
-    email_one,                   -- most often used
-    email_two,                   -- backup
-    phone_mobile,                -- fist contact
-    phone_land                   -- backup
+    email_one TEXT,              -- most often used
+    email_two TEXT,              -- backup
+    phone_mobile TEXT,           -- fist contact
+    phone_land TEXT,             -- backup
+    bio TEXT                     -- biography
 );
 
 
