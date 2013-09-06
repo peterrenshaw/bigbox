@@ -18,24 +18,24 @@
 -- #---
 -- # PERSON
 -- #--- 
-SELECT id, 
-       first_name, 
-       nick_name, 
-       last_name, 
-       twitter, 
-       email_one
+SELECT person.id, 
+       person.first_name, 
+       person.nick_name, 
+       person.last_name, 
+       person.twitter, 
+       person.email_one
 FROM   person;
 
 -- #---
 -- # STATUS_TYPE
 -- #---
-SELECT count,
-       description 
+SELECT status_type.count,
+       status_type.description 
 FROM   status_type;
 
 
-SELECT count, 
-       description 
+SELECT quality_type.count, 
+       quality_type.description 
 FROM   quality_type;
 
 
@@ -47,34 +47,41 @@ FROM   quality_type;
 -- #---
 -- # ENTRY
 -- #---
-SELECT id, 
-       line, 
-       length, 
-       datetime
-FROM   entry;
+SELECT 
+       entry.id, 
+       entry.line, 
+       entry.length, 
+       entry.datetime
+FROM   
+       entry
+ORDER BY 
+       entry.datetime DESC;
 
 
 -- #---
 -- # ENTRY_STATUS
 -- #---
-SELECT *
+SELECT status_type.*
 FROM   entry,
        entry_status,
        status_type
 WHERE
        entry.id = entry_status.entry_id AND
-       status_type.id = entry_status.status_id;
+       status_type.id = entry_status.status_id
+ORDER BY entry.id, status_type.id;
 
 
 --- #---
 --- # all entries 
 --- #---
 SELECT 
-       line,
-       length,
-       datetime
+       Entry.line,
+       Entry.length,
+       Entry.datetime
 FROM 
-       Entry;
+       Entry
+ORDER BY 
+       Entry.datetime DESC;
 
 --- #--- 
 --- # entry by id
@@ -85,20 +92,20 @@ SELECT line,
 FROM 
        Entry
 WHERE
-       Entry.id > 1
+       Entry.id > 0;  -- id here
 
 
 --- #--- 
 --- # entry by datetime
 --- #---
 SELECT 
-       line,
-       length,
-       datetime
+       Entry.line,
+       Entry.length,
+       Entry.datetime
 FROM 
        Entry
---WHERE
---       Entry.datetime > (some datetime in some format)
+WHERE
+       Entry.datetime = 0;
 
 --- #--- 
 --- # entry by status
