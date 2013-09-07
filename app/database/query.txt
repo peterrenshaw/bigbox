@@ -6,44 +6,25 @@ SELECT person.id,
        person.twitter, 
        person.email_one
 FROM   person;
-
-id          first_name  nick_name   last_name   bio                  twitter       email_one 
-----------  ----------  ----------  ----------  -------------------  ------------  ----------
-1           Peter       goon        Renshaw     ☮ ♥ ♬ ⌨ ⾛  peterrenshaw            
-
 SELECT status_type.count,
        status_type.description 
 FROM   status_type;
-
-count       description     
-----------  ----------------
-1           Immediate Action
-2           Action          
-3           Review: risk ide
-4           Monitor: potenti
-5           No Action       
-
 SELECT quality_type.count, 
        quality_type.description 
 FROM   quality_type;
-
-count       description                             
-----------  ----------------------------------------
-1           Fully Verified: multiple trusted Sources
-2           Partial Verified: one trusted Source    
-3           UN Verified Source                      
-4           Rumour                                  
-5           UN Verified Rumour                      
-
 SELECT 
        entry.id, 
        entry.line, 
        entry.length, 
-       entry.datetime
+       entry.date_time
 FROM   
        entry
 ORDER BY 
-       entry.datetime DESC;
+       entry.date_time ASC;
+id          line                                                          length      date_time 
+----------  ------------------------------------------------------------  ----------  ----------
+2           hey does this thing work @tyabblemsons http://duckduckgo.com  60          1378516526
+4           what about this @geehall1 http://cfa.com.au                   43          1378516716
 SELECT status_type.*
 FROM   entry,
        entry_status,
@@ -55,24 +36,42 @@ ORDER BY entry.id, status_type.id;
 SELECT 
        Entry.line,
        Entry.length,
-       Entry.datetime
+       Entry.date_time
 FROM 
        Entry
 ORDER BY 
-       Entry.datetime DESC;
+       Entry.date_time DESC;
+line                                         length      date_time 
+-------------------------------------------  ----------  ----------
+what about this @geehall1 http://cfa.com.au  43          1378516716
+hey does this thing work @tyabblemsons http  60          1378516526
 SELECT Entry.line,
        Entry.length,
-       Entry.datetime
+       Entry.date_time
 FROM 
        Entry
 WHERE
        Entry.id > 0;
-
+line                                                          length      date_time 
+------------------------------------------------------------  ----------  ----------
+hey does this thing work @tyabblemsons http://duckduckgo.com  60          1378516526
+what about this @geehall1 http://cfa.com.au                   43          1378516716
 SELECT 
        Entry.line,
        Entry.length,
-       Entry.datetime
+       Entry.date_time
 FROM 
        Entry
 WHERE
-       Entry.datetime = 0;
+       Entry.length > 1;
+line                                                          length      date_time 
+------------------------------------------------------------  ----------  ----------
+hey does this thing work @tyabblemsons http://duckduckgo.com  60          1378516526
+what about this @geehall1 http://cfa.com.au                   43          1378516716
+SELECT entry.line,
+       entry.length,
+       entry.date_time,
+       status_type.count,
+       status_type.description
+FROM   
+       entry, status_type, entry_status;

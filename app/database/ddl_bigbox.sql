@@ -32,8 +32,9 @@ CREATE TABLE Person (
 CREATE TABLE Entry (
     id  INTEGER PRIMARY KEY,
     line TEXT,                   -- entry line into BB
-    datetime DATETIME,           -- when
-    length INEGER                -- precalc length
+    date_time DATETIME,          -- when
+    length INTEGER                -- precalc length
+    
 );
 
 -- #---

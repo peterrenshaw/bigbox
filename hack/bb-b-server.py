@@ -121,7 +121,7 @@ def new_search():
 #  curl -i -H "Content-Type: application/json" -X PUT -d '{"result":"is a great place"}
 #                                       http://localhost:8081/bb/api/v0.1/search/2
 #---
-@app.route('/bb/api/v0.1/search/<sid:int>', method = 'PUT')
+@app.route('/bb/api/v0.1/search/<sid:int>', method = 'POST')
 def update_search(sid):
     query = search(sid, 'id', data) # find data fragment by id
     if query: # really basic validity

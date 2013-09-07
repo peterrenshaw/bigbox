@@ -7,7 +7,7 @@
 -- #===
 
 -- #---
--- # USAGE: IN:  sqlite3 bigbox.db < ddl-bigbox.sql
+-- # USAGE: IN:  sqlite3 bigbox.db < ddl_bigbox.sql
 -- #        OUT: sqlite3 -header -column -echo bigbox.db < query.sql > query.txt
 -- #---
 
@@ -52,11 +52,11 @@ SELECT
        entry.id, 
        entry.line, 
        entry.length, 
-       entry.datetime
+       entry.date_time
 FROM   
        entry
 ORDER BY 
-       entry.datetime DESC;
+       entry.date_time ASC;
 
 
 -- #---
@@ -78,18 +78,18 @@ ORDER BY entry.id, status_type.id;
 SELECT 
        Entry.line,
        Entry.length,
-       Entry.datetime
+       Entry.date_time
 FROM 
        Entry
 ORDER BY 
-       Entry.datetime DESC;
+       Entry.date_time DESC;
 
 --- #--- 
 --- # entry by id
 --- #---
 SELECT Entry.line,
        Entry.length,
-       Entry.datetime
+       Entry.date_time
 FROM 
        Entry
 WHERE
@@ -97,55 +97,52 @@ WHERE
 
 
 --- #--- 
---- # entry by datetime
+--- # entry by date_time
 --- #---
 SELECT 
        Entry.line,
        Entry.length,
-       Entry.datetime
+       Entry.date_time
 FROM 
        Entry
 WHERE
-       Entry.datetime = 0;
+       Entry.length > 1;
 
 --- #--- 
 --- # entry by status
 --- #--- 
-SELECT 
-       entry.line, 
+SELECT entry.line,
        entry.length,
-       entry.datetime
+       entry.date_time,
        status_type.count,
        status_type.description
 FROM   
-       entry, status_type, entry_status
-WHERE  
-       entry.id = entry_status.entry_id AND
-       status_type.id = entry_status.status_id
+       entry, status_type, entry_status;
+--WHERE  
+--       entry.id = entry_status.entry_id AND
+--       status_type.id = entry_status.status_id;
 --     AND status_type =  (id)
 
 --- #--- 
 --- # entry by status
 --- #--- 
-SELECT 
-       entry.line, 
-       entry.length,
-       entry.datetime
-       status_type.count,
-       status_type.description
-FROM   
-       entry, status_type, entry_status
-WHERE  
-       entry.id = entry_status.entry_id AND
-       status_type.id = entry_status.status_id
+
+--SELECT entry.line, 
+--       entry.length,
+--       entry.date_time
+--       status_type.count,
+--       status_type.description
+--FROM   
+--       entry, status_type, entry_status
+--WHERE  
+--       entry.id = entry_status.entry_id AND
+--       status_type.id = entry_status.status_id;
 --     AND status_type.id =  (id)
---     AND entry.datetime > (some datetime)
+--     AND entry.date_time > (some date_time)
 
 -- # 
 -- # INSERT
 -- #
-
-
 -- # 
 -- # UPDATE
 -- #
