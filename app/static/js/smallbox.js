@@ -2,7 +2,7 @@
   blatent rippoff, source ~ http://angularjs.org/#todo-js 
 */
 angular.module('bigbox', ['ui.bootstrap']);
-function TodoCtrl($scope) {
+function smallboxCtrl($scope) {
     $scope.commands = ['!ddg', '!duckduckgo', '!twit', '!twitter', ':clr', ':h', 
                        ':help', ':img', ':loc', ':local', ':per', ':person', ':q', 
                        ':query', ':sav', ':save', ':url', ':w', ':words'];
@@ -32,4 +32,5 @@ function TodoCtrl($scope) {
             if (!todo.done) $scope.todos.push(todo);
         });
     };
+
 }
