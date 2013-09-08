@@ -3,7 +3,7 @@
 */
 angular.module('bigbox', ['ui.bootstrap']);
 function TodoCtrl($scope) {
-    $scope.commands = ['!ddg', '!duckduckgo', '!twit', '!twitter', ':clr', ':h', 
+    $scope.commands = ['!ddg', '!duckduckgo', '!twit', '!twitter', ':clr', ':clear',':h',
                        ':help', ':img', ':loc', ':local', ':per', ':person', ':q', 
                        ':query', ':sav', ':save', ':url', ':w', ':words'];
     $scope.todos = [
