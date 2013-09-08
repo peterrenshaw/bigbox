@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" ng-app="bigbox"
+<head>
+    <title>Hack: bigbox</title>
+    <link rel="stylesheet" href="css/todo.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="js/todo.js"></script>
+</head>
+<body>
+<!-- -->
+   <div class="span12">
+         <div class="span4"></div>
+         <div class="span8">
+ 
+         <div class='container'>
+                <div class="pull-center">
+                <h1 class="active"><a href="#">bigbox</a></h1>
+
+    <div class='container-fluid' ng-controller="TodoCtrl"> 
+    <form ng-submit="addTodo()">
+          <pre>Model: {{selected| json}}</pre>
+          <input type="text"
+                 ng-model="todoText" 
+                 typeahead="command for command in commands | filter:$viewValue | limitTo:20"
+                 id="new_message"
+                 maxlength="200" 
+                 placeholder=":help enter command here"
+                 accesskey="c" 
+                 tabindex="1"
+                 autofocus></input>
+          <input class="btn-primary" type="submit" value="enter &#8626;">
+    </form>
+
+
+    <span>{{remaining()}} of {{todos.length}} remaining</span>
+    [ <a href="" ng-click="archive()">archive</a> ]
+    <ul class="unstyled">
+        <li ng-repeat="todo in todos">
+              <input type="checkbox" ng-model="todo.done">
+              <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+    </ul>    
+
+           <div class="footer">
+           <p>Bigbox &copy; 2013</p>
+           </div>
+
+    </div>
+                </div>
+           </div>
+           </div>
+           </div>
+           </div>
+        </div>
+      <hr>
+<!-- -->
+</body>
+</html>
+

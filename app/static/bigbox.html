@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>⌨bigbox</title>
+    <!-- responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- end responsive -->
+    <!-- meta -->
+    <meta name="description" content="bigbox">
+    <meta name="author" content="@peterrenshaw">
+    <!-- end meta -->
+    <!-- bootstrap -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+    <!--- end bootstrap -->
+</head>
+
+<body>
+    <div class="row">
+    <div class="row-fluid">
+        <div class="span4"></div>
+        <div class="span2">
+            <h1 class="text-left">⌨bigbox</h1>
+       </div>
+       <div class="span4"></div>
+    </div>
+    <div class="span4"></div>
+    <!-- main controls -->
+    <div class="span4">
+            <!-- main entry controls -->
+            <div class="controls-controls-row">
+                 <textarea class="span4 input-xxlarge" id="focusedInput" accesskey="b" tabindex="1" rows="10" placeholder="{{selected| json}}" disabled></textarea>
+                 <form class="form-search">
+                 <div class="input-append">
+                   <input class="span3 search-query" id="focusedInput" accesskey="c" tabindex="2" type="text" placeholder="" value="" autofocus>
+                   <button type="submit btn-small btn-primary" class="btn">enter &#8626;</button>
+                 </div>
+                 </form>
+            </div>
+            <!-- end main entry controls -->
+            <hr/>
+            <div>
+                <!-- main report controls -->
+                <span><h4 class="text-left"><i class="icon-list icon-black"></i> History</h4></span>
+                <table class="table table-striped table-condensed table-hover">
+                    <caption class="text-left">commands you have entered appear here</caption>
+                    <tr>
+                        <th>#</th>
+                        <th>line</th>
+                        <th>count</th>
+                    </tr>
+                    <tr class="">
+                        <td>blank</td>
+                        <td>blank</td>
+                        <td>blank</td>
+                    </tr>
+                </table>
+                <!-- end main report controls --> 
+            </div>
+            </br>
+    </div>
+    <div class="span4"></div>
+    <div class="span12">
+    <div class="span12">
+        <div class="span4"></div>
+            <div class="span3">
+                <a href="https://github.com/peterrenshaw/bigbox/blob/master/ABOUT"><i class="icon-user icon-black"></i> About</a>
+                <a href="http://twitter.com/peterrenshaw"><i class="icon-envelope icon-black"></i> Contact</a>
+                <a href="http://github.com/peterrenshaw/bigbox"><i class="icon-ok icon-black"></i> Hack</a>
+                </br>
+            </div>
+            <div class="span6"></div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
