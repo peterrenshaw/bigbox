@@ -33,8 +33,8 @@ CREATE TABLE Entry (
     id  INTEGER PRIMARY KEY,
     line TEXT,                   -- entry line into BB
     date_time DATETIME,          -- when
-    length INTEGER                -- precalc length
-    
+    length INTEGER,              -- precalc length
+    flagged INTEGER             -- flag to show or not show
 );
 
 -- #---

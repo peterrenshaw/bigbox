@@ -16,15 +16,19 @@ SELECT
        entry.id, 
        entry.line, 
        entry.length, 
-       entry.date_time
+       entry.date_time,
+       entry.flagged
 FROM   
        entry
 ORDER BY 
        entry.date_time ASC;
-id          line                                                          length      date_time 
-----------  ------------------------------------------------------------  ----------  ----------
-2           hey does this thing work @tyabblemsons http://duckduckgo.com  60          1378516526
-4           what about this @geehall1 http://cfa.com.au                   43          1378516716
+id          line                                                                                                             length      date_time   flagged   
+----------  ---------------------------------------------------------------------------------------------                    ----------  ----------  ----------
+1           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759}  105         1378523092  1         
+2           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759}  105         1378523288  1         
+3           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378523502  1         
+4           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378524046  1         
+5           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378525586  0         
 SELECT status_type.*
 FROM   entry,
        entry_status,
@@ -34,40 +38,56 @@ WHERE
        status_type.id = entry_status.status_id
 ORDER BY entry.id, status_type.id;
 SELECT 
+       Entry.id,
        Entry.line,
        Entry.length,
-       Entry.date_time
+       Entry.date_time,
+       Entry.flagged
 FROM 
        Entry
 ORDER BY 
        Entry.date_time DESC;
-line                                         length      date_time 
--------------------------------------------  ----------  ----------
-what about this @geehall1 http://cfa.com.au  43          1378516716
-hey does this thing work @tyabblemsons http  60          1378516526
-SELECT Entry.line,
+id          line                                                                                                                         length      date_time   flagged   
+----------  ---------------------------------------------------------------------------------------------                                ----------  ----------  ----------
+5           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,'flagged':0}  117         1378525586  0         
+4           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,'flagged':0}  117         1378524046  1         
+3           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,'flagged':0}  117         1378523502  1         
+2           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759}              105         1378523288  1         
+1           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759}              105         1378523092  1         
+SELECT 
+       Entry.id, 
+       Entry.line,
        Entry.length,
-       Entry.date_time
+       Entry.date_time,
+       Entry.flagged
 FROM 
        Entry
 WHERE
        Entry.id > 0;
-line                                                          length      date_time 
-------------------------------------------------------------  ----------  ----------
-hey does this thing work @tyabblemsons http://duckduckgo.com  60          1378516526
-what about this @geehall1 http://cfa.com.au                   43          1378516716
+id          line                                                                                                             length      date_time   flagged   
+----------  ---------------------------------------------------------------------------------------------                    ----------  ----------  ----------
+1           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759}  105         1378523092  1         
+2           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759}  105         1378523288  1         
+3           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378523502  1         
+4           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378524046  1         
+5           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378525586  0         
 SELECT 
+       Entry.id,
        Entry.line,
        Entry.length,
-       Entry.date_time
+       Entry.date_time,
+       Entry.flagged
 FROM 
        Entry
 WHERE
        Entry.length > 1;
-line                                                          length      date_time 
-------------------------------------------------------------  ----------  ----------
-hey does this thing work @tyabblemsons http://duckduckgo.com  60          1378516526
-what about this @geehall1 http://cfa.com.au                   43          1378516716
+id          line                                                                                                             length      date_time   flagged   
+----------  ---------------------------------------------------------------------------------------------                    ----------  ----------  ----------
+1           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759}  105         1378523092  1         
+2           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759}  105         1378523288  1         
+3           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378523502  1         
+4           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378524046  1         
+5           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378525586  0         
 SELECT entry.line,
        entry.length,
        entry.date_time,

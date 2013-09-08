@@ -52,7 +52,8 @@ SELECT
        entry.id, 
        entry.line, 
        entry.length, 
-       entry.date_time
+       entry.date_time,
+       entry.flagged
 FROM   
        entry
 ORDER BY 
@@ -76,9 +77,11 @@ ORDER BY entry.id, status_type.id;
 --- # all entries 
 --- #---
 SELECT 
+       Entry.id,
        Entry.line,
        Entry.length,
-       Entry.date_time
+       Entry.date_time,
+       Entry.flagged
 FROM 
        Entry
 ORDER BY 
@@ -87,9 +90,12 @@ ORDER BY
 --- #--- 
 --- # entry by id
 --- #---
-SELECT Entry.line,
+SELECT 
+       Entry.id, 
+       Entry.line,
        Entry.length,
-       Entry.date_time
+       Entry.date_time,
+       Entry.flagged
 FROM 
        Entry
 WHERE
@@ -100,9 +106,11 @@ WHERE
 --- # entry by date_time
 --- #---
 SELECT 
+       Entry.id,
        Entry.line,
        Entry.length,
-       Entry.date_time
+       Entry.date_time,
+       Entry.flagged
 FROM 
        Entry
 WHERE
