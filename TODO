@@ -14,7 +14,10 @@
   desc BIGBOX: A easy to use front end for socsim.
 
 
-2013SEP06
+2013SEP08
+* bb server
+[-] getting api server & static server to work
+[-] parser
 * integration
 - build demo app with server + search
 * testing
@@ -25,6 +28,14 @@
 [-] default: just select -d & most settings are selected, instead
     of having to re-do confusing options
 [-] more testing
+
+2013SEP07
+* bb server
+[X] planning for server
+[x] tables
+[x] workflow
+
+2013SEP06
 [x] explain why not using python-duckduckgo?
 [+] where are you *storing* the data?
 [+] how are you *recalling* the data?
