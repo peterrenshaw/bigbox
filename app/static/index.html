@@ -43,12 +43,12 @@
                            id="focusedInput"
                            ng-model="bufferText"
                            accesskey="b" 
-                           tabindex="2" 
+                           tabindex="3" 
                            rows="10" 
                            placeholder="buffer" 
                            >{{entry.line}}</textarea>
                      <div class="input-append">
-                          <input class="span3 search-query" 
+                         <input class="span3 search-query" 
                               id="focusedInput"
                               ng-model="entryText"
                               typeahead="command for command in commands | filter:$viewValue | limitTo:20"
@@ -58,7 +58,7 @@
                               placeholder="select command here"
                               value="" 
                               autofocus>
-                          <button type="submit btn-small btn-primary" class="btn">enter &#8626;</button>
+                         <button type="submit btn-small btn-primary" class="btn" tabindex="2"><b>enter &#8626;</b></button>
                      </div>
                  </form>
             </div>
@@ -66,12 +66,11 @@
             <hr/>
             <div>
                 <!-- main report controls -->
-                <span>
-                    <h4 class="text-left"><i class="icon-list icon-black"></i> History</h4>
-                    <p class="text-left">Left ({{remaining()}}/{{entries.length}})<button class="close" ng-click="remove()">X</button></p>
-                </span>
                 <table class="table table-striped table-condensed table-hover">
-                    <caption class="text-left">Commands you have entered</caption>
+                    <caption class="text-left">
+                        <i class="icon-list icon-black"></i> <button class="close btn btn-link" ng-click="remove()">X</button> <b>History</b> 
+                         ({{remaining()}}/{{entries.length}})
+                    </caption>
                     <tr>
                         <th>len</th>
                         <th>date</th>
