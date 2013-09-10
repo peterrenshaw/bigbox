@@ -1,97 +1,65 @@
-SELECT person.id, 
-       person.first_name, 
-       person.nick_name, 
-       person.last_name, 
-       person.bio,
-       person.twitter, 
-       person.email_one
-FROM   person;
-SELECT status_type.count,
-       status_type.description 
-FROM   status_type;
-SELECT quality_type.count, 
-       quality_type.description 
-FROM   quality_type;
-SELECT 
-       entry.id, 
-       entry.line, 
-       entry.length, 
-       entry.date_time,
-       entry.flagged
-FROM   
-       entry
-ORDER BY 
-       entry.date_time ASC;
-id          line                                                                                                             length      date_time   flagged   
-----------  ---------------------------------------------------------------------------------------------                    ----------  ----------  ----------
-1           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759}  105         1378523092  1         
-2           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759}  105         1378523288  1         
-3           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378523502  1         
-4           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378524046  1         
-5           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378525586  0         
-SELECT status_type.*
-FROM   entry,
-       entry_status,
-       status_type
-WHERE
-       entry.id = entry_status.entry_id AND
-       status_type.id = entry_status.status_id
-ORDER BY entry.id, status_type.id;
-SELECT 
-       Entry.id,
-       Entry.line,
-       Entry.length,
-       Entry.date_time,
-       Entry.flagged
-FROM 
-       Entry
-ORDER BY 
-       Entry.date_time DESC;
-id          line                                                                                                                         length      date_time   flagged   
-----------  ---------------------------------------------------------------------------------------------                                ----------  ----------  ----------
-5           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,'flagged':0}  117         1378525586  0         
-4           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,'flagged':0}  117         1378524046  1         
-3           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,'flagged':0}  117         1378523502  1         
-2           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759}              105         1378523288  1         
-1           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759}              105         1378523092  1         
-SELECT 
-       Entry.id, 
-       Entry.line,
-       Entry.length,
-       Entry.date_time,
-       Entry.flagged
-FROM 
-       Entry
-WHERE
-       Entry.id > 0;
-id          line                                                                                                             length      date_time   flagged   
-----------  ---------------------------------------------------------------------------------------------                    ----------  ----------  ----------
-1           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759}  105         1378523092  1         
-2           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759}  105         1378523288  1         
-3           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378523502  1         
-4           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378524046  1         
-5           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378525586  0         
-SELECT 
-       Entry.id,
-       Entry.line,
-       Entry.length,
-       Entry.date_time,
-       Entry.flagged
-FROM 
-       Entry
-WHERE
-       Entry.length > 1;
-id          line                                                                                                             length      date_time   flagged   
-----------  ---------------------------------------------------------------------------------------------                    ----------  ----------  ----------
-1           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759}  105         1378523092  1         
-2           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759}  105         1378523288  1         
-3           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378523502  1         
-4           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378524046  1         
-5           {'line','â¬ ocean sky, sea of blue / let the sand wash over you â¬','length':59,'date_time':1378517759,  117         1378525586  0         
-SELECT entry.line,
-       entry.length,
-       entry.date_time,
-       status_type.count,
-       status_type.description
-FROM   
-       entry, status_type, entry_status;
+1|Peter|goon|Renshaw|☮ ♥ ♬ ⌨ ⾛|peterrenshaw|
+1|Immediate Action
+2|Action
+3|Review: risk identified
+4|Monitor: potential risk
+5|No Action
+1|Fully Verified: multiple trusted Sources
+2|Partial Verified: one trusted Source
+3|UN Verified Source
+4|Rumour
+5|UN Verified Rumour
+1|#SMEM WATCH AND ACT http://bit.ly/19C4HDI  Watch and Act DOHERTYS RD LAVERTON NORTH Effective: 10/09/13 9:50 AM Expires: 10/09/13 4:00...
+|0|0|0
+2|#SMEM Former army barracks at Brighton destroyed by fire - Herald Sun http://bit.ly/17lVYVW|0|0|0
+3|#vicses Minor Flood Warning for the Kiewa River at Bandiana http://bit.ly/17SqDct|0|0|0
+4|#SMEM WATCH AND ACT http://bit.ly/13CubQu|0|0|0
+5|#SMEM ADVICE http://bit.ly/13Cu9rV|0|0|0
+6|#SMEM WATCH AND ACT http://bit.ly/13CubQu  Watch and Act DOHERTYS RD LAVERTON NORTH Effective: 10/09/13 7:24 AM Expires: 10/09/13 1:00...|0|0|0
+7|#SMEM ADVICE http://bit.ly/13Cu9rV  Advice - All Clear BANANA AL MELBOURNE Effective: 10/09/13 7:14 AM Expires: 11/09/13 7:00 AM Inci...|0|0|0
+8|It`s currently Light Rain Shower and 12C outside in Melbourne #vicrains|0|0|0
+9|#SMEM ADVICE http://bit.ly/19B7gps|0|0|0
+10|#SMEM ADVICE http://bit.ly/19B7gps  Advice BANANA AL MELBOURNE Effective: 10/09/13 3:27 AM Expires: 10/09/13 8:00 AM Incident Informa...|0|0|0
+11|Laverton North: MFB Watch & Act: http://www.mfb.vic.gov.au/news/warning.html?page=10%2f09%2f2013-9%3a51%3a06-AM … pic.twitter.com/daoh47hBhVLaverton North: MFB Watch & Act: http://www.mfb.vic.gov.au/news/warning.html?page=10%2f09%2f2013-9%3a51%3a06-AM … pic.twitter.com/daoh47hBhV|0|0|0
+12|Laverton North: MFB Watch & Act: http://www.mfb.vic.gov.au/news/warning.html?page=10%2f09%2f2013-9%3a51%3a06-AM … pic.twitter.com/daoh47hBhV|0|0|0
+13|Also here - Smoke over the freeway near the fire at the Nth Laverton Car Recycling Depot. Thanks to Josh P http://ow.ly/i/36iBk|0|0|0
+14|@cooper123_j Recycling yard. Stay out of toxic smoke.|0|0|0
+15|@tyabblemons "What`s in the bong, man?" "Linkedin Man"|0|0|0
+16|Laverton North: Around 22 appliances now on that recycling yard fire. Many road closures. Stay clear of toxic smoke.|0|0|0
+17|Dohertys Rd, Laverton North - Road Closed, Doherty`s Rd is closed between Fitzgerald Rd and Foundation… http://bit.ly/1fPY81V  #victraffic|0|0|0
+1|#SMEM WATCH AND ACT http://bit.ly/19C4HDI  Watch and Act DOHERTYS RD LAVERTON NORTH Effective: 10/09/13 9:50 AM Expires: 10/09/13 4:00...
+|0|0|0
+2|#SMEM Former army barracks at Brighton destroyed by fire - Herald Sun http://bit.ly/17lVYVW|0|0|0
+3|#vicses Minor Flood Warning for the Kiewa River at Bandiana http://bit.ly/17SqDct|0|0|0
+4|#SMEM WATCH AND ACT http://bit.ly/13CubQu|0|0|0
+5|#SMEM ADVICE http://bit.ly/13Cu9rV|0|0|0
+6|#SMEM WATCH AND ACT http://bit.ly/13CubQu  Watch and Act DOHERTYS RD LAVERTON NORTH Effective: 10/09/13 7:24 AM Expires: 10/09/13 1:00...|0|0|0
+7|#SMEM ADVICE http://bit.ly/13Cu9rV  Advice - All Clear BANANA AL MELBOURNE Effective: 10/09/13 7:14 AM Expires: 11/09/13 7:00 AM Inci...|0|0|0
+8|It`s currently Light Rain Shower and 12C outside in Melbourne #vicrains|0|0|0
+9|#SMEM ADVICE http://bit.ly/19B7gps|0|0|0
+10|#SMEM ADVICE http://bit.ly/19B7gps  Advice BANANA AL MELBOURNE Effective: 10/09/13 3:27 AM Expires: 10/09/13 8:00 AM Incident Informa...|0|0|0
+11|Laverton North: MFB Watch & Act: http://www.mfb.vic.gov.au/news/warning.html?page=10%2f09%2f2013-9%3a51%3a06-AM … pic.twitter.com/daoh47hBhVLaverton North: MFB Watch & Act: http://www.mfb.vic.gov.au/news/warning.html?page=10%2f09%2f2013-9%3a51%3a06-AM … pic.twitter.com/daoh47hBhV|0|0|0
+12|Laverton North: MFB Watch & Act: http://www.mfb.vic.gov.au/news/warning.html?page=10%2f09%2f2013-9%3a51%3a06-AM … pic.twitter.com/daoh47hBhV|0|0|0
+13|Also here - Smoke over the freeway near the fire at the Nth Laverton Car Recycling Depot. Thanks to Josh P http://ow.ly/i/36iBk|0|0|0
+14|@cooper123_j Recycling yard. Stay out of toxic smoke.|0|0|0
+15|@tyabblemons "What`s in the bong, man?" "Linkedin Man"|0|0|0
+16|Laverton North: Around 22 appliances now on that recycling yard fire. Many road closures. Stay clear of toxic smoke.|0|0|0
+17|Dohertys Rd, Laverton North - Road Closed, Doherty`s Rd is closed between Fitzgerald Rd and Foundation… http://bit.ly/1fPY81V  #victraffic|0|0|0
+1|#SMEM WATCH AND ACT http://bit.ly/19C4HDI  Watch and Act DOHERTYS RD LAVERTON NORTH Effective: 10/09/13 9:50 AM Expires: 10/09/13 4:00...
+|0|0|0
+2|#SMEM Former army barracks at Brighton destroyed by fire - Herald Sun http://bit.ly/17lVYVW|0|0|0
+3|#vicses Minor Flood Warning for the Kiewa River at Bandiana http://bit.ly/17SqDct|0|0|0
+4|#SMEM WATCH AND ACT http://bit.ly/13CubQu|0|0|0
+5|#SMEM ADVICE http://bit.ly/13Cu9rV|0|0|0
+6|#SMEM WATCH AND ACT http://bit.ly/13CubQu  Watch and Act DOHERTYS RD LAVERTON NORTH Effective: 10/09/13 7:24 AM Expires: 10/09/13 1:00...|0|0|0
+7|#SMEM ADVICE http://bit.ly/13Cu9rV  Advice - All Clear BANANA AL MELBOURNE Effective: 10/09/13 7:14 AM Expires: 11/09/13 7:00 AM Inci...|0|0|0
+8|It`s currently Light Rain Shower and 12C outside in Melbourne #vicrains|0|0|0
+9|#SMEM ADVICE http://bit.ly/19B7gps|0|0|0
+10|#SMEM ADVICE http://bit.ly/19B7gps  Advice BANANA AL MELBOURNE Effective: 10/09/13 3:27 AM Expires: 10/09/13 8:00 AM Incident Informa...|0|0|0
+11|Laverton North: MFB Watch & Act: http://www.mfb.vic.gov.au/news/warning.html?page=10%2f09%2f2013-9%3a51%3a06-AM … pic.twitter.com/daoh47hBhVLaverton North: MFB Watch & Act: http://www.mfb.vic.gov.au/news/warning.html?page=10%2f09%2f2013-9%3a51%3a06-AM … pic.twitter.com/daoh47hBhV|0|0|0
+12|Laverton North: MFB Watch & Act: http://www.mfb.vic.gov.au/news/warning.html?page=10%2f09%2f2013-9%3a51%3a06-AM … pic.twitter.com/daoh47hBhV|0|0|0
+13|Also here - Smoke over the freeway near the fire at the Nth Laverton Car Recycling Depot. Thanks to Josh P http://ow.ly/i/36iBk|0|0|0
+14|@cooper123_j Recycling yard. Stay out of toxic smoke.|0|0|0
+15|@tyabblemons "What`s in the bong, man?" "Linkedin Man"|0|0|0
+16|Laverton North: Around 22 appliances now on that recycling yard fire. Many road closures. Stay clear of toxic smoke.|0|0|0
+17|Dohertys Rd, Laverton North - Road Closed, Doherty`s Rd is closed between Fitzgerald Rd and Foundation… http://bit.ly/1fPY81V  #victraffic|0|0|0

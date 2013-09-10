@@ -20,7 +20,6 @@
     <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
     <!-- end bootstrap -->
     <!-- bb code -->
-    <script src="js/todo.js"></script>
     <script src="js/controller.js"></script>
 </head>
 
@@ -43,12 +42,12 @@
                            id="focusedInput"
                            ng-model="bufferText"
                            accesskey="b" 
-                           tabindex="3" 
+                           tabindex="2" 
                            rows="10" 
                            placeholder="buffer" 
                            >{{entry.line}}</textarea>
                      <div class="input-append">
-                         <input class="span3 search-query" 
+                          <input class="span3 search-query" 
                               id="focusedInput"
                               ng-model="entryText"
                               typeahead="command for command in commands | filter:$viewValue | limitTo:20"
@@ -58,7 +57,7 @@
                               placeholder="select command here"
                               value="" 
                               autofocus>
-                         <button type="submit btn-small btn-primary" class="btn" tabindex="2"><b>enter &#8626;</b></button>
+                          <button type="submit btn-small btn-primary" class="btn"><b>enter &#8626;</b></button>
                      </div>
                  </form>
             </div>
