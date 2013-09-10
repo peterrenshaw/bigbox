@@ -68,7 +68,7 @@
                         <th>entry</th>
                         <th>delete</th>
                     </tr>
-                    <tr class="table-striped" ng-repeat="entry in entries" tabindex="4">
+                    <tr class="table-striped" ng-repeat="entry in entries  | filter:entryText | orderBy:'line'" tabindex="4">
                         <td>{{entry.length}}</td>
                         <td>{{entry.datetime | date:'dd/MMM/yyyy HH:mm.sss'}}</td>
                         <td>{{entry.line}}</td>

@@ -24,12 +24,16 @@ function TodoCtrl($scope, $http) {
            //$scope.bufferText = "";
            var maxlen = $scope.entryText.length;
            var line = $scope.entryText.substring(2, maxlen);
-
-           // add command to command list
-           $scope.entries.push({line:line,
+         
+           if ( line.length > 0 ) {
+               // add command to command list
+               $scope.entries.push({line:line,
                                  length:$scope.entryText.length,
                                  datetime:d.getTime()});
-
+           } else {
+                $scope.icon = "icon-warning-sign";
+                $scope.status = "enter something after the ':s', like ':s melbourne'";
+           }
            // clear littlebox for new command
            $scope.entryText = '';
 
@@ -40,7 +44,7 @@ function TodoCtrl($scope, $http) {
            // message to status box area
            // imge button to status area - icon-ok
            $scope.icon = "icon-search";
-           $scope.status = "search";
+           $scope.status = "search" + " for " + term;
 
            
         } else {
