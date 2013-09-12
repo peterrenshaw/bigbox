@@ -13,6 +13,12 @@
   prog @peterrenshaw
   desc BIGBOX: A easy to use front end for socsim.
 
+2013SEP13
+- re-writing front-end
+- list of modules used
+- write help file
+- write story of work flow up
+- integrate ddg into live search
 
 2013SEP08
 * bb server
