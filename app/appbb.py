@@ -20,9 +20,7 @@
 #---
 
 
-import os
-import sys
-import os.path
+
 import ast
 import time
 import datetime
@@ -33,15 +31,16 @@ from bottle import route
 from bottle import Bottle
 from bottle import install
 from bottle import request
-from bottle import static_file
+from bottle import response
 from bottle.ext import sqlite
 
 
 # --- test TODO test for failure ---
 app = Bottle(__name__)
-plugin = sqlite.Plugin(dbfile='app/database/bigbox.db')  
+plugin = sqlite.Plugin(dbfile='database/bigbox.db')  
 app.install(plugin)
 # --- test ---
+
 
 # db_datetime_utc: return epoch in utc
 def db_datetime_utc():
@@ -49,35 +48,6 @@ def db_datetime_utc():
     t = datetime.datetime.utcnow()
     return time.mktime(t.timetuple())
 
-#---
-# Static Routes
-@app.route('/<filename:re:.*\.js>')
-def javascripts(filename):
-    return static_file(filename, root='static/js')
-
-@app.route('/<filename:re:.*\.css>')
-def stylesheets(filename):
-    return static_file(filename, root='static/css')
-
-@app.route('/<filename:re:.*\.(jpg|png|gif|ico)>')
-def images(filename):
-    return static_file(filename, root='static/img')
-
-@app.route('/<filename:re:.*\.(eot|ttf|woff|svg)>')
-def fonts(filename):
-    return static_file(filename, root='static/fonts')
-
-@app.route('/')
-def index():
-    # html page, route to static page
-    return '''<!DOCTYPE html><html lang="en" ng-app="bigbox"><head>\
-              <meta charset="utf-8"><title>⌨bigbox</title>\
-              <meta name="description" content="bigbox">\
-              <meta name="author" content="@peterrenshaw">\
-              </head><body><h1>⌨bigbox</h1><p>An easy to use front end for ?</p>\
-              <p>start <a href="/static/">here...</a></p>\
-              <p class="text-center">Bigbox &copy; 2013 build 0.1.0</p>\
-              </body></html>'''
 
 #--- routes ---
 # HACK WARNING: I'm tired, this is untested & potentially 
@@ -102,6 +72,7 @@ def get_entry(db):
         for key in keys:
             d[key] = item[key]
         data.append(d)
+    response.set_header('Access-Control-Allow-Origin', 'http://127.0.0.1:8080')
     if data:
         return {'e': data}
     return {'e': False}
@@ -114,11 +85,17 @@ def get_entry(db):
 @app.route('/bb/api/v1.0/e/<entry_id:int>', method = 'GET')
 @app.route('/bb/api/v1.0/e/id/<entry_id:int>', method = 'GET')
 def get_entry_id(entry_id, db):
-    row = db.execute('SELECT entry.* \
+    row = db.execute('SELECT id, line, date_time, length, flagged \
                       from entry WHERE entry.id = ?', (entry_id,))
     entry = row.fetchone()
+    response.set_header('Access-Control-Allow-Origin', 'http://127.0.0.1:8080')
     if len(entry) > 0:
-        return  {'id': entry[0],'line':entry[1], 'date_time':entry[2]}
+        return  {'e': [dict(id=entry[0],
+                           line=entry[1],
+                           date_time=entry[2],
+                           length=entry[3],
+                           flagged=entry[4])]}
+
     return {'e': False}
 #---
 # name: add_entry
@@ -140,7 +117,6 @@ def add_entry(db):
                 length = len(i)
                 c = db.execute('INSERT INTO entry (line, length, date_time, flagged) \
                                 VALUES (?, ?, ?, ?)', (i, length, dt, 0))
-                
                 if c:
                     return {'e': True}
                 else:

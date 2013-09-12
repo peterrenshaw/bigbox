@@ -16,9 +16,8 @@ function BigboxCtrl($scope, Search) {
     $scope.search = function(term) {
         Search.get({term: term}, 
         function(results) {
-            $scope.show = key;
+            $scope.show = term;
             $scope.results = results;
-            console.log(results);
         });
     }
 }
