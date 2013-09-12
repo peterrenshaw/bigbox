@@ -3,7 +3,7 @@ bigbox.factory('Search', function ($resource) {
     return $resource('http://127.0.0.1\\:8081/bb/api/v1.0/e/:term', {}, {
         query: {
             method: 'GET',
-            isArray: true,
+            isArray: false,
             params: {
                 term: "term"
             }
