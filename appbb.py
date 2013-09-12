@@ -20,7 +20,9 @@
 #---
 
 
-
+import os
+import sys
+import os.path
 import ast
 import time
 import datetime
@@ -31,6 +33,7 @@ from bottle import route
 from bottle import Bottle
 from bottle import install
 from bottle import request
+from bottle import static_file
 from bottle.ext import sqlite
 
 
@@ -40,13 +43,41 @@ plugin = sqlite.Plugin(dbfile='app/database/bigbox.db')
 app.install(plugin)
 # --- test ---
 
-
 # db_datetime_utc: return epoch in utc
 def db_datetime_utc():
     """store datetime in UTC epoch format"""
     t = datetime.datetime.utcnow()
     return time.mktime(t.timetuple())
 
+#---
+# Static Routes
+@app.route('/<filename:re:.*\.js>')
+def javascripts(filename):
+    return static_file(filename, root='static/js')
+
+@app.route('/<filename:re:.*\.css>')
+def stylesheets(filename):
+    return static_file(filename, root='static/css')
+
+@app.route('/<filename:re:.*\.(jpg|png|gif|ico)>')
+def images(filename):
+    return static_file(filename, root='static/img')
+
+@app.route('/<filename:re:.*\.(eot|ttf|woff|svg)>')
+def fonts(filename):
+    return static_file(filename, root='static/fonts')
+
+@app.route('/')
+def index():
+    # html page, route to static page
+    return '''<!DOCTYPE html><html lang="en" ng-app="bigbox"><head>\
+              <meta charset="utf-8"><title>⌨bigbox</title>\
+              <meta name="description" content="bigbox">\
+              <meta name="author" content="@peterrenshaw">\
+              </head><body><h1>⌨bigbox</h1><p>An easy to use front end for ?</p>\
+              <p>start <a href="/static/">here...</a></p>\
+              <p class="text-center">Bigbox &copy; 2013 build 0.1.0</p>\
+              </body></html>'''
 
 #--- routes ---
 # HACK WARNING: I'm tired, this is untested & potentially 
