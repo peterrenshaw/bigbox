@@ -71,7 +71,7 @@ def get_entry(db):
         for key in keys:
             d[key] = item[key]
         data.append(d)
-    if data: 
+    if data:
         return {'e': data}
     return {'e': False}
 
@@ -167,7 +167,7 @@ def update_entry(entry_id, db):
 #---
 def main():
     """main app entry point"""
-    app.run(host='localhost', port=8081, reloader=True, debug = True)
+    app.run(host='127.0.0.1', port=8081, reloader=True, debug = True)
 
 
 #---
