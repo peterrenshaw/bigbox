@@ -19,6 +19,9 @@ function BigboxCtrl($scope, Search) {
         function(results) {
             $scope.show = term;
             $scope.results = results;
+            if (term.length > 0) {
+                $scope.bufferText = results.e[0].line;
+            } else {$scope.bufferText = "";}
         });
     }
     $scope.entryText = "";

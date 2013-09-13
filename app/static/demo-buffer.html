@@ -42,14 +42,12 @@
             <!-- main entry controls -->
             <div class="controls-controls-row">
                  <form class="form-search">
-                          <textarea class="span4 input-xxlarge" 
-                           id="focusedInput"
-                           ng-model="bufferText"
+                      <textarea class="span4 input-xxlarge"
+                           ng-model="bufferText" 
                            accesskey="b" 
                            tabindex="2" 
                            rows="10" 
-                           placeholder="{{ results.e | json}}" 
-                           ></textarea>
+                           placeholder="">{{ bufferText | json}}</textarea>
                      <div class="input-append">
                           <input class="span3 search-query" 
                               id="focusedInput"
