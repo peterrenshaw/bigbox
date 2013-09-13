@@ -24,7 +24,7 @@
     <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
     <!-- end bootstrap -->
     <!-- bb code -->
-    <script src="js/hack_5_controller.js"></script>
+    <script src="js/demo_buffer.js"></script>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
     <div class="row-fluid">
         <div class="span3"></div>
         <div class="span2">
-            <h1 class="text-center">&#9000;bigbox</h1>
+            <h1 class="text-left">&#9000;bigbox</h1>
        </div>
        <div class="span5"></div>
     </div>
@@ -40,26 +40,57 @@
     <!-- main controls -->
     <div class="span6" ng-controller="BigboxCtrl">
             <!-- main entry controls -->
+            <div class="controls-controls-row">
+                 <form class="form-search">
+                          <textarea class="span4 input-xxlarge" 
+                           id="focusedInput"
+                           ng-model="bufferText"
+                           accesskey="b" 
+                           tabindex="2" 
+                           rows="10" 
+                           placeholder="{{ results.e | json}}" 
+                           ></textarea>
+                     <div class="input-append">
+                          <input class="span3 search-query" 
+                              id="focusedInput"
+                              ng-model="term"
+                              accesskey="c" 
+                              tabindex="1"
+                              type="text"
+                              placeholder="enter command :)"
+                              value="" 
+                              autofocus>
+                          <button class="btn" tabindex="2" ng-click="search(term)">
+                                  <i class="icon-search"></i> <b>enter &#8626;</b></button>
+                     </div>
+                 </form>
+            </div>
             <!-- end main entry controls -->
-            <ul class="unstyled">
+            <div>
                 <!-- main report controls -->
-                <li>
-                     <h5>Entry</h5>
-                     <p><a href="demo-entry.html">text entry</a></p>
-                </li>
-                <li>
-                     <h5>Buffer</h5>
-                     <p><a href="demo-buffer.html">entry to buffer</a></p>
-                </li>
-                <li>
-                     <h5>Database</h5>
-                     <p><a href="demo-db.html">database access</a></p>
-                </li>
+                <table class="table table-striped table-condensed table-hover">
+                    <caption class="text-left">
+                        <span><i class="icon-list icon-black"></i> <b>History: {{show}}</b></span> 
+                    </caption>
+                    </br>
+                    <tr>
+                        <th>#</th>
+                        <th>line</th>
+                        <th>date</th>
+                        <th>flagged</th>
+                    </tr>
+                    <tr class="table-striped" ng-repeat="entry in results.e | filter:term | orderBy: date_time" 
+                                              tabindex="4">
+                        <td>{{entry.id}}</td>
+                        <td><span id="{{entry.id}}">{{entry.line}}</span> ({{entry.length}})</a></td>
+                        <td>{{entry.date_time | date:'dd/MMM/yy HH:mm.sss'}}</td>
+                        <td><input type="checkbox" {{entry.flagged}}</td>
+                    </tr>
+                </table>
                 <!-- end main report controls --> 
-            </ul>
+            </div>
             </br>
     </div>
-    <!-- end main controls -->
     <div class="span3"></div>
     <div class="span12">
     <div class="span12">
