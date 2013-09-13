@@ -164,7 +164,50 @@ def update_entry(entry_id, db):
             return {'e': True} if c else {'e': False}
     return {'e': False}
 #
+# ---
 #
+
+#---
+# name: duckduckgo
+# desc: return all duckduckgo details in duckduckgo table
+# test: curl -i http://localhost:8080/bb/api/v1.0/d
+#---
+@app.route('/bb/api/v1.0/d', method = 'GET')            
+@app.route('/bb/api/v1.0/d/all', method = 'GET')
+def get_entry(db):
+    row = db.execute('SELECT duckduckgo.* FROM duckduckgo ORDER BY duckduckgo.id ASC')
+    items = row.fetchall()
+    data = []
+    for item in items:
+        keys = item.keys()
+        d = {}
+        for key in keys:
+            d[key] = item[key]
+        data.append(d)
+    response.set_header('Access-Control-Allow-Origin', 'http://127.0.0.1:8080')
+    if data:
+        return {'d': data}
+    return {'d': False}
+#---
+# name: duckduckgo_id
+# desc: return ddg by ddg.id
+# test: curl -i http://localhost:8080/bb/api/v1.0/d/10  
+#---
+@app.route('/bb/api/v1.0/d/<ddg_id:int>', method = 'GET')
+@app.route('/bb/api/v1.0/d/id/<ddg_id:int>', method = 'GET')
+def get_entry_id(ddg_id, db):
+    row = db.execute('SELECT id, key, heading, answer, definition \
+                      from duckduckgo WHERE duckduckgo.id = ?', (ddg_id,))
+    entry = row.fetchone()
+    response.set_header('Access-Control-Allow-Origin', 'http://127.0.0.1:8080')
+    if entry: 
+        if len(entry) > 0:
+            return  {'d': [dict(id=entry[0],
+                           key=entry[1],
+                           heading=entry[2],
+                           answer=entry[3],
+                           definition=entry[4])]}
+    return {'d': False}
 #--- end routes ---
 
 

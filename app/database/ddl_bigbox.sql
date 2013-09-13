@@ -76,3 +76,15 @@ CREATE TABLE Entry_Status (
     status_id INTEGER
 );
 
+-- #---
+-- # DuckDuckgo: Find a) all entries of N status
+-- #                    b) grade entries by status
+-- #                    c) given entry, find status
+-- #---
+CREATE TABLE DuckDuckgo (
+    id INTEGER PRIMARY KEY,
+    key, TEXT,
+    heading TEXT, 
+    answer TEXT,
+    definition TEXT
+);
