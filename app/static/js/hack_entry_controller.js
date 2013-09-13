@@ -1,7 +1,7 @@
 angular.module('bigbox', ['ui.bootstrap']);
 function TodoCtrl($scope) {
     // array of entries    
-    //$scope.entries = Entry.query();; 
+    $scope.entries = []; 
     $scope.icon = "icon-ok";
     $scope.status = "ready";
 
