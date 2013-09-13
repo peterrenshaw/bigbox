@@ -2,10 +2,14 @@
 <html lang="en" ng-app="bigbox">
 <head>
     <meta charset="utf-8">
-    <title>⌨bigbox</title>
+    <title>&#9000; bigbox</title>
     <!-- responsive -->
     <!-- end responsive -->
     <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="bigbox">
+    <meta name="author" content="@peterrenshaw">
     <!-- end meta -->
     <!-- bootstrap -->
     <link href="css/normalize.css" rel="stylesheet">
@@ -19,7 +23,6 @@
     <script src="js/angular-resource.min.js"></script>
     <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
     <!-- end bootstrap -->
-    <script src="js/json2.js"></script>
     <!-- bb code -->
     <script src="js/hack_5_controller.js"></script>
 </head>
@@ -27,15 +30,15 @@
 <body>
     <div class="row">
     <div class="row-fluid">
-        <div class="span4"></div>
+        <div class="span3"></div>
         <div class="span2">
-            <h1 class="text-left">⌨bigbox</h1>
+            <h1 class="text-left">&#9000;bigbox</h1>
        </div>
-       <div class="span4"></div>
+       <div class="span5"></div>
     </div>
-    <div class="span4"></div>
+    <div class="span3"></div>
     <!-- main controls -->
-    <div class="span5" ng-controller="BigboxCtrl">
+    <div class="span6" ng-controller="BigboxCtrl">
             <!-- main entry controls -->
             <div class="controls-controls-row">
                  <form class="form-search">
@@ -54,26 +57,24 @@
                  </form>
             </div>
             <!-- end main entry controls -->
-            <hr/>
             <div>
                 <!-- main report controls -->
                 <table class="table table-striped table-condensed table-hover">
                     <caption class="text-left">
                         <span><i class="icon-list icon-black"></i> <b>History: {{show}}</b></span> 
                     </caption>
+                    </br>
                     <tr>
-                        <th>id</th>
-                        <th>length</th>
+                        <th>#</th>
                         <th>line</th>
-                        <th>date_time</th>
+                        <th>date</th>
                         <th>flagged</th>
                     </tr>
                     <tr class="table-striped" ng-repeat="entry in results.e | filter:term | orderBy: date_time" tabindex="4">
                         <td>{{entry.id}}</td>
-                        <td>{{entry.length}}</td>
-                        <td>{{entry.line}}</td>
-                        <td>{{entry.date_time}}</td>
-                        <td>{{entry.flagged}}</td>
+                        <td><span id="{{entry.id}}">{{entry.line}}</span> ({{entry.length}})</a></td>
+                        <td>{{entry.date_time | date:'dd/MMM/yy HH:mm.sss'}}</td>
+                        <td><input type="checkbox" {{entry.flagged}}</td>
                     </tr>
                 </table>
                 <!-- end main report controls --> 
@@ -96,6 +97,6 @@
     </div>
     </div>
     </div>
-    <p class="text-center">Bigbox &copy; 2013 build 0.1.0</p>
+    <p class="text-center">&#9000; Bigbox &copy; 2013 build 0.1.0</p>
 </body>
 </html>
