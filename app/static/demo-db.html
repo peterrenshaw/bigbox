@@ -22,7 +22,7 @@
     <script src="js/ui-bootstrap-tpls-0.5.0.js"></script>
     <!-- end bootstrap -->
     <!-- bb code -->
-    <script src="js/hack_5_controller.js"></script>
+    <script src="js/demo_db.js"></script>
 </head>
 
 <body>
@@ -42,14 +42,15 @@
                  <form class="form-search">
                      <div class="input-append">
                           <input class="span3 search-query" 
-                              id="focusedInput"
+                              type="text"
+                              name="input"
                               ng-model="term"
+                              min="1"
+                              id="focusedInput"
                               accesskey="c" 
                               tabindex="1"
-                              type="text"
-                              placeholder="enter command :)"
-                              value="" 
-                              autofocus>
+                              placeholder="hit enter :)"
+                              required autofocus>
                           <button class="btn" tabindex="2" ng-click="search(term)">
                                   <i class="icon-search"></i> <b>enter &#8626;</b></button>
                      </div>
@@ -61,7 +62,8 @@
                 <table class="table table-striped table-condensed table-hover">
                     <caption class="text-left">
                         <span><i class="icon-list icon-black"></i> <b>History: {{show}}</b></span> 
-                    </caption>
+                        <span class="error" ng-show="bufferform.input.$error.required">Required!</span>
+                     </caption>
                     </br>
                     <tr>
                         <th>#</th>

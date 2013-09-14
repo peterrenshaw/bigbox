@@ -41,7 +41,7 @@
     <div class="span6" ng-controller="BigboxCtrl">
             <!-- main entry controls -->
             <div class="controls-controls-row">
-                 <form class="form-search">
+                 <form name="bufferform" class="form-search">
                       <textarea class="span4 input-xxlarge"
                            ng-model="bufferText" 
                            accesskey="b" 
@@ -49,15 +49,16 @@
                            rows="10" 
                            placeholder="">{{ bufferText | json}}</textarea>
                      <div class="input-append">
-                          <input class="span3 search-query" 
-                              id="focusedInput"
+                          <input class="span3 search-query"
+                              type="number"
+                              name="input"
                               ng-model="term"
+                              min="1"
+                              id="focusedInput"
                               accesskey="c" 
                               tabindex="1"
-                              type="text"
-                              placeholder="enter command :)"
-                              value="" 
-                              autofocus>
+                              placeholder="enter record number :)"
+                              required autofocus>
                           <button class="btn" tabindex="2" ng-click="search(term)">
                                   <i class="icon-search"></i> <b>enter &#8626;</b></button>
                      </div>
@@ -69,6 +70,8 @@
                 <table class="table table-striped table-condensed table-hover">
                     <caption class="text-left">
                         <span><i class="icon-list icon-black"></i> <b>History: {{show}}</b></span> 
+                        <span class="error" ng-show="bufferform.input.$error.required">Required!</span>
+                        <span class="error" ng-show="bufferform.input.$error.number">Not valid number!</span>
                     </caption>
                     </br>
                     <tr>

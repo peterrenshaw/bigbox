@@ -15,6 +15,18 @@
 -- # queries
 -- #---
 
+SELECT duckduckgo.id,
+       duckduckgo.key,
+       duckduckgo.heading,
+       duckduckgo.answer,
+       duckduckgo.definition,
+       duckduckgo.abstract,
+       duckduckgo.date_time
+FROM
+       duckduckgo
+ORDER BY
+       duckduckgo.id ASC;
+
 -- #---
 -- # PERSON
 -- #--- 

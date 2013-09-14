@@ -51,8 +51,46 @@ from optparse import OptionParser
 
 
 import duckduckgo
-import socsim.tools
 
+#--- tools ---
+# some testing
+#
+def save(filepathname, data):
+    """save a file to filesystem"""
+    filepath = os.path.dirname(filepathname)
+    filename = os.path.basename(filepathname)
+    if data:
+        if filename:
+            if os.path.isdir(filepath):
+                with open(filepathname, 'w') as f:
+                    f.write(data)
+                return True
+    return False
+def load(filepathname):
+    """load a file"""
+    if filepathname: 
+        if os.path.isfile(filepathname):
+            data = ""
+            with open(filepathname, 'r') as f:
+                data = f.read()
+            f.close()
+            return data
+    return False
+def convert(data, to_json=True):
+    """conversion from py<==>json"""
+    if data:
+        if to_json:
+            return json.dumps(data, sort_keys=True, indent=4, separators=(',', ': '))
+        else:
+            return json.loads(data)
+    return False
+def json2py(data):
+    """convert json data to python structure"""
+    return convert(data, to_json=False)
+def py2json(data):
+    """convert python structure to json"""
+    return convert(data)
+#--- tools ---
 
 #---
 # main: cli entry point
@@ -122,7 +160,7 @@ def main():
             with file(options.filepath, 'r') as f:
                 data = f.read()
             
-            pydat = socsim.tools.json2py(data)
+            pydat = json2py(data)
             r = duckduckgo.Result(pydat)
 
             # results
@@ -217,7 +255,7 @@ def main():
 
             # extract data
             if options.extract:
-                pydat = socsim.tools.json2py(data)
+                pydat = json2py(data)
                 r = duckduckgo.Result(pydat)
 
                 # results

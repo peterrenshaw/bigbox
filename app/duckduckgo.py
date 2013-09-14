@@ -34,7 +34,6 @@ from string import Template
 from optparse import OptionParser
 
 
-import socsim.tools
 
 
 __version__ = "0.1.0"
@@ -74,9 +73,10 @@ if PYVER >= PYTHON3:
         import requests
         LIB_REQUEST_FOUND = True
     except ImportError:
-        from urllib import request as Request   # use as Request
-        from urllib.request import urlopen      # use as urlopen
-    from urllib.parse import encode
+        import urllib.request
+        #from urllib import request as Request   # use as Request
+        #from urllib.request import urlopen      # use as urlopen
+    from urllib.parse import urlencode
 elif PYVER >= PYTHON273:
     try:
         import requests
@@ -97,6 +97,47 @@ if LIB_REQUEST_FOUND:
     LIB_REQUEST = True  # yes, use 'import request'
 else:
     LIB_REQUEST = False # no, use standard python libs
+
+
+#--- tools ---
+# some testing
+#
+def save(filepathname, data):
+    """save a file to filesystem"""
+    filepath = os.path.dirname(filepathname)
+    filename = os.path.basename(filepathname)
+    if data:
+        if filename:
+            if os.path.isdir(filepath):
+                with open(filepathname, 'w') as f:
+                    f.write(data)
+                return True
+    return False
+def load(filepathname):
+    """load a file"""
+    if filepathname: 
+        if os.path.isfile(filepathname):
+            data = ""
+            with open(filepathname, 'r') as f:
+                data = f.read()
+            f.close()
+            return data
+    return False
+def convert(data, to_json=True):
+    """conversion from py<==>json"""
+    if data:
+        if to_json:
+            return json.dumps(data, sort_keys=True, indent=4, separators=(',', ': '))
+        else:
+            return json.loads(data)
+    return False
+def json2py(data):
+    """convert json data to python structure"""
+    return convert(data, to_json=False)
+def py2json(data):
+    """convert python structure to json"""
+    return convert(data)
+#--- tools ---
 
 
 #---
@@ -140,7 +181,8 @@ class Duckduckgo:
         
         self.api_url = 'http://api.duckduckgo.com/?'
         self.query_url = ""
-        self.user_agent = "%s-%s" % (user_agent, version)
+        #self.user_agent = "%s-%s" % (user_agent, version)
+        self.user_agent = user_agent
         self.data = ""
 
         # build parameter
@@ -203,8 +245,8 @@ class Duckduckgo:
         """build final query url"""
         if self.parameters:
             # TODO: work out way to stop key order change
-            query_param = urlencode(self.query_param)
-            url_enc_params = urlencode(self.parameters)
+            query_param = urlencode(self.query_param, doseq=True)
+            url_enc_params = urlencode(self.parameters, doseq=True)
             self.query_url = "%s%s&%s" % (self.api_url,
                                        query_param,
                                        url_enc_params)
@@ -214,15 +256,19 @@ class Duckduckgo:
     def __request_pydefault(self):
         """request made using urlib (py3) or urllib2 (py2.7.3)"""
         data = ""
-        request = Request(self.query_url, 
-                          headers={'User-Agent': self.user_agent})
-        response = urlopen(request)
-        if response: 
-            data = response.read()
-            response.close()
+        try:
+            r = urllib.request.Request(self.query_url)
+            r.add_header('User-Agent','bigbox-tools-ddg')
+            response = urllib.request.urlopen(r)
+            if response: 
+                data = response.read().decode('utf-8')                                                                                      
+                response.close()
+        except:
+            return False
         if data:
             return data
-        return False
+        else:
+            return False
     def __request_requests(self):
         """request using superior Requests library"""
         request = requests.get(self.query_url, 
@@ -270,10 +316,11 @@ class Result:
     # --- general query ---
     def search(self, key):
         """generalised query by key on list data, find or F"""
-        if key:
-            for title in self.data:
-                if key == title:
-                    return self.data[title]
+        if self.data:
+            if key:
+                for title in self.data:
+                    if key == title:
+                        return self.data[title]
         return False
 
     # --- specific query ---
@@ -345,7 +392,7 @@ class Result:
                 stub = Template(tpl).substitute(data)
                 stubs.append(stub)
             for stub in stubs:
-                print stub
+                print(stub)
         return False
     # related topics (many)
     def related_topics(self, rao="", template=""):

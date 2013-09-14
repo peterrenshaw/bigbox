@@ -35,6 +35,9 @@ from bottle import response
 from bottle.ext import sqlite
 
 
+import duckduckgo
+
+
 # --- test TODO test for failure ---
 app = Bottle(__name__)
 plugin = sqlite.Plugin(dbfile='database/bigbox.db')  
@@ -191,23 +194,107 @@ def get_entry(db):
 #---
 # name: duckduckgo_id
 # desc: return ddg by ddg.id
-# test: curl -i http://localhost:8080/bb/api/v1.0/d/10  
+# test: curl -i http://127.0.0.1:8081/bb/api/v1.0/d/10  
 #---
-@app.route('/bb/api/v1.0/d/<ddg_id:int>', method = 'GET')
-@app.route('/bb/api/v1.0/d/id/<ddg_id:int>', method = 'GET')
-def get_entry_id(ddg_id, db):
-    row = db.execute('SELECT id, key, heading, answer, definition \
-                      from duckduckgo WHERE duckduckgo.id = ?', (ddg_id,))
-    entry = row.fetchone()
-    response.set_header('Access-Control-Allow-Origin', 'http://127.0.0.1:8080')
-    if entry: 
-        if len(entry) > 0:
-            return  {'d': [dict(id=entry[0],
-                           key=entry[1],
-                           heading=entry[2],
-                           answer=entry[3],
-                           definition=entry[4])]}
-    return {'d': False}
+@app.route('/bb/api/v1.0/d/<ddg_key>', method = 'GET')
+def get_entry_id(ddg_key, db):
+    if ddg_key:
+        row = db.execute('SELECT id, key, heading, answer, \
+                                 definition, abstract \
+                          FROM duckduckgo \
+                          WHERE duckduckgo.key = ?', (ddg_key,))
+        entry = row.fetchone()
+        if entry: 
+            if len(entry) > 0:
+                response.set_header('Access-Control-Allow-Origin', 
+                                    'http://127.0.0.1:8080')
+                return  {'d': [dict(id=entry[0],
+                               key=entry[1],
+                               heading=entry[2],
+                               answer=entry[3],
+                               definition=entry[4],
+                               abstract=entry[5])]}
+        else:
+            is_json = True
+            safe_search = True
+            is_callback = False
+            is_pretty = True
+            no_html = True
+            no_redirect = True
+            skip_disambig = True
+
+            # selection options
+            # bloody important, no callback
+            # inserts shite into json string, 
+            # can't parse
+            if is_json:
+                if is_pretty:
+                    is_pretty = True
+                else: 
+                    is_pretty = False
+                if is_callback:
+                    is_callback = True
+                else:
+                    is_callback = False
+
+            ddg = duckduckgo.Duckduckgo()
+            ddg.build_parms(ddg_key, is_json,
+                       safe_search,
+                       is_callback,
+                       is_pretty,
+                       no_html,
+                       no_redirect,
+                       skip_disambig)
+            ddg.build_query_url()
+            data = ddg.request()
+
+            heading = ""
+            answer = ""
+            definition = ""
+            abstract = ""
+            if not data:
+                print("error: can't request data")
+                response.set_header('Access-Control-Allow-Origin', 
+                                    'http://127.0.0.1:8080')
+                return {'d': False}
+            else:
+                pydat = duckduckgo.json2py(data)
+                r = duckduckgo.Result(pydat)
+                d_heading = r.heading()
+                d_answer = r.answer()
+                d_definition = r.definition()
+                d_abstract = r.abstract()
+                r = None
+
+            # results
+            # insert into db
+            dt = db_datetime_utc()
+            c = None
+            c = db.execute('INSERT INTO duckduckgo \
+                            (key, date_time, heading, \
+                             answer, definition, abstract) \
+                             VALUES (?, ?, ?, ?, ?, ?)',
+                (ddg_key, dt, d_heading, d_answer, d_definition, d_abstract))
+            if not c:
+                response.set_header('Access-Control-Allow-Origin', 
+                                    'http://127.0.0.1:8080')
+                return {'d': False}
+            # get id of inserted record
+            did = c.lastrowid
+            c = None
+ 
+            # return results
+            response.set_header('Access-Control-Allow-Origin', 
+                                'http://127.0.0.1:8080')
+            return  {'d': [dict(id=did,
+                            key=ddg_key,
+                            date_time=dt,
+                            heading=d_heading,
+                            answer=d_answer,
+                            definition=d_definition,
+                            abstract=d_abstract)]}
+    else:
+        return {'d': False}
 #--- end routes ---
 
 
@@ -217,7 +304,7 @@ def get_entry_id(ddg_id, db):
 #---
 def main():
     """main app entry point"""
-    app.run(host='127.0.0.1', port=8081, reloader=True, debug = True)
+    app.run(host='127.0.0.1', port=8081, reloader=True, debug = False)
 
 
 #---

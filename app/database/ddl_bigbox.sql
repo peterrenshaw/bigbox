@@ -84,7 +84,9 @@ CREATE TABLE Entry_Status (
 CREATE TABLE DuckDuckgo (
     id INTEGER PRIMARY KEY,
     key, TEXT,
+    date_time DATETIME,
     heading TEXT, 
     answer TEXT,
-    definition TEXT
+    definition TEXT,
+    abstract TEXT
 );
