@@ -36,6 +36,14 @@ Why?
     though as a non-coder, it still reads semi-Greek to me.
     <https://twitter.com/geehallone/status/368635594231910400>
 
+
+* 2013SEP14
+- integrated live ddg search
+- fixed database access 
+- fixed search queries with on-screen data
+- fixed layout
+- cleaned up code base
+
 * 2013SEP12
 - angularjs front end hack working
 - installed on windows
