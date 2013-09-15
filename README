@@ -26,16 +26,32 @@ Why?
     the detail. I just rely on the finished product being usable.
     <https://twitter.com/tyabblemons/status/368647354586365952>
 
-    George Hall ‏@geehall1 17 Aug
+    George Hall @geehall1 17 Aug
     @peterrenshaw @SkillsyOz @tyabblemons The front-end sounds good...something 
     that helps the non-coders use this effectively.
     <https://twitter.com/geehall1/status/368642014021038080>
 
-    George Hall ‏@geehallone 17 Aug
+    George Hall @geehallone 17 Aug
     @peterrenshaw @SkillsyOz @geehall1 @tyabblemons Very good project, Peter, 
     though as a non-coder, it still reads semi-Greek to me.
     <https://twitter.com/geehallone/status/368635594231910400>
 
+
+* 2013SEP16
+- added .db to .gitignore 
+- blasted conflict at github 
+- Auto-merging app/database/bigbox.db CONFLICT (content):    
+  Merge conflict in app/database/bigbox.db    
+  Automatic merge failed; fix conflicts and then commit the result. 
+- kill .db on github, pull & push
+
+* 2013SEP15
+- demo day :)
+
+  @geehall1 @peterrenshaw @SkillsyOz BB impressed me more than I 
+  thought it would. The speed was great - hope it can do that with 
+  big index
+  <https://twitter.com/tyabblemons/status/379194015934988288>
 
 * 2013SEP14
 - integrated live ddg search
