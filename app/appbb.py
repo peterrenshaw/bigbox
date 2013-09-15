@@ -66,7 +66,7 @@ def db_datetime_utc():
 @app.route('/bb/api/v1.0/e', method = 'GET')            
 @app.route('/bb/api/v1.0/e/all', method = 'GET')
 def get_entry(db):
-    row = db.execute('SELECT entry.* FROM entry ORDER BY entry.date_time ASC')
+    row = db.execute('SELECT entry.* FROM entry ORDER BY entry.date_time DESC')
     items = row.fetchall()
     data = []
     for item in items:
@@ -178,7 +178,7 @@ def update_entry(entry_id, db):
 @app.route('/bb/api/v1.0/d', method = 'GET')            
 @app.route('/bb/api/v1.0/d/all', method = 'GET')
 def get_entry(db):
-    row = db.execute('SELECT duckduckgo.* FROM duckduckgo ORDER BY duckduckgo.id ASC')
+    row = db.execute('SELECT duckduckgo.* FROM duckduckgo ORDER BY duckduckgo.id DESC')
     items = row.fetchall()
     data = []
     for item in items:
