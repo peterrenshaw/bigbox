@@ -13,6 +13,13 @@
   prog @peterrenshaw
   desc BIGBOX: A easy to use front end for socsim.
 
+2013SEP16
+* on entry from demo_ddg.html
+- date time is stored in unix epoch
+- when displayed it's in seconds since 1970
+- should actually display date and time of current 
+  insertion
+
 2013AUG30
 * tools/test_duckduckgo.py
 - one bug, document & fix
