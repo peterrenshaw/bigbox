@@ -198,7 +198,9 @@ def get_entry(db):
 #---
 @app.route('/bb/api/v1.0/d/<ddg_key>', method = 'GET')
 def get_entry_id(ddg_key, db):
-    if ddg_key:
+    if not ddg_key:
+        return get_entry(db)
+    else:
         row = db.execute('SELECT id, key, heading, answer, \
                                  definition, abstract \
                           FROM duckduckgo \
@@ -293,8 +295,6 @@ def get_entry_id(ddg_key, db):
                             answer=d_answer,
                             definition=d_definition,
                             abstract=d_abstract)]}
-    else:
-        return {'d': False}
 #--- end routes ---
 
 
