@@ -66,17 +66,22 @@
                     <tr>
                         <th>term</th>
                         <th>heading</th>
-                        <th>abstract</th>
+                        <!-- <th>abstract</th> -->
                         <th>definition</th>
-                        <th>answer</th>
+                        <!-- <th>answer</th> -->
                     </tr>
                     <tr class="table-striped" ng-repeat="entry in results.d | filter:term | orderBy: date_time" 
                                               tabindex="4">
-                        <td>{{entry.key}}</td>
+                        <td><small><a href="https://duckduckgo.com/?q={{entry.key}}&t=bigbox">{{entry.key}}</a></small></td>
+                        <td>
+                            <span id="{{entry.id}}">
+                            <a href="https://duckduckgo.com/?q={{entry.heading}}&t=bigbox">{{entry.heading}}</a>
+                            </span>
+                        </td>
                         <td><span id="{{entry.id}}">{{entry.heading}}</span></a></td>
-                        <td>{{entry.abstract}}</td>
+                        <!-- <td>{{entry.abstract}}</td> -->
                         <td>{{entry.definition}}</td>
-                        <td>{{entry.answer}}</td>
+                        <!-- <td>{{entry.answer}}</td> -->
                     </tr>
                 </table>
                 <!-- end main report controls --> 
@@ -95,7 +100,7 @@
             <li><a href="/tests"><i class="icon-ok icon-black"></i> Tests</a>
             <li><a href="http://github.com/peterrenshaw/bigbox"><i class="icon-wrench icon-black"></i> Hack</a>
             </ul>
-            <p class="text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9000; bigbox &copy; 2013 build 0.1.1</p>
+            <p class="text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9000; bigbox &copy; 2013SEP16 build 0.1.2</p>
         </div>
         <div class="span6">
         </div>
