@@ -1,0 +1,13 @@
+Q
+
+Working with git branches
+http://genomewiki.ucsc.edu/index.php/Working_with_branches_in_Git
+
+How do I make a git branch? 
+http://genomewiki.ucsc.edu/index.php/Working_with_branches_in_Git#How_do_I_make_a_branch.3F
+
+git-branch
+http://linux.die.net/man/1/git-branch
+
+branching and merging
+http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging

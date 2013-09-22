@@ -1,0 +1,11 @@
+Workflow
+
+
+To be able to build new things I'm going to get make a lot
+of suggestions. More importantly I need feedback, written and graphic.
+So in order to work effectivley I'm suggesting a possible way to agree
+on what to build. So here it goes:
+
+* create a screen
+
+    * 
