@@ -26,6 +26,7 @@ from twython import TwythonError
 
 
 import bigbox
+import bigbox.tools
 import bigbox.feed.config
 
 
@@ -70,6 +71,7 @@ class Twy:
         self.max_msg_length = 140
         self.twitter = twitter
         self.message = ""
+        self.message_id = 0
         #
         # TODO check Twython obj valid
         #
@@ -91,6 +93,19 @@ class Twy:
             # catch Twython errors
             try:
                 self.twitter.update_status(status=self.message)
+                #print(s)
+                #ps = bigbox.tools.json2py(s)
+                #print(ps)
+                # what is the id of this message?
+                # self.message_id =  ?
+                # message = dict(message=self.message,
+                #                id=self.message_id,
+                #                time=)
+                # msg_json = bigbox.tools.py2json(message)
+                # fpn = os.path.join('data','yyyymmmdd.json')
+                # bigbox.tools.save(fpn, msg_json)
+                #mid = self.twitter.get_sent_messages(count=1)
+                #print('mid=%s' % mid)
                 status = True
             except TwythonError as e:
                 pass  # TODO capture error
