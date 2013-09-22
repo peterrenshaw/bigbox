@@ -6,3 +6,7 @@ app-1
 .*.swp
 *.db
 *.exe
+bigbox.egg-info
+build
+dist
+__pycache__

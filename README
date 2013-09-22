@@ -37,6 +37,12 @@ Why?
     <https://twitter.com/geehallone/status/368635594231910400>
 
 
+* 2013SEP22
+- new branch, source.tw
+- added source.twitter to allow access to twit api via
+  <https://github.com/ryanmcgrath/twython>
+- updated .gitignore
+
 * 2013SEP16
 - added .db to .gitignore 
 - blasted conflict at github 
