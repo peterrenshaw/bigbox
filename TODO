@@ -13,6 +13,15 @@
   prog @peterrenshaw
   desc BIGBOX: A easy to use front end for socsim.
 
+
+2013SEP22
+[-] fix datetime display/record bug in BUGS
+[-] testing on bigbox.feed.twitter
+[-] testing on bigbox.tools
+[-] saving data to db
+[-] rest rebuild
+[-] server serving static and api on same server problem
+
 2013SEP16
 [-] fix datetime display/record bug in BUGS
 

@@ -36,6 +36,13 @@ Why?
     though as a non-coder, it still reads semi-Greek to me.
     <https://twitter.com/geehallone/status/368635594231910400>
 
+* 2013SEP23
+- bigbox.feed.twitter
++ needs testing
++ saves to file system in json lines
+  file not entirely json
+* bigbox.tools updated
++ much testing required
 
 * 2013SEP22
 - new branch, source.tw
