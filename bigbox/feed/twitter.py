@@ -8,7 +8,10 @@
 # prog: pr
 # desc: code allows twitter integration with bigbox
 #       Twython code allows full access to twit api
-#       along with restrictions.
+#       ...along with restrictions.
+# lisc: moving towards GPL3
+# copy: copyright (C) 2013 Peter Renshaw
+#
 # use : 
 #       send: twitter.py -m 'a message to send'
 #       help: twitter.py -h
@@ -18,6 +21,7 @@
 
 
 import sys
+import os.path
 from optparse import OptionParser
 
 
@@ -34,11 +38,14 @@ import bigbox.feed.config
 #     * internet connected
 #     * not get secrets data into github
 #     * testing
+#     * work out how to:
+#     - report errors, halt/return code?
+#     - save to filesystem/api?
 
 
 #---
 # authenticate: pass in keys, object & return authenticated
-#               twitter object or F
+#               twitter Twython object or F
 #---
 def authenticate(consumer_key, consumer_secret, access_key, 
                  access_secret):
@@ -51,8 +58,7 @@ def authenticate(consumer_key, consumer_secret, access_key,
         status = Twython(consumer_key, consumer_secret, access_key, 
                          access_secret)
     except TwythonError as e:
-        print("error: twitter authentication failed")
-        print("\t%s" % e)
+        status = False    
     return status
 
 
@@ -66,23 +72,81 @@ def authenticate(consumer_key, consumer_secret, access_key,
 #       so remember to initialise
 #---
 class Twy:
-    def __init__(self, twitter):
+    def __init__(self, twitter_obj):
         """init Twy object"""
         self.max_msg_length = 140
-        self.twitter = twitter
+        self.twitter = twitter_obj
         self.message = ""
         self.message_id = 0
         #
         # TODO check Twython obj valid
         #
+    def valid(self):
+        """is object valid?"""
+        if self.twitter: return True
+        else: return False
     def message_len(self):
         """return length of message"""
-        return len(self.message)
+        return len(self.message) if self.message else 0  # exect F, use zero
     def valid_message_length(self):
         """check message length is correct"""
         if self.message_len() > 0:
             if self.message_len() <= self.max_msg_length:
                 return True
+        return False
+    #---
+    # build_data: extract data from twitter api call, decode & build
+    #             dictionary to save. Failed? try url below:
+    # <https://dev.twitter.com/docs/api/1.1/get/statuses/show/%3Aid>
+    #
+    # original data structure:
+    #    line = """{"message": "%s","status": "%s","date": %s}\n""" % 
+    #              (message, update.id, time.mktime(t.timetuple())) 
+    #
+    #---
+    def build_data(self, tid, tmsg, tent):
+        """build dict of data to save to file"""
+        if tid:  # have twitter id?
+            if tmsg: # have a twitter message?
+                if tent: # have a twitter entitiy? (complicated)
+
+                    # gracefully fail if we screw up
+                    try:
+                        dtags = tent['hashtags']
+                        durls = tent['urls']
+
+                        # will this survive json if not str?
+                        dt_str = "%s" % bigbox.tools.db_datetime_utc()
+
+                        #---
+                        # data structure for storage
+                        py_data = dict(id_str=tid,              # tweet id
+                                       message=tmsg,            # msg sent
+                                       hashtag=tent['hashtags'],# list of #tags 
+                                       urls=tent['urls'],       # list of urls
+                                       date_str=dt_str)         # epoch in utc
+                        #---
+                    except:
+                        return False
+                    return py_data
+        return False
+
+    def save(self, tid, tmsg, tent):
+        """save message to somewhere"""
+        # save to file system/rest api? where?
+        # save to filesystem
+        # TODO what day is this? localtime?
+        fn = bigbox.tools.fn_current_day(ext='json')
+        fp = os.path.join(os.getcwd(), "data")
+        if os.path.isdir(fp):
+            fpn = os.path.join(fp, fn)            
+            with open(fpn, 'a') as f:
+                line_py = self.build_data(tid, tmsg, tent)
+                line_json = bigbox.tools.py2json(line_py)
+                f.write(line_json)
+                f.write('\n')  # stops braces butting up
+            return True       
+
         return False
     def send(self, message):
         """send a message"""
@@ -92,23 +156,16 @@ class Twy:
         if self.valid_message_length():
             # catch Twython errors
             try:
-                self.twitter.update_status(status=self.message)
-                #print(s)
-                #ps = bigbox.tools.json2py(s)
-                #print(ps)
-                # what is the id of this message?
-                # self.message_id =  ?
-                # message = dict(message=self.message,
-                #                id=self.message_id,
-                #                time=)
-                # msg_json = bigbox.tools.py2json(message)
-                # fpn = os.path.join('data','yyyymmmdd.json')
-                # bigbox.tools.save(fpn, msg_json)
-                #mid = self.twitter.get_sent_messages(count=1)
-                #print('mid=%s' % mid)
-                status = True
+                # twitter api call, (trim_user) only ret what we need
+                s = self.twitter.update_status(status=self.message, trim_user=True)
+
+                t_id = s['id_str']    # twitter id as string
+                t_msg = s['text']     # twitter message
+                t_ent = s['entities'] # twitter urls, tags & misc
+
+                status = self.save(t_id, t_msg, t_ent)
             except TwythonError as e:
-                pass  # TODO capture error
+                return False
         return status
     def close(self):
         """de-allocate Twython object"""
@@ -143,14 +200,18 @@ def main():
                           bigbox.feed.config.ACCESS_KEY, 
                           bigbox.feed.config.ACCESS_SECRET)
         t = Twy(twitter)
-        print("send")
-        status = t.send(options.message)
-        print("'%s' (%s)" % (options.message, t.message_len()))
-        if status:
-            print("ack")
+        if t.valid():
+            print("send")
+            status = t.send(options.message)
+            if status:
+                print("message saved & sent (%s)" % t.message_len())
+                print("ack")
+            else:
+                print("cant send message (%s)" % t.message_len())
+                print("fail")
+            t.close()
         else:
-            print("fail")
-        t.close()
+            print("bad Twython object, check")
     else:
         parser.print_help()
     # --- end process ---
