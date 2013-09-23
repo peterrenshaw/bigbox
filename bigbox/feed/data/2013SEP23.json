@@ -1,0 +1,131 @@
+{
+    "date_str": 1379873941.0,
+    "hashtag": [
+        {
+            "indices": [
+                16,
+                19
+            ],
+            "text": "ny"
+        }
+    ],
+    "id_str": "381995895958425600",
+    "message": "'I work for me' #ny ~ http://t.co/5EERF7lnnA",
+    "urls": [
+        {
+            "display_url": "rollingstone.com/music/news/nei\u2026",
+            "expanded_url": "http://www.rollingstone.com/music/news/neil-young-dave-matthews-jack-johnson-triumph-at-soggy-farm-aid-20130922",
+            "indices": [
+                22,
+                44
+            ],
+            "url": "http://t.co/5EERF7lnnA"
+        }
+    ]
+}
+{
+    "date_str": 1379874980.0,
+    "hashtag": [],
+    "id_str": "382000233690841088",
+    "message": "@tyabblemons why Im wary of APIs http://t.co/SulyTPTEVe @SkillsyOz @geehall1",
+    "urls": [
+        {
+            "display_url": "bits.blogs.nytimes.com/2013/09/13/for\u2026",
+            "expanded_url": "http://bits.blogs.nytimes.com/2013/09/13/for-developers-a-downside-to-a-public-twitter",
+            "indices": [
+                33,
+                55
+            ],
+            "url": "http://t.co/SulyTPTEVe"
+        }
+    ]
+}
+{
+    "date_str": "1379876623.0",
+    "hashtag": [],
+    "id_str": "382007103998541824",
+    "message": "\u266c love was a winner there overcoming hate / like a little girl who couldn't wait \u266c",
+    "urls": []
+}
+{
+    "date_str": "1379881460.0",
+    "hashtag": [],
+    "id_str": "382027559988252672",
+    "message": "\u266c hold on, baby, hold on / we can go gliding through the air / far from the jeers and lies \u266c",
+    "urls": []
+}
+{
+    "date_str": "1379882070.0",
+    "hashtag": [],
+    "id_str": "382030111018471424",
+    "message": "\u266c sometimes when I go walkin' / in the tall trees / I feel the light comin' down on me / under moon, under son / I feel the chosen one \u266c",
+    "urls": []
+}
+{
+    "date_str": "1379882205.0",
+    "hashtag": [],
+    "id_str": "382030676293197824",
+    "message": "\u266c no more darkness / no more wasted time / let me stay here with this heart of mine / and with you I feel no hidden path \u266c",
+    "urls": []
+}
+{
+    "date_str": "1379882393.0",
+    "hashtag": [],
+    "id_str": "382031458803523584",
+    "message": "\u266c there's a cold wind blowin' through my mind / but I'm holdin' on to the threads of time / and with you I feel no hidden path \u266c",
+    "urls": []
+}
+{
+    "date_str": "1379882710.0",
+    "hashtag": [],
+    "id_str": "382032785612873728",
+    "message": "\u266c sometimes when I go walkin' / in the trees, in the trees / that's where I do my prayin' / in the trees, in the trees \u266c",
+    "urls": []
+}
+{
+    "date_str": "1379883597.0",
+    "hashtag": [],
+    "id_str": "382036492178034688",
+    "message": "\u266c an ambulance can only go so fast / it's easy to get buried in the past / when you try to make a good thing last \u266c",
+    "urls": []
+}
+{
+    "date_str": "1379885256.0",
+    "hashtag": [
+        {
+            "indices": [
+                25,
+                33
+            ],
+            "text": "python3"
+        }
+    ],
+    "id_str": "382043426004279297",
+    "message": "@tyabblemons message via #python3 :) https://t.co/uGr06koIoT cc @SkillsyOz @geehall1",
+    "urls": [
+        {
+            "display_url": "github.com/peterrenshaw/b\u2026",
+            "expanded_url": "https://github.com/peterrenshaw/bigbox/blob/source.tw/bigbox/feed/twitter.py",
+            "indices": [
+                37,
+                60
+            ],
+            "url": "https://t.co/uGr06koIoT"
+        }
+    ]
+}
+{
+    "date_str": "1379887909.0",
+    "hashtag": [
+        {
+            "indices": [
+                100,
+                109
+            ],
+            "text": "facebook"
+        }
+    ],
+    "id_str": "382054544764448768",
+    "message": "I feel your pain @SkillsyOz that's why I'm working towards open api for data collected - wont solve #facebook pain though",
+    "urls": []
+}
