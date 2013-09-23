@@ -200,6 +200,7 @@ def main():
                           bigbox.feed.config.ACCESS_KEY, 
                           bigbox.feed.config.ACCESS_SECRET)
         t = Twy(twitter)
+
         if t.valid():
             print("send")
             status = t.send(options.message)
@@ -209,9 +210,10 @@ def main():
             else:
                 print("cant send message (%s)" % t.message_len())
                 print("fail")
-            t.close()
         else:
             print("bad Twython object, check")
+
+        t.close()
     else:
         parser.print_help()
     # --- end process ---
