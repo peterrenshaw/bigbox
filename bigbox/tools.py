@@ -22,7 +22,7 @@ import datetime
 
 # TODO testing #$@%^@^!
 
-#--- tools ---
+#--- filesystem tools ---
 # some testing
 #
 def save(filepathname, data):
@@ -46,6 +46,11 @@ def load(filepathname):
             f.close()
             return data
     return False
+#
+#--- end filesystem tools ---
+
+#--- conversion tools ---
+#
 #---
 # convert: bi-directional conversion of data from
 #          py=>json or json=>py. indent_sz arg 
@@ -70,8 +75,11 @@ def json2py(data):
 def py2json(data, indent=4):
     """convert python structure to json"""
     return convert(data, to_json=True, indent_sz=indent)
+#
+#--- end conversion tools ---
 
-#--- datetime ---
+
+#--- datetime tools ---
 #
 
 #---
@@ -86,10 +94,7 @@ def dt_datetime_strf(strf_fmt="%Y%b%d"):
 def fn_current_day(ext="json"):
     return "%s.%s" % (dt_datetime_strf(), ext)
 #
-#--- end datetime ---
-
-
-#--- end tools ---
+#--- end datetime tools---
 
 
 # main: cli entry point

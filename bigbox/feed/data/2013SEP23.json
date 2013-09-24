@@ -129,3 +129,112 @@
     "message": "I feel your pain @SkillsyOz that's why I'm working towards open api for data collected - wont solve #facebook pain though",
     "urls": []
 }
+{
+    "date_str": "1379888528.0",
+    "hashtag": [
+        {
+            "indices": [
+                23,
+                31
+            ],
+            "text": "twitter"
+        }
+    ],
+    "id_str": "382057142062026753",
+    "message": "@SkillsyOz dat extract #twitter https://t.co/TTkgws0M4E @geehall1 @tyabblemons",
+    "urls": [
+        {
+            "display_url": "github.com/peterrenshaw/b\u2026",
+            "expanded_url": "https://github.com/peterrenshaw/bigbox/blob/source.tw/bigbox/feed/data/2013SEP23.json",
+            "indices": [
+                32,
+                55
+            ],
+            "url": "https://t.co/TTkgws0M4E"
+        }
+    ]
+}
+{
+    "date_str": "1379888621.0",
+    "hashtag": [
+        {
+            "indices": [
+                51,
+                55
+            ],
+            "text": "utc"
+        }
+    ],
+    "id_str": "382057527732486144",
+    "message": "@SkillsyOz note data extract not local time :( but #utc &amp; display locally @geehall1 @tyabblemons",
+    "urls": []
+}
+{
+    "date_str": "1379888751.0",
+    "hashtag": [
+        {
+            "indices": [
+                64,
+                71
+            ],
+            "text": "bigbox"
+        }
+    ],
+    "id_str": "382058075588284416",
+    "message": "Brad I have access to search but it's not tested or hooked into #bigbox, take a while, gettin' there @SkillsyOz @geehall1 @tyabblemons",
+    "urls": []
+}
+{
+    "date_str": "1379888814.0",
+    "hashtag": [],
+    "id_str": "382058341498765313",
+    "message": "Brad before testing I'll try some queries &amp; spit out some data, see what happens next 24/48hrs @SkillsyOz @geehall1 @tyabblemons",
+    "urls": []
+}
+{
+    "date_str": "1379894915.0",
+    "hashtag": [
+        {
+            "indices": [
+                14,
+                26
+            ],
+            "text": "DavidSuzuki"
+        }
+    ],
+    "id_str": "382083930347675648",
+    "message": "@Doc_Samantha #DavidSuzuki coomunication skills honed practicing to his father as a youngster",
+    "urls": []
+}
+{
+    "date_str": "1379894964.0",
+    "hashtag": [],
+    "id_str": "382084133997928449",
+    "message": "@Doc_Samantha http://t.co/33aHIgJiyZ",
+    "urls": [
+        {
+            "display_url": "cbc.ca/archives/categ\u2026",
+            "expanded_url": "http://cbc.ca/archives/categories/arts-entertainment/media/david-suzuki-scientist-activist-broadcaster-1/stages-in-a-life.html",
+            "indices": [
+                14,
+                36
+            ],
+            "url": "http://t.co/33aHIgJiyZ"
+        }
+    ]
+}
+{
+    "date_str": "1379895011.0",
+    "hashtag": [
+        {
+            "indices": [
+                120,
+                132
+            ],
+            "text": "DavidSuzuki"
+        }
+    ],
+    "id_str": "382084332375916544",
+    "message": "'From the genes you gave me, to the lifetime of experience and example, you helped me through much of my metamorphosis' #DavidSuzuki",
+    "urls": []
+}
