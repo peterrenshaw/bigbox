@@ -29,12 +29,15 @@ from twython import Twython
 from twython import TwythonError
 
 
-import bigbox
 import bigbox.tools
 import bigbox.feed.config
 
 
 # TODO 
+#     * check twitter restrictions
+#       on search
+#     * implement a twitter search count/min
+#     * create extraction object for better extraction
 #     * internet connected
 #     * not get secrets data into github
 #     * testing
@@ -44,34 +47,148 @@ import bigbox.feed.config
 
 
 #---
-# authenticate: pass in keys, object & return authenticated
-#               twitter Twython object or F
+# authenticate_r: pass in keys, object & return authenticated
+#                 for READ ONLY access only to twitter API
+#                 Twython object or F
 #---
-def authenticate(consumer_key, consumer_secret, access_key, 
-                 access_secret):
+def authenticate_r(consumer_key, consumer_secret, access_token=""):
     """
     authenticate Twython object with keys & secrets, return 
     obj or F
     """
     status = False
     try:
-        status = Twython(consumer_key, consumer_secret, access_key, 
-                         access_secret)
+        # important: this only authenticates for READ ONLY api calls
+        status = Twython(consumer_key, consumer_secret, oauth_version=2)
+
+        # have access token?
+        # extract then save this for later on
+        q_access_token = access_token
+        if not access_token:
+            q_access_token = status.obtain_access_token()
+            #print('access_token = %s' % q_access_token)
+        
+        status = Twython(consumer_key, access_token=q_access_token)
     except TwythonError as e:
         status = False    
+    return status
+#---
+# authenticate_rw: pass in keys, object & return authenticated
+#                  for full API access to twitter Twython object or F
+#---
+def authenticate_rw(consumer_key, consumer_secret, 
+                    access_key, access_secret):
+    """
+    authenticate Twython object with keys & secrets, return obj or F
+    """
+    status = False
+    try:
+        status = Twython(consumer_key, consumer_secret, 
+                         access_key, access_secret)
+    except TwythonError as e:
+        status = False
     return status
 
 
 #---
-# name: Twy
-# date: 2013SEP22
+# name: Twy_r
+# date: 2013SEP24
 # prog: pr
 # desc: simple wrapper for Twython object
-#
+#       READ ONLY to twitter API
 #       have to pass in valid Twython obj
 #       so remember to initialise
 #---
-class Twy:
+class Twy_r:
+    def __init__(self, twitter_obj):
+        """init Twy obj"""
+        self.twitter = twitter_obj
+        self.query = ""
+        self.result = ""
+        self.result_type = ""
+        self.count = 0
+        self.until = ""
+        self.include_entities = False
+    def count(self, count):
+        """set count for query returns"""
+        if count > 0:
+            self.count = count
+            return True
+        return False
+    def search(self, query, 
+                     result_type="recent", 
+                     count=0, 
+                     until="",
+                     include_entities=False):
+        """query twitter api"""
+        if query:
+            self.query = query
+            self.result_type = result_type
+            self.count = count
+            self.until = until
+            self.include_entities = include_entities
+            self.result = self.twitter.search(q = self.query,
+                                    result_type = self.result_type,
+                                    count = self.count, 
+                                    until = self.until,
+                                    include_entities=self.include_entities)
+            return self.result
+        return False       
+    def build_data(self, query, data, datetime):
+        """build data into a dictionary to save to file"""
+        if data:
+            dt = datetime
+
+            q = query.replace(' ','+')
+            md_count = data['search_metadata']['count']
+
+            messages = []
+            for s in data['statuses']:
+                d = dict(id_str=s['id_str'],
+                         text=s['text'])
+                messages.append(d)
+                d = None
+           
+            #---
+            # data structure for storage
+            py_data = dict(q=q,                # query made
+                           count=md_count,     # message count
+                           datetime=dt,        # date time stamp  
+                           message=messages)   # id, text from queries
+            #---
+            return py_data
+        return False
+    def save(self, data):
+        """save a query"""
+        # save to file system/rest api? where?
+        # save to filesystem
+        # TODO what day is this? localtime?
+        if data:
+            self.result = data
+            fn = bigbox.tools.fn_current_day(ext='json')
+            fp = os.path.join(os.getcwd(), "query")
+            if os.path.isdir(fp):
+                fpn = os.path.join(fp, fn)            
+                with open(fpn, 'a') as f:
+                    dt = "%s" % bigbox.tools.db_datetime_utc()
+                    line_py = self.build_data(self.query, self.result, dt)
+                    line_json = bigbox.tools.py2json(line_py)
+                    f.write(line_json)
+                    f.write('\n')  # stops braces butting up
+                return True       
+        return False
+
+
+#---
+# name: Twy_rw
+# date: 2013SEP22
+# prog: pr
+# desc: simple wrapper for Twython object
+#       RW access to twitter API
+#       have to pass in valid Twython obj
+#       so remember to initialise
+#---
+class Twy_rw:
     def __init__(self, twitter_obj):
         """init Twy object"""
         self.max_msg_length = 140
@@ -83,6 +200,9 @@ class Twy:
         #
     def valid(self):
         """is object valid?"""
+        # TODO this really doesn't do the job
+        #      seems to return obj even without
+        #      consumer & access keys
         if self.twitter: return True
         else: return False
     def message_len(self):
@@ -130,14 +250,13 @@ class Twy:
                         return False
                     return py_data
         return False
-
     def save(self, tid, tmsg, tent):
         """save message to somewhere"""
         # save to file system/rest api? where?
         # save to filesystem
         # TODO what day is this? localtime?
         fn = bigbox.tools.fn_current_day(ext='json')
-        fp = os.path.join(os.getcwd(), "data")
+        fp = os.path.join(os.getcwd(), "tweet")
         if os.path.isdir(fp):
             fpn = os.path.join(fp, fn)            
             with open(fpn, 'a') as f:
@@ -181,9 +300,11 @@ def main():
     usage = "usage: %prog [v] -t -d"
     parser = OptionParser(usage)
 
-    # --- options --- 
+    # --- options ---
     parser.add_option("-m", "--message", dest="message", \
                       help="send a message")
+    parser.add_option("-q", "--search", dest="search", \
+                      help="search twitter by query")
     parser.add_option("-v", "--version", dest="version",
                       action="store_true",
                       help="current version")    
@@ -195,13 +316,12 @@ def main():
                                 '2013SEP22', '(C) 2013'))
         sys.exit(0)
     elif options.message:
-        twitter = Twython(bigbox.feed.config.CONSUMER_KEY,
-                          bigbox.feed.config.CONSUMER_SECRET, 
-                          bigbox.feed.config.ACCESS_KEY, 
-                          bigbox.feed.config.ACCESS_SECRET)
-        t = Twy(twitter)
-
-        if t.valid():
+        twitter = authenticate_rw(bigbox.feed.config.CONSUMER_KEY,
+                                  bigbox.feed.config.CONSUMER_SECRET,
+                                  bigbox.feed.config.ACCESS_KEY,
+                                  bigbox.feed.config.ACCESS_SECRET)
+        if twitter:
+            t = Twy_rw(twitter)
             print("send")
             status = t.send(options.message)
             if status:
@@ -214,6 +334,20 @@ def main():
             print("bad Twython object, check")
 
         t.close()
+    elif options.search:
+        print("query = <%s>" % options.search)
+        twitter = authenticate_r(bigbox.feed.config.CONSUMER_KEY,
+                                 bigbox.feed.config.CONSUMER_SECRET,"")
+        if twitter:
+            t = Twy_r(twitter)
+            if t: 
+                result = t.search(options.search)
+                t.save(result)
+                print("ack")      
+            else:
+                print("fail")
+        else:
+            print("bad Twython object, check")
     else:
         parser.print_help()
     # --- end process ---

@@ -1,0 +1,71 @@
+{
+    "date_str": "1379959783.0",
+    "hashtag": [
+        {
+            "indices": [
+                1,
+                7
+            ],
+            "text": "vinyl"
+        },
+        {
+            "indices": [
+                33,
+                39
+            ],
+            "text": "music"
+        }
+    ],
+    "id_str": "382356069000806400",
+    "message": "'#vinyl is a material carrier of #music heritage' http://t.co/5QMmMgEn09",
+    "urls": [
+        {
+            "display_url": "abc.net.au/news/2013-09-2\u2026",
+            "expanded_url": "http://abc.net.au/news/2013-09-23/surge-in-sales-music-to-the-ears-of-vinyl-lovers/4975862",
+            "indices": [
+                50,
+                72
+            ],
+            "url": "http://t.co/5QMmMgEn09"
+        }
+    ]
+}
+{
+    "date_str": "1379963506.0",
+    "hashtag": [],
+    "id_str": "382371665985802240",
+    "message": "\u266c when we both went down to register / we we laughin all the way / that's when we named it the hippie highway / I still call it that today \u266c",
+    "urls": []
+}
+{
+    "date_str": "1379963662.0",
+    "hashtag": [
+        {
+            "indices": [
+                0,
+                7
+            ],
+            "text": "spring"
+        }
+    ],
+    "id_str": "382372320817344512",
+    "message": "#spring ~ http://t.co/9FjXFIPaty",
+    "urls": [
+        {
+            "display_url": "flickr.com/photos/bootloa\u2026",
+            "expanded_url": "http://flickr.com/photos/bootload/9910442803",
+            "indices": [
+                10,
+                32
+            ],
+            "url": "http://t.co/9FjXFIPaty"
+        }
+    ]
+}
+{
+    "date_str": "1379991883.0",
+    "hashtag": [],
+    "id_str": "382490634642153472",
+    "message": "@deshuis by EN do you mean Evernote? by batch do you mean a shell script? by os do you mean linux?",
+    "urls": []
+}

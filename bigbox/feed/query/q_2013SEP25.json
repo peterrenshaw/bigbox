@@ -1,0 +1,1320 @@
+{
+    "datetime": "1380049293.0",
+    "metadata": {
+        "completed_in": 0.068,
+        "count": 15,
+        "max_id": 382730752867069952,
+        "max_id_str": "382730752867069952",
+        "next_results": "?max_id=382725617583534079&q=neil%20young&result_type=recent",
+        "query": "neil+young",
+        "refresh_url": "?since_id=382730752867069952&q=neil%20young&result_type=recent",
+        "since_id": 0,
+        "since_id_str": "0"
+    },
+    "q": "neil young",
+    "status": [
+        {
+            "contributors": null,
+            "coordinates": null,
+            "created_at": "Wed Sep 25 04:58:16 +0000 2013",
+            "favorite_count": 0,
+            "favorited": false,
+            "geo": null,
+            "id": 382730752867069952,
+            "id_str": "382730752867069952",
+            "in_reply_to_screen_name": null,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "lang": "en",
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "place": null,
+            "possibly_sensitive": false,
+            "retweet_count": 0,
+            "retweeted": false,
+            "source": "<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>",
+            "text": "Venting Sept. 25, 2013: \u2018I invited Neil Young and Robert Redford into my home via their music and their movies... http://t.co/XmbY3OYkg2",
+            "truncated": false,
+            "user": {
+                "contributors_enabled": false,
+                "created_at": "Fri Jul 24 16:16:23 +0000 2009",
+                "default_profile": false,
+                "default_profile_image": false,
+                "description": "I'm a proud Edmontonian tweeting stuff you need to know if you are in Edmonton! Follow for a while :)",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "favourites_count": 1,
+                "follow_request_sent": null,
+                "followers_count": 17957,
+                "following": null,
+                "friends_count": 16175,
+                "geo_enabled": false,
+                "id": 59820919,
+                "id_str": "59820919",
+                "is_translator": false,
+                "lang": "en",
+                "listed_count": 251,
+                "location": "Edmonton",
+                "name": "ETown Mickey",
+                "notifications": null,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http://a0.twimg.com/profile_background_images/605563430/2t2s5mqtwfnj2hjd7td6.jpeg",
+                "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/605563430/2t2s5mqtwfnj2hjd7td6.jpeg",
+                "profile_background_tile": false,
+                "profile_image_url": "http://a0.twimg.com/profile_images/330085700/Edmonton_normal.jpg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/330085700/Edmonton_normal.jpg",
+                "profile_link_color": "0084B4",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "protected": false,
+                "screen_name": "ETownMickey",
+                "statuses_count": 31403,
+                "time_zone": "Mountain Time (US & Canada)",
+                "url": null,
+                "utc_offset": -21600,
+                "verified": false
+            }
+        },
+        {
+            "contributors": null,
+            "coordinates": null,
+            "created_at": "Wed Sep 25 04:58:02 +0000 2013",
+            "favorite_count": 0,
+            "favorited": false,
+            "geo": null,
+            "id": 382730690661720064,
+            "id_str": "382730690661720064",
+            "in_reply_to_screen_name": null,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "lang": "en",
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "place": null,
+            "retweet_count": 0,
+            "retweeted": false,
+            "source": "<a href=\"http://www.shoutirc.com/\" rel=\"nofollow\">ShoutIRC Plugin</a>",
+            "text": "RMT is playing Neil Young Buffalo Springfield - I Ain't Got The Blues [Listeners: 2/50] [Requests are: On]",
+            "truncated": false,
+            "user": {
+                "contributors_enabled": false,
+                "created_at": "Thu Jan 31 17:22:24 +0000 2013",
+                "default_profile": true,
+                "default_profile_image": false,
+                "description": "We serve up the best classic rock on the internet!  Join us!",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "rockinusa.net:8004",
+                                "expanded_url": "http://rockinusa.net:8004",
+                                "indices": [
+                                    0,
+                                    20
+                                ],
+                                "url": "http://t.co/Inv87toc"
+                            }
+                        ]
+                    }
+                },
+                "favourites_count": 0,
+                "follow_request_sent": null,
+                "followers_count": 97,
+                "following": null,
+                "friends_count": 33,
+                "geo_enabled": true,
+                "id": 1137452570,
+                "id_str": "1137452570",
+                "is_translator": false,
+                "lang": "en",
+                "listed_count": 2,
+                "location": "Montana",
+                "name": "Classic Rock MT",
+                "notifications": null,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://a0.twimg.com/profile_images/3188992225/08ee31d6934c45ff2d29252211611636_normal.jpeg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/3188992225/08ee31d6934c45ff2d29252211611636_normal.jpeg",
+                "profile_link_color": "0084B4",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "protected": false,
+                "screen_name": "ClassicRockMT",
+                "statuses_count": 83558,
+                "time_zone": null,
+                "url": "http://t.co/Inv87toc",
+                "utc_offset": null,
+                "verified": false
+            }
+        },
+        {
+            "contributors": null,
+            "coordinates": null,
+            "created_at": "Wed Sep 25 04:57:20 +0000 2013",
+            "favorite_count": 0,
+            "favorited": false,
+            "geo": null,
+            "id": 382730515805007872,
+            "id_str": "382730515805007872",
+            "in_reply_to_screen_name": null,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "lang": "en",
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "place": null,
+            "retweet_count": 0,
+            "retweeted": false,
+            "source": "web",
+            "text": "i want to relive neil young's generation of music.",
+            "truncated": false,
+            "user": {
+                "contributors_enabled": false,
+                "created_at": "Fri Jan 21 00:17:14 +0000 2011",
+                "default_profile": false,
+                "default_profile_image": false,
+                "description": "Bulldog.\r\nLeading the Wolf pack to greatness.",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "favourites_count": 539,
+                "follow_request_sent": null,
+                "followers_count": 243,
+                "following": null,
+                "friends_count": 148,
+                "geo_enabled": true,
+                "id": 240894453,
+                "id_str": "240894453",
+                "is_translator": false,
+                "lang": "en",
+                "listed_count": 0,
+                "location": "St.Albert, Alberta",
+                "name": "Carter-Ray Gallant",
+                "notifications": null,
+                "profile_background_color": "AEEBC7",
+                "profile_background_image_url": "http://a0.twimg.com/profile_background_images/395298036/24473_381960399518_31600914518_3578689_7081144_n.jpg",
+                "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/395298036/24473_381960399518_31600914518_3578689_7081144_n.jpg",
+                "profile_background_tile": false,
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/240894453/1353992453",
+                "profile_image_url": "http://a0.twimg.com/profile_images/378800000504959806/cef6b6533d81fc8afdbc6b4136a9ed2f_normal.jpeg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/378800000504959806/cef6b6533d81fc8afdbc6b4136a9ed2f_normal.jpeg",
+                "profile_link_color": "17A33C",
+                "profile_sidebar_border_color": "F0F5AB",
+                "profile_sidebar_fill_color": "CCFFDC",
+                "profile_text_color": "666666",
+                "profile_use_background_image": false,
+                "protected": false,
+                "screen_name": "CarterGallant",
+                "statuses_count": 2343,
+                "time_zone": null,
+                "url": null,
+                "utc_offset": null,
+                "verified": false
+            }
+        },
+        {
+            "contributors": null,
+            "coordinates": null,
+            "created_at": "Wed Sep 25 04:56:27 +0000 2013",
+            "favorite_count": 0,
+            "favorited": false,
+            "geo": null,
+            "id": 382730292726726656,
+            "id_str": "382730292726726656",
+            "in_reply_to_screen_name": null,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "lang": "en",
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "place": null,
+            "possibly_sensitive": false,
+            "retweet_count": 0,
+            "retweeted": false,
+            "source": "<a href=\"http://www.tweetdeck.com\" rel=\"nofollow\">TweetDeck</a>",
+            "text": "Video: Neil Young closes Farm Aid with Phil Ochs' \"Changes,\" preceded by a spoken intro mentioning Kurt Cobain. http://t.co/YxfhqTD0AP",
+            "truncated": false,
+            "user": {
+                "contributors_enabled": false,
+                "created_at": "Sat Mar 07 14:23:22 +0000 2009",
+                "default_profile": false,
+                "default_profile_image": false,
+                "description": "Journalist, photographer. Author: http://t.co/CQBwiTdS7V @midlandauthors president. 2013 runner-up, Chicago Reader's Best Chicagoan to follow on Twitter",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "alchemyofbones.com",
+                                "expanded_url": "http://www.alchemyofbones.com",
+                                "indices": [
+                                    34,
+                                    56
+                                ],
+                                "url": "http://t.co/CQBwiTdS7V"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "robertloerzel.com",
+                                "expanded_url": "http://www.robertloerzel.com",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/f3NdT1FAmD"
+                            }
+                        ]
+                    }
+                },
+                "favourites_count": 3499,
+                "follow_request_sent": null,
+                "followers_count": 4282,
+                "following": null,
+                "friends_count": 4539,
+                "geo_enabled": true,
+                "id": 23196051,
+                "id_str": "23196051",
+                "is_translator": false,
+                "lang": "en",
+                "listed_count": 242,
+                "location": "Chicago",
+                "name": "Robert Loerzel",
+                "notifications": null,
+                "profile_background_color": "0099B9",
+                "profile_background_image_url": "http://a0.twimg.com/profile_background_images/52706528/bluebackground.jpg",
+                "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/52706528/bluebackground.jpg",
+                "profile_background_tile": true,
+                "profile_image_url": "http://a0.twimg.com/profile_images/2559630030/g6d9bhbqwvd7c03xcz03_normal.jpeg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/2559630030/g6d9bhbqwvd7c03xcz03_normal.jpeg",
+                "profile_link_color": "0099B9",
+                "profile_sidebar_border_color": "5ED4DC",
+                "profile_sidebar_fill_color": "95E8EC",
+                "profile_text_color": "3C3940",
+                "profile_use_background_image": true,
+                "protected": false,
+                "screen_name": "robertloerzel",
+                "statuses_count": 73563,
+                "time_zone": "Central Time (US & Canada)",
+                "url": "http://t.co/f3NdT1FAmD",
+                "utc_offset": -18000,
+                "verified": false
+            }
+        },
+        {
+            "contributors": null,
+            "coordinates": null,
+            "created_at": "Wed Sep 25 04:53:57 +0000 2013",
+            "favorite_count": 0,
+            "favorited": false,
+            "geo": null,
+            "id": 382729665946734592,
+            "id_str": "382729665946734592",
+            "in_reply_to_screen_name": null,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "lang": "en",
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "place": null,
+            "retweet_count": 1,
+            "retweeted": false,
+            "retweeted_status": {
+                "contributors": null,
+                "coordinates": null,
+                "created_at": "Wed Sep 25 04:49:54 +0000 2013",
+                "favorite_count": 2,
+                "favorited": false,
+                "geo": null,
+                "id": 382728645099266048,
+                "id_str": "382728645099266048",
+                "in_reply_to_screen_name": null,
+                "in_reply_to_status_id": null,
+                "in_reply_to_status_id_str": null,
+                "in_reply_to_user_id": null,
+                "in_reply_to_user_id_str": null,
+                "lang": "en",
+                "metadata": {
+                    "iso_language_code": "en",
+                    "result_type": "recent"
+                },
+                "place": null,
+                "possibly_sensitive": false,
+                "retweet_count": 1,
+                "retweeted": false,
+                "source": "<a href=\"http://www.tweetdeck.com\" rel=\"nofollow\">TweetDeck</a>",
+                "text": "With a live cover of the beautiful \"Changes,\" Neil Young pays tribute to the late, great Phil Ochs. I do this song. http://t.co/mA5JBvvZDu",
+                "truncated": false,
+                "user": {
+                    "contributors_enabled": false,
+                    "created_at": "Tue Aug 12 05:05:56 +0000 2008",
+                    "default_profile": false,
+                    "default_profile_image": false,
+                    "description": "Journalist/musician/agitator. Author, SPIES FOR HIRE. Salon & Nation writer. Union guy. Raised in postwar Asia. Fan of Dylan, guitars and a Girl named Barbara.",
+                    "entities": {
+                        "description": {
+                            "urls": []
+                        },
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "timshorrock.com",
+                                    "expanded_url": "http://www.timshorrock.com",
+                                    "indices": [
+                                        0,
+                                        22
+                                    ],
+                                    "url": "http://t.co/yLlal4XPGN"
+                                }
+                            ]
+                        }
+                    },
+                    "favourites_count": 200,
+                    "follow_request_sent": null,
+                    "followers_count": 7194,
+                    "following": null,
+                    "friends_count": 4137,
+                    "geo_enabled": true,
+                    "id": 15818978,
+                    "id_str": "15818978",
+                    "is_translator": false,
+                    "lang": "en",
+                    "listed_count": 476,
+                    "location": "Washington, DC, USA",
+                    "name": "Tim Shorrock",
+                    "notifications": null,
+                    "profile_background_color": "961A1A",
+                    "profile_background_image_url": "http://a0.twimg.com/profile_background_images/337445188/terror_IMG_0489.jpg",
+                    "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/337445188/terror_IMG_0489.jpg",
+                    "profile_background_tile": true,
+                    "profile_image_url": "http://a0.twimg.com/profile_images/378800000233583968/3c8696408cb31a8015da3cf453b9c77a_normal.jpeg",
+                    "profile_image_url_https": "https://si0.twimg.com/profile_images/378800000233583968/3c8696408cb31a8015da3cf453b9c77a_normal.jpeg",
+                    "profile_link_color": "0000FF",
+                    "profile_sidebar_border_color": "87BC44",
+                    "profile_sidebar_fill_color": "E0FF92",
+                    "profile_text_color": "000000",
+                    "profile_use_background_image": true,
+                    "protected": false,
+                    "screen_name": "TimothyS",
+                    "statuses_count": 37028,
+                    "time_zone": "Eastern Time (US & Canada)",
+                    "url": "http://t.co/yLlal4XPGN",
+                    "utc_offset": -14400,
+                    "verified": false
+                }
+            },
+            "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+            "text": "RT @TimothyS: With a live cover of the beautiful \"Changes,\" Neil Young pays tribute to the late, great Phil Ochs. I do this song. http://t.\u2026",
+            "truncated": false,
+            "user": {
+                "contributors_enabled": false,
+                "created_at": "Fri Mar 02 00:12:35 +0000 2012",
+                "default_profile": true,
+                "default_profile_image": false,
+                "description": "Fighting the Good Fight, REAL Progressive, Medical Professional, Musician, #ACLU #NLG #UNIONS #99% #GENX #CONSPIRACY #SFGIANTS RT may not endorse/may piss u off",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "favourites_count": 6851,
+                "follow_request_sent": null,
+                "followers_count": 1296,
+                "following": null,
+                "friends_count": 2002,
+                "geo_enabled": false,
+                "id": 511081531,
+                "id_str": "511081531",
+                "is_translator": false,
+                "lang": "en",
+                "listed_count": 67,
+                "location": "Higher Ground",
+                "name": "Zuma",
+                "notifications": null,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/511081531/1352400306",
+                "profile_image_url": "http://a0.twimg.com/profile_images/2566197517/image_normal.jpg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/2566197517/image_normal.jpg",
+                "profile_link_color": "0084B4",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "protected": false,
+                "screen_name": "NeilYoungSaveUs",
+                "statuses_count": 77409,
+                "time_zone": "Eastern Time (US & Canada)",
+                "url": null,
+                "utc_offset": -14400,
+                "verified": false
+            }
+        },
+        {
+            "contributors": null,
+            "coordinates": null,
+            "created_at": "Wed Sep 25 04:53:12 +0000 2013",
+            "favorite_count": 0,
+            "favorited": false,
+            "geo": null,
+            "id": 382729476276494336,
+            "id_str": "382729476276494336",
+            "in_reply_to_screen_name": null,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "lang": "en",
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "place": null,
+            "possibly_sensitive": false,
+            "retweet_count": 0,
+            "retweeted": false,
+            "source": "<a href=\"http://www.facebook.com/twitter\" rel=\"nofollow\">Facebook</a>",
+            "text": "Willie Nelson\nCouldn't make it to Farm Aid 2013? Enjoy the setlist recaps for Willie, Neil Young, John... http://t.co/dKRapMLxaa",
+            "truncated": false,
+            "user": {
+                "contributors_enabled": false,
+                "created_at": "Wed Jun 19 00:42:02 +0000 2013",
+                "default_profile": true,
+                "default_profile_image": false,
+                "description": "Country Music, Community radio, Music, Broadcasting",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "facebook.com/thecountrywagg\u2026",
+                                "expanded_url": "http://www.facebook.com/thecountrywaggon",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/pP4EJsk2wv"
+                            }
+                        ]
+                    }
+                },
+                "favourites_count": 0,
+                "follow_request_sent": null,
+                "followers_count": 26,
+                "following": null,
+                "friends_count": 247,
+                "geo_enabled": false,
+                "id": 1529244458,
+                "id_str": "1529244458",
+                "is_translator": false,
+                "lang": "en",
+                "listed_count": 0,
+                "location": "Temora",
+                "name": "Matthew David Clarke",
+                "notifications": null,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://a0.twimg.com/profile_images/378800000013488477/03dff15ec49b4bc504371beb6947eb3f_normal.jpeg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/378800000013488477/03dff15ec49b4bc504371beb6947eb3f_normal.jpeg",
+                "profile_link_color": "0084B4",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "protected": false,
+                "screen_name": "clarke_the",
+                "statuses_count": 657,
+                "time_zone": null,
+                "url": "http://t.co/pP4EJsk2wv",
+                "utc_offset": null,
+                "verified": false
+            }
+        },
+        {
+            "contributors": null,
+            "coordinates": null,
+            "created_at": "Wed Sep 25 04:51:54 +0000 2013",
+            "favorite_count": 0,
+            "favorited": false,
+            "geo": null,
+            "id": 382729150412632064,
+            "id_str": "382729150412632064",
+            "in_reply_to_screen_name": "MatthewRyan101",
+            "in_reply_to_status_id": 382727748802064385,
+            "in_reply_to_status_id_str": "382727748802064385",
+            "in_reply_to_user_id": 21908151,
+            "in_reply_to_user_id_str": "21908151",
+            "lang": "en",
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "place": null,
+            "retweet_count": 0,
+            "retweeted": false,
+            "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+            "text": "@MatthewRyan101 definitely one of my favorite Neil Young songs!",
+            "truncated": false,
+            "user": {
+                "contributors_enabled": false,
+                "created_at": "Sat Jun 15 21:54:42 +0000 2013",
+                "default_profile": true,
+                "default_profile_image": false,
+                "description": "",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "favourites_count": 0,
+                "follow_request_sent": null,
+                "followers_count": 13,
+                "following": null,
+                "friends_count": 63,
+                "geo_enabled": false,
+                "id": 1520496042,
+                "id_str": "1520496042",
+                "is_translator": false,
+                "lang": "en",
+                "listed_count": 0,
+                "location": "Nashville, Tennessee",
+                "name": "Kimberly Stone",
+                "notifications": null,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://a0.twimg.com/profile_images/344513261583737992/a63fe018a28d125a4303a6cf3d49ae7b_normal.jpeg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/344513261583737992/a63fe018a28d125a4303a6cf3d49ae7b_normal.jpeg",
+                "profile_link_color": "0084B4",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "protected": false,
+                "screen_name": "Kimbee1269",
+                "statuses_count": 60,
+                "time_zone": null,
+                "url": null,
+                "utc_offset": null,
+                "verified": false
+            }
+        },
+        {
+            "contributors": null,
+            "coordinates": null,
+            "created_at": "Wed Sep 25 04:49:54 +0000 2013",
+            "favorite_count": 2,
+            "favorited": false,
+            "geo": null,
+            "id": 382728645099266048,
+            "id_str": "382728645099266048",
+            "in_reply_to_screen_name": null,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "lang": "en",
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "place": null,
+            "possibly_sensitive": false,
+            "retweet_count": 1,
+            "retweeted": false,
+            "source": "<a href=\"http://www.tweetdeck.com\" rel=\"nofollow\">TweetDeck</a>",
+            "text": "With a live cover of the beautiful \"Changes,\" Neil Young pays tribute to the late, great Phil Ochs. I do this song. http://t.co/mA5JBvvZDu",
+            "truncated": false,
+            "user": {
+                "contributors_enabled": false,
+                "created_at": "Tue Aug 12 05:05:56 +0000 2008",
+                "default_profile": false,
+                "default_profile_image": false,
+                "description": "Journalist/musician/agitator. Author, SPIES FOR HIRE. Salon & Nation writer. Union guy. Raised in postwar Asia. Fan of Dylan, guitars and a Girl named Barbara.",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "timshorrock.com",
+                                "expanded_url": "http://www.timshorrock.com",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/yLlal4XPGN"
+                            }
+                        ]
+                    }
+                },
+                "favourites_count": 200,
+                "follow_request_sent": null,
+                "followers_count": 7194,
+                "following": null,
+                "friends_count": 4137,
+                "geo_enabled": true,
+                "id": 15818978,
+                "id_str": "15818978",
+                "is_translator": false,
+                "lang": "en",
+                "listed_count": 476,
+                "location": "Washington, DC, USA",
+                "name": "Tim Shorrock",
+                "notifications": null,
+                "profile_background_color": "961A1A",
+                "profile_background_image_url": "http://a0.twimg.com/profile_background_images/337445188/terror_IMG_0489.jpg",
+                "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/337445188/terror_IMG_0489.jpg",
+                "profile_background_tile": true,
+                "profile_image_url": "http://a0.twimg.com/profile_images/378800000233583968/3c8696408cb31a8015da3cf453b9c77a_normal.jpeg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/378800000233583968/3c8696408cb31a8015da3cf453b9c77a_normal.jpeg",
+                "profile_link_color": "0000FF",
+                "profile_sidebar_border_color": "87BC44",
+                "profile_sidebar_fill_color": "E0FF92",
+                "profile_text_color": "000000",
+                "profile_use_background_image": true,
+                "protected": false,
+                "screen_name": "TimothyS",
+                "statuses_count": 37028,
+                "time_zone": "Eastern Time (US & Canada)",
+                "url": "http://t.co/yLlal4XPGN",
+                "utc_offset": -14400,
+                "verified": false
+            }
+        },
+        {
+            "contributors": null,
+            "coordinates": null,
+            "created_at": "Wed Sep 25 04:48:48 +0000 2013",
+            "favorite_count": 0,
+            "favorited": false,
+            "geo": null,
+            "id": 382728367293726721,
+            "id_str": "382728367293726721",
+            "in_reply_to_screen_name": null,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "lang": "en",
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "place": {
+                "attributes": {},
+                "bounding_box": {
+                    "coordinates": [
+                        [
+                            [
+                                -121.95641,
+                                37.618957
+                            ],
+                            [
+                                -121.798766,
+                                37.618957
+                            ],
+                            [
+                                -121.798766,
+                                37.7037
+                            ],
+                            [
+                                -121.95641,
+                                37.7037
+                            ]
+                        ]
+                    ],
+                    "type": "Polygon"
+                },
+                "country": "United States",
+                "country_code": "US",
+                "full_name": "Pleasanton, CA",
+                "id": "ad4876a662119b74",
+                "name": "Pleasanton",
+                "place_type": "city",
+                "url": "https://api.twitter.com/1.1/geo/id/ad4876a662119b74.json"
+            },
+            "retweet_count": 0,
+            "retweeted": false,
+            "source": "<a href=\"http://tapbots.com/tweetbot\" rel=\"nofollow\">Tweetbot for iOS</a>",
+            "text": "I have \u201ccomes a time\u201d by Neil young stuck in my head",
+            "truncated": false,
+            "user": {
+                "contributors_enabled": false,
+                "created_at": "Thu Mar 22 12:32:42 +0000 2007",
+                "default_profile": false,
+                "default_profile_image": false,
+                "description": "arit93 he's just this guy",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "favourites_count": 61,
+                "follow_request_sent": null,
+                "followers_count": 464,
+                "following": null,
+                "friends_count": 339,
+                "geo_enabled": true,
+                "id": 1867761,
+                "id_str": "1867761",
+                "is_translator": false,
+                "lang": "en",
+                "listed_count": 31,
+                "location": "Pleasanton, Ca",
+                "name": "Ari Turetzky",
+                "notifications": null,
+                "profile_background_color": "DCDCDC",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://a0.twimg.com/profile_images/1426572920/Photo_on_2011-07-04_at_16.19_normal.jpg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/1426572920/Photo_on_2011-07-04_at_16.19_normal.jpg",
+                "profile_link_color": "0000FF",
+                "profile_sidebar_border_color": "87BC44",
+                "profile_sidebar_fill_color": "E0FF92",
+                "profile_text_color": "000000",
+                "profile_use_background_image": false,
+                "protected": false,
+                "screen_name": "AriT93",
+                "statuses_count": 31814,
+                "time_zone": "Central Time (US & Canada)",
+                "url": null,
+                "utc_offset": -18000,
+                "verified": false
+            }
+        },
+        {
+            "contributors": null,
+            "coordinates": null,
+            "created_at": "Wed Sep 25 04:48:01 +0000 2013",
+            "favorite_count": 0,
+            "favorited": false,
+            "geo": null,
+            "id": 382728173349134336,
+            "id_str": "382728173349134336",
+            "in_reply_to_screen_name": null,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "lang": "en",
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "place": null,
+            "retweet_count": 0,
+            "retweeted": false,
+            "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+            "text": "Neil Young 30 years ago singing to me &amp; only me",
+            "truncated": false,
+            "user": {
+                "contributors_enabled": false,
+                "created_at": "Thu May 30 20:36:47 +0000 2013",
+                "default_profile": true,
+                "default_profile_image": false,
+                "description": "",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "favourites_count": 149,
+                "follow_request_sent": null,
+                "followers_count": 49,
+                "following": null,
+                "friends_count": 105,
+                "geo_enabled": false,
+                "id": 1470625939,
+                "id_str": "1470625939",
+                "is_translator": false,
+                "lang": "en",
+                "listed_count": 0,
+                "location": "",
+                "name": "Hannah Hein",
+                "notifications": null,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/1470625939/1370027006",
+                "profile_image_url": "http://a0.twimg.com/profile_images/3733531012/91fbe17328b65de832cb657e2cf70567_normal.jpeg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/3733531012/91fbe17328b65de832cb657e2cf70567_normal.jpeg",
+                "profile_link_color": "0084B4",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "protected": false,
+                "screen_name": "hannah_hein",
+                "statuses_count": 226,
+                "time_zone": null,
+                "url": null,
+                "utc_offset": null,
+                "verified": false
+            }
+        },
+        {
+            "contributors": null,
+            "coordinates": null,
+            "created_at": "Wed Sep 25 04:47:55 +0000 2013",
+            "favorite_count": 0,
+            "favorited": false,
+            "geo": null,
+            "id": 382728145389903872,
+            "id_str": "382728145389903872",
+            "in_reply_to_screen_name": null,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "lang": "en",
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "place": null,
+            "retweet_count": 0,
+            "retweeted": false,
+            "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+            "text": "I swear \"Old Man\" by Neil Young in Lords of Dogtown makes that movie extra perfect",
+            "truncated": false,
+            "user": {
+                "contributors_enabled": false,
+                "created_at": "Tue Nov 29 16:53:59 +0000 2011",
+                "default_profile": false,
+                "default_profile_image": false,
+                "description": "Crazy beautiful. \u2661",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "Instagram.com/kayyyristaa",
+                                "expanded_url": "http://Instagram.com/kayyyristaa",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/Nm5L7CGxgo"
+                            }
+                        ]
+                    }
+                },
+                "favourites_count": 14622,
+                "follow_request_sent": null,
+                "followers_count": 295,
+                "following": null,
+                "friends_count": 193,
+                "geo_enabled": false,
+                "id": 424327401,
+                "id_str": "424327401",
+                "is_translator": false,
+                "lang": "en",
+                "listed_count": 1,
+                "location": "California",
+                "name": "Krista",
+                "notifications": null,
+                "profile_background_color": "1BD9E0",
+                "profile_background_image_url": "http://a0.twimg.com/profile_background_images/751023620/f9955a9f4e3bb1596dc9155a3bb8d447.jpeg",
+                "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/751023620/f9955a9f4e3bb1596dc9155a3bb8d447.jpeg",
+                "profile_background_tile": true,
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/424327401/1380079172",
+                "profile_image_url": "http://a0.twimg.com/profile_images/378800000500626799/46271acbfa2d6d8c428adfbe1bfb719c_normal.jpeg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/378800000500626799/46271acbfa2d6d8c428adfbe1bfb719c_normal.jpeg",
+                "profile_link_color": "EB0E66",
+                "profile_sidebar_border_color": "FFFFFF",
+                "profile_sidebar_fill_color": "F6F6F6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": false,
+                "protected": false,
+                "screen_name": "kayyyristaa",
+                "statuses_count": 32989,
+                "time_zone": "Pacific Time (US & Canada)",
+                "url": "http://t.co/Nm5L7CGxgo",
+                "utc_offset": -25200,
+                "verified": false
+            }
+        },
+        {
+            "contributors": null,
+            "coordinates": null,
+            "created_at": "Wed Sep 25 04:47:35 +0000 2013",
+            "favorite_count": 0,
+            "favorited": false,
+            "geo": null,
+            "id": 382728062942449664,
+            "id_str": "382728062942449664",
+            "in_reply_to_screen_name": null,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "lang": "en",
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "place": null,
+            "retweet_count": 0,
+            "retweeted": false,
+            "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+            "text": "Neil fucking Young",
+            "truncated": false,
+            "user": {
+                "contributors_enabled": false,
+                "created_at": "Tue Nov 29 16:53:59 +0000 2011",
+                "default_profile": false,
+                "default_profile_image": false,
+                "description": "Crazy beautiful. \u2661",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "Instagram.com/kayyyristaa",
+                                "expanded_url": "http://Instagram.com/kayyyristaa",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/Nm5L7CGxgo"
+                            }
+                        ]
+                    }
+                },
+                "favourites_count": 14622,
+                "follow_request_sent": null,
+                "followers_count": 295,
+                "following": null,
+                "friends_count": 193,
+                "geo_enabled": false,
+                "id": 424327401,
+                "id_str": "424327401",
+                "is_translator": false,
+                "lang": "en",
+                "listed_count": 1,
+                "location": "California",
+                "name": "Krista",
+                "notifications": null,
+                "profile_background_color": "1BD9E0",
+                "profile_background_image_url": "http://a0.twimg.com/profile_background_images/751023620/f9955a9f4e3bb1596dc9155a3bb8d447.jpeg",
+                "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/751023620/f9955a9f4e3bb1596dc9155a3bb8d447.jpeg",
+                "profile_background_tile": true,
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/424327401/1380079172",
+                "profile_image_url": "http://a0.twimg.com/profile_images/378800000500626799/46271acbfa2d6d8c428adfbe1bfb719c_normal.jpeg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/378800000500626799/46271acbfa2d6d8c428adfbe1bfb719c_normal.jpeg",
+                "profile_link_color": "EB0E66",
+                "profile_sidebar_border_color": "FFFFFF",
+                "profile_sidebar_fill_color": "F6F6F6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": false,
+                "protected": false,
+                "screen_name": "kayyyristaa",
+                "statuses_count": 32989,
+                "time_zone": "Pacific Time (US & Canada)",
+                "url": "http://t.co/Nm5L7CGxgo",
+                "utc_offset": -25200,
+                "verified": false
+            }
+        },
+        {
+            "contributors": null,
+            "coordinates": null,
+            "created_at": "Wed Sep 25 04:46:20 +0000 2013",
+            "favorite_count": 0,
+            "favorited": false,
+            "geo": null,
+            "id": 382727748802064385,
+            "id_str": "382727748802064385",
+            "in_reply_to_screen_name": null,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "lang": "en",
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "place": null,
+            "possibly_sensitive": false,
+            "retweet_count": 0,
+            "retweeted": false,
+            "source": "<a href=\"http://www.apple.com\" rel=\"nofollow\">iOS</a>",
+            "text": "I'll say this like it's never been said before: I love this!! NEIL YOUNG &amp; CRAZY HORSE - Hey Hey, My My http://t.co/rNYhfrKoWG",
+            "truncated": false,
+            "user": {
+                "contributors_enabled": false,
+                "created_at": "Wed Feb 25 19:44:03 +0000 2009",
+                "default_profile": false,
+                "default_profile_image": false,
+                "description": "Latest album, In The Dusk Of Everything, can be heard here: http://t.co/3puMoHRfR6",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "matthewryanonline.bandcamp.com/album/in-the-d\u2026",
+                                "expanded_url": "http://matthewryanonline.bandcamp.com/album/in-the-dusk-of-everything",
+                                "indices": [
+                                    60,
+                                    82
+                                ],
+                                "url": "http://t.co/3puMoHRfR6"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "matthewryanonline.com",
+                                "expanded_url": "http://matthewryanonline.com",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/sd72ySpdhb"
+                            }
+                        ]
+                    }
+                },
+                "favourites_count": 1800,
+                "follow_request_sent": null,
+                "followers_count": 2667,
+                "following": null,
+                "friends_count": 488,
+                "geo_enabled": false,
+                "id": 21908151,
+                "id_str": "21908151",
+                "is_translator": false,
+                "lang": "en",
+                "listed_count": 100,
+                "location": "PGH",
+                "name": "Matthew Ryan",
+                "notifications": null,
+                "profile_background_color": "011211",
+                "profile_background_image_url": "http://a0.twimg.com/profile_background_images/27031163/ME_BRI__2_.jpg",
+                "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/27031163/ME_BRI__2_.jpg",
+                "profile_background_tile": true,
+                "profile_image_url": "http://a0.twimg.com/profile_images/378800000076360920/36a340f33a84def3d287503d365aa1fe_normal.jpeg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/378800000076360920/36a340f33a84def3d287503d365aa1fe_normal.jpeg",
+                "profile_link_color": "C70C0C",
+                "profile_sidebar_border_color": "5ED4DC",
+                "profile_sidebar_fill_color": "ABF9FC",
+                "profile_text_color": "080303",
+                "profile_use_background_image": true,
+                "protected": false,
+                "screen_name": "MatthewRyan101",
+                "statuses_count": 6478,
+                "time_zone": "Central Time (US & Canada)",
+                "url": "http://t.co/sd72ySpdhb",
+                "utc_offset": -18000,
+                "verified": true
+            }
+        },
+        {
+            "contributors": null,
+            "coordinates": null,
+            "created_at": "Wed Sep 25 04:39:17 +0000 2013",
+            "favorite_count": 0,
+            "favorited": false,
+            "geo": null,
+            "id": 382725974212616192,
+            "id_str": "382725974212616192",
+            "in_reply_to_screen_name": null,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "lang": "en",
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "place": null,
+            "possibly_sensitive": false,
+            "retweet_count": 0,
+            "retweeted": false,
+            "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+            "text": "A man on the pier was playin this an damn it got in my head. Neil Young - Hey Hey My My http://t.co/ORh5kp8HRj",
+            "truncated": false,
+            "user": {
+                "contributors_enabled": false,
+                "created_at": "Mon Jul 09 02:20:41 +0000 2012",
+                "default_profile": true,
+                "default_profile_image": false,
+                "description": "Wanna Work get @ Me. Getting to my Dream so I can help others get to theirs. Owner of Fly As Me Clothing Co. @FLYASMEclothing",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "FLYASME.com",
+                                "expanded_url": "http://www.FLYASME.com",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/vZmkbVfnRU"
+                            }
+                        ]
+                    }
+                },
+                "favourites_count": 1824,
+                "follow_request_sent": null,
+                "followers_count": 92,
+                "following": null,
+                "friends_count": 96,
+                "geo_enabled": false,
+                "id": 630704738,
+                "id_str": "630704738",
+                "is_translator": false,
+                "lang": "en",
+                "listed_count": 2,
+                "location": "Where the DOPe things Are",
+                "name": "ADD_Lion_Heart",
+                "notifications": null,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/630704738/1372888891",
+                "profile_image_url": "http://a0.twimg.com/profile_images/378800000504630762/c2d209475b33215344c450844dbb3d5c_normal.jpeg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/378800000504630762/c2d209475b33215344c450844dbb3d5c_normal.jpeg",
+                "profile_link_color": "0084B4",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "protected": false,
+                "screen_name": "RichieRichdaCEO",
+                "statuses_count": 2601,
+                "time_zone": null,
+                "url": "http://t.co/vZmkbVfnRU",
+                "utc_offset": null,
+                "verified": false
+            }
+        },
+        {
+            "contributors": null,
+            "coordinates": null,
+            "created_at": "Wed Sep 25 04:37:52 +0000 2013",
+            "favorite_count": 0,
+            "favorited": false,
+            "geo": null,
+            "id": 382725617583534080,
+            "id_str": "382725617583534080",
+            "in_reply_to_screen_name": "neileatson",
+            "in_reply_to_status_id": 382606113302392832,
+            "in_reply_to_status_id_str": "382606113302392832",
+            "in_reply_to_user_id": 34642129,
+            "in_reply_to_user_id_str": "34642129",
+            "lang": "en",
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "place": null,
+            "retweet_count": 0,
+            "retweeted": false,
+            "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+            "text": "@neileatson agree Neil, but this was a young Villa side with seven changes. Keep this result in perspective. Saturday will be the big test.",
+            "truncated": false,
+            "user": {
+                "contributors_enabled": false,
+                "created_at": "Thu Jul 05 21:47:29 +0000 2012",
+                "default_profile": false,
+                "default_profile_image": false,
+                "description": "",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "favourites_count": 6,
+                "follow_request_sent": null,
+                "followers_count": 13,
+                "following": null,
+                "friends_count": 45,
+                "geo_enabled": true,
+                "id": 627846459,
+                "id_str": "627846459",
+                "is_translator": false,
+                "lang": "en",
+                "listed_count": 0,
+                "location": "Castle Rock Colorado",
+                "name": "Castle Rock Brit",
+                "notifications": null,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http://a0.twimg.com/profile_background_images/615524137/n5l94c15hmv392f46eij.jpeg",
+                "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/615524137/n5l94c15hmv392f46eij.jpeg",
+                "profile_background_tile": false,
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/627846459/1352437203",
+                "profile_image_url": "http://a0.twimg.com/profile_images/2768723041/d3331541aef46ca32e7de90561a302ee_normal.jpeg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/2768723041/d3331541aef46ca32e7de90561a302ee_normal.jpeg",
+                "profile_link_color": "0084B4",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "protected": false,
+                "screen_name": "CastleRockBrit",
+                "statuses_count": 1262,
+                "time_zone": "Mountain Time (US & Canada)",
+                "url": null,
+                "utc_offset": -21600,
+                "verified": false
+            }
+        }
+    ]
+}

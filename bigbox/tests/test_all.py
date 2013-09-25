@@ -10,6 +10,7 @@ import unittest
 
 
 import test_tools
+import test_twitter
 
 
 #---
@@ -19,9 +20,11 @@ def main():
     """tests added to run in 'test_all.py'"""
     # add all new test suites per test module here
     suite_tools = test_tools.suite()
+    suite_twitter = test_twitter.suite()
 
     # add the suite to be tested here
-    alltests = unittest.TestSuite((suite_tools))
+    alltests = unittest.TestSuite((suite_tools,
+                                   suite_twitter))
 
     # run the suite
     runner = unittest.TextTestRunner()
