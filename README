@@ -36,6 +36,45 @@ Why?
     though as a non-coder, it still reads semi-Greek to me.
     <https://twitter.com/geehallone/status/368635594231910400>
 
+* 2013SEP24
+* hack to get twitter query
+  *** HACK ALERT ***
+- worked
+- lots of data
+- lots of testing required
+- no modules to parse data
+- output data is handed created
+- not hard to do but tedious
+- potential for problems following twit api rules
+- no handling of twit error replies
+
+* twitter.py
+- authenticate_r
+- OAuth 2 authentication
+- require only consumer key & secret, request token (EASY)
+
+- authenticate_rw
++ OAuth 1 authentication
+- require consumer key & secret, then magic number to get
+  access key & secret (PIA)
+
+- Twy_r
++ object wrapper for Twython using Read-only access & 
+  access data for limited Twitter API
+- Twy_rw
++ object wrapper fr Twython using full access & consumer data
+  for full access to Twitter API
+
+* saving data
+- tweet
++ where authenticate_rw->Twy_rw tweet post data is saved by date
+- query
++ where authenticate_r->Twy_r query data is saved by date
+
+* testing
+- nothing to date
+  *** HACK ALERT ***
+
 * 2013SEP23
 - bigbox.feed.twitter
 + needs testing
