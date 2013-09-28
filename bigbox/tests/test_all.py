@@ -11,6 +11,8 @@ import unittest
 
 import test_tools
 import test_twitter
+import test_server_a
+import test_database
 
 
 #---
@@ -21,10 +23,14 @@ def main():
     # add all new test suites per test module here
     suite_tools = test_tools.suite()
     suite_twitter = test_twitter.suite()
+    suite_server_a = test_server_a.suite()
+    suite_database = test_database.suite()
 
     # add the suite to be tested here
     alltests = unittest.TestSuite((suite_tools,
-                                   suite_twitter))
+                                   suite_twitter,
+                                   suite_server_a,
+                                   suite_database))
 
     # run the suite
     runner = unittest.TextTestRunner()
