@@ -110,7 +110,7 @@ take given the constraints of time, knowledge and the certainty of known, knowns
 
 ## Referece
 
-[0] Paul Graham, *'The hardest lessons'*,
+[0] **Paul Graham**, *'The hardest lessons'*,
 [Last Accessed Wednesday 18th September, 2013 ] 
 <http://www.paulgraham.com/startuplessons.html>
 
