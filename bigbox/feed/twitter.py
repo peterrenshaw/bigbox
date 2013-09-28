@@ -9,13 +9,16 @@
 # desc: code allows twitter integration with bigbox
 #       Twython code allows full access to twit api
 #       ...along with restrictions.
+#
 # lisc: moving towards GPL3
 # copy: copyright (C) 2013 Peter Renshaw
 #
 # use : 
-#       send: twitter.py -m 'a message to send'
+#       send: twitter.py -m "'I hit the city and I lost my band'"
+#       qry : twitter.py -q '#neilyoung'
 #       help: twitter.py -h
-#       vers: twitter.py -v 
+#       vers: twitter.py -v
+#
 # sorc: <https://github.com/ryanmcgrath/twython>
 #===
 
@@ -34,6 +37,9 @@ import bigbox.feed.config
 
 
 # TODO 
+#     * build 1/2 decent way to extract all data
+#       from twitter query, not hard
+#     - needs regular testing to see if api changes
 #     * check twitter restrictions
 #       on search
 #     * implement a twitter search count/min
@@ -44,6 +50,7 @@ import bigbox.feed.config
 #     * work out how to:
 #     - report errors, halt/return code?
 #     - save to filesystem/api?
+#
 
 
 #---
@@ -106,30 +113,24 @@ class Twy_r:
         self.query = ""
         self.result = ""
         self.result_type = ""
-        self.count = 0
+        self.counter = 1
         self.until = ""
         self.include_entities = False
-    def count(self, count):
-        """set count for query returns"""
-        if count > 0:
-            self.count = count
-            return True
-        return False
     def search(self, query, 
                      result_type="recent", 
-                     count=0, 
+                     count=1, 
                      until="",
                      include_entities=False):
         """query twitter api"""
         if query:
             self.query = query
             self.result_type = result_type
-            self.count = count
+            self.counter = count
             self.until = until
             self.include_entities = include_entities
             self.result = self.twitter.search(q = self.query,
                                     result_type = self.result_type,
-                                    count = self.count, 
+                                    count = self.counter, 
                                     until = self.until,
                                     include_entities=self.include_entities)
             return self.result
@@ -138,13 +139,13 @@ class Twy_r:
         """build data into a dictionary to save to file"""
         if data:
             dt = datetime
-
             q = query.replace(' ','+')
             md_count = data['search_metadata']['count']
 
             messages = []
             for s in data['statuses']:
                 d = dict(id_str=s['id_str'],
+                         name=s['user']['screen_name'],
                          text=s['text'])
                 messages.append(d)
                 d = None
@@ -341,7 +342,7 @@ def main():
         if twitter:
             t = Twy_r(twitter)
             if t: 
-                result = t.search(options.search)
+                result = t.search(options.search, count=5)
                 t.save(result)
                 print("ack")      
             else:

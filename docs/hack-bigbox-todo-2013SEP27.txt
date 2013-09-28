@@ -1,0 +1,92 @@
+
+        __     _         __                
+       / /_   (_)____ _ / /_   ____   _  __
+      / __ \ / // __ `// __ \ / __ \ | |/_/
+     / /_/ // // /_/ // /_/ // /_/ /_>  <
+    /_.___//_/ \__, //_.___/ \____//_/|_| [1]
+              /____/                       
+
+
+  name hack-bigbox-todo-2013SEP27.txt
+  date 2013SEP28
+  prog @peterrenshaw
+  desc BIGBOX: A easy to use front end for socsim. This 
+       hack, BIGBOX search allows for search within or external 
+       to you local system.
+  
+abstract
+
+       My current TOOD list
+
+
+If you look below you can see what I have on my plate at the moment.
+While the demo worked, I'll have to re-visit code to make it better
+and build new components. I've broken down what I have to do into 
+layers starting at Layer 0 and finishing at Layer 4.
+
+Legend:		Layer		Function		Language
+==================================================================
+                0		database		SQL
+		1		web server		Python
+		2		business logic		Python
+		3		user interface		HTML/CSS
+		4		application logic	Javascript
+==================================================================
+
+
+Testing
+
+I've also described the level of testing on each layer. The idea is
+to have as much testing as possible at each layer. That's the idea,
+lets see how this works out in practice.
+
+Legend: Status	Description	Explanation
+==================================================================
+	0 	No tests	require testing
+	H	hack, limited	some testing 
+	1-9	test coverage	from low to high test coverage
+==================================================================
+
+
+Below is a more detailed breakdown showing the status, order, testing.
+The grid gives some idea of the simplicity of the design.
+
+
+# NAME	 	LOCATION	DESC		STAT	ORD	TEST	REQ
+===========================================================================
+bb-ddl		below L0	database ddl	H	0	H	Y
+-------------------------------------------------------------------------
+server-a 	below L1	api server      H	2	2	Y
+                                bottle
+bb.twitter-a	below L2	search	H	-	-	0	Y
+bb.ddg-a	below L2	search		H	-	2	Y
+bb.local	below L2	search		-	3	0	Y
+-------------------------------------------------------------------------
+server-b 	below L1	api server	-	-	0	N
+                                flask
+bb.twitter-b	below L2	full api	-	-	0	N
+bb.ddg-b	below L2	search		H	-	2	N
+-------------------------------------------------------------------------
+bb.tools	below L2	misc tools	H	-	0	Y
+bb.db		below L2	db tools	-	1	0	Y
+-------------------------------------------------------------------------
+bb.html		above L3	user interface	H	9	0	Y
+bb.css		above L3	user layout	H	8	0	Y
+bb.js.bb	above L3	bigbox js code	H	7	0	Y
+-------------------------------------------------------------------------
+angular.js	above L4	angularjs code	H	4	0	Y
+bootstrap.js	above L4	bootstrap.js 	H	5	0	Y
+bootstrap.css	above L4	bootrstap css	H	6	0	Y
+-------------------------------------------------------------------------
+boostrap.png	above L3	boostrap image	H	-	0	Y
+-------------------------------------------------------------------------
+
+As you can see there's a bit of work to do. 
+
+That's it for now.
+
+PR
+
+
+
+# vim: ff=unix:ts=4:sw=4:tw=78:noai:expandtab

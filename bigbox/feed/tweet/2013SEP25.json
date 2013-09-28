@@ -197,3 +197,163 @@
     "message": "\u266c many years have come and gone / friends and enemies / I try to leave my past behind / but it's catching up on me \u266c",
     "urls": []
 }
+{
+    "date_str": "1380054232.0",
+    "hashtag": [
+        {
+            "indices": [
+                14,
+                20
+            ],
+            "text": "solar"
+        },
+        {
+            "indices": [
+                21,
+                26
+            ],
+            "text": "cell"
+        },
+        {
+            "indices": [
+                75,
+                78
+            ],
+            "text": "hn"
+        }
+    ],
+    "id_str": "382752191867400192",
+    "message": "'World record #solar #cell with 44.7% efficiency (http://t.co/SJRkMOLHAl)' #hn ~ https://t.co/O1VGR1Oq0e",
+    "urls": [
+        {
+            "display_url": "phys.org",
+            "expanded_url": "http://phys.org",
+            "indices": [
+                50,
+                72
+            ],
+            "url": "http://t.co/SJRkMOLHAl"
+        },
+        {
+            "display_url": "news.ycombinator.com/item?id=6442289",
+            "expanded_url": "https://news.ycombinator.com/item?id=6442289",
+            "indices": [
+                81,
+                104
+            ],
+            "url": "https://t.co/O1VGR1Oq0e"
+        }
+    ]
+}
+{
+    "date_str": "1380054406.0",
+    "hashtag": [
+        {
+            "indices": [
+                12,
+                18
+            ],
+            "text": "style"
+        },
+        {
+            "indices": [
+                25,
+                33
+            ],
+            "text": "quality"
+        },
+        {
+            "indices": [
+                38,
+                45
+            ],
+            "text": "python"
+        },
+        {
+            "indices": [
+                46,
+                55
+            ],
+            "text": "requests"
+        },
+        {
+            "indices": [
+                56,
+                59
+            ],
+            "text": "v2"
+        }
+    ],
+    "id_str": "382752922699706368",
+    "message": "programmers #style &amp; #quality, cf #python #requests #v2.0 ~ http://t.co/AOrrO1Cz18",
+    "urls": [
+        {
+            "display_url": "docs.python-requests.org/en/latest/comm\u2026",
+            "expanded_url": "http://docs.python-requests.org/en/latest/community/updates/#release-history",
+            "indices": [
+                64,
+                86
+            ],
+            "url": "http://t.co/AOrrO1Cz18"
+        }
+    ]
+}
+{
+    "date_str": "1380056871.0",
+    "hashtag": [
+        {
+            "indices": [
+                31,
+                42
+            ],
+            "text": "reeltoreel"
+        }
+    ],
+    "id_str": "382763263173226496",
+    "message": "@CaptArgo what happened to the #reeltoreel?",
+    "urls": []
+}
+{
+    "date_str": "1380057856.0",
+    "hashtag": [],
+    "id_str": "382767391135899648",
+    "message": "@CaptArgo ok",
+    "urls": []
+}
+{
+    "date_str": "1380071167.0",
+    "hashtag": [
+        {
+            "indices": [
+                70,
+                82
+            ],
+            "text": "raspberrypi"
+        },
+        {
+            "indices": [
+                120,
+                136
+            ],
+            "text": "highscalability"
+        }
+    ],
+    "id_str": "382823282308689920",
+    "message": "@nicolaiarocci I read 'cellphone like a server' thinking it was about #raspberrypi, interesting read on the constraints #highscalability",
+    "urls": []
+}
+{
+    "date_str": "1380074527.0",
+    "hashtag": [
+        {
+            "indices": [
+                58,
+                61
+            ],
+            "text": "pt"
+        }
+    ],
+    "id_str": "382837344367149057",
+    "message": "9 yesterday, 5 the day before, 5 today 1208 19km 1kg 0#ex #pt",
+    "urls": []
+}
