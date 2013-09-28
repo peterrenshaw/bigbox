@@ -10,7 +10,7 @@
 import unittest
 
 
-import bigbox.db.server_a
+import bigbox.server_a
 
 
 class TestServerA(unittest.TestCase):

@@ -13,13 +13,16 @@
 #===
 
 
+import os.path
+
+
 import bottle
 from bottle.ext import sqlite
 
 
 #--- configuration ---
 app = bottle.default_app()
-app.config.load_config('server_a.ini')
+app.config.load_config(os.path('database','server_a.ini'))
 
 
 # --- database --
