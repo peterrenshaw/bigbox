@@ -29,7 +29,7 @@ into my head. Once it was in my head I could very quickly hack up
 something new and I use the term hack literally, to build a basic
 demo.
 
-   BUT: a basic unit of hacking time to complete a feature.
+    BUT: a basic unit of hacking time to complete a feature.
 
 ### BUT
 

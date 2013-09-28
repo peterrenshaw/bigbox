@@ -81,7 +81,7 @@ bootstrap.css	above L4	bootrstap css	H	6	0	Y
 boostrap.png	above L3	boostrap image	H	-	0	Y
 -------------------------------------------------------------------------
 
-As you can see there's a bit of work to do. 
+As you can see there's a bit of work to do.   
 
 That's it for now.
 
