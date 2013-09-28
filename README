@@ -36,6 +36,15 @@ Why?
     though as a non-coder, it still reads semi-Greek to me.
     <https://twitter.com/geehallone/status/368635594231910400>
 
+* 2013SEP28
+- added 
++ doc/hack-bigbox-a-basic-unit-of-hack-time.md
++ doc/hack-bigbox-todo-2013SEP27.txt
++ server_a.py
++ test/test_server_a.py
++ test/test_database.py
++ database/server_a.ini
+
 * 2013SEP24
 * hack to get twitter query
   *** HACK ALERT ***
