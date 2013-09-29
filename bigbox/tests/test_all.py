@@ -9,10 +9,10 @@
 import unittest
 
 
-import test_tools
-import test_twitter
-import test_server_a
-import test_database
+import bigbox.tests.test_tools
+import bigbox.tests.test_server
+import bigbox.tests.test_twitter
+import bigbox.tests.test_database
 
 
 #---
@@ -21,10 +21,10 @@ import test_database
 def main():
     """tests added to run in 'test_all.py'"""
     # add all new test suites per test module here
-    suite_tools = test_tools.suite()
-    suite_twitter = test_twitter.suite()
-    suite_server_a = test_server_a.suite()
-    suite_database = test_database.suite()
+    suite_tools = bigbox.tests.test_tools.suite()
+    suite_twitter = bigbox.tests.test_twitter.suite()
+    suite_server_a = bigbox.tests.test_server.suite()
+    suite_database = bigbox.tests.test_database.suite()
 
     # add the suite to be tested here
     alltests = unittest.TestSuite((suite_tools,

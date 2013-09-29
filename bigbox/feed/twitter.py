@@ -32,8 +32,10 @@ from twython import Twython
 from twython import TwythonError
 
 
-import bigbox.tools
+import bigbox.tools.dt
+import bigbox.tools.file
 import bigbox.feed.config
+from bigbox.tools.file import REL_PATH
 
 
 # TODO 
@@ -159,21 +161,24 @@ class Twy_r:
             #---
             return py_data
         return False
-    def save(self, data):
+    def save(self, data, fp_rel=REL_PATH):
         """save a query"""
         # save to file system/rest api? where?
         # save to filesystem
         # TODO what day is this? localtime?
         if data:
             self.result = data
-            fn = bigbox.tools.fn_current_day(ext='json')
-            fp = os.path.join(os.getcwd(), "query")
+            fn = bigbox.tools.dt.fn_current_day(ext='json')
+
+            # TODO fix: warning on hard coded file paths
+            fp = os.path.join(fp_rel, "feed", "query")
+
             if os.path.isdir(fp):
                 fpn = os.path.join(fp, fn)            
                 with open(fpn, 'a') as f:
-                    dt = "%s" % bigbox.tools.db_datetime_utc()
+                    dt = "%s" % bigbox.tools.dt.db_datetime_utc()
                     line_py = self.build_data(self.query, self.result, dt)
-                    line_json = bigbox.tools.py2json(line_py)
+                    line_json = bigbox.tools.file.py2json(line_py)
                     f.write(line_json)
                     f.write('\n')  # stops braces butting up
                 return True       
@@ -237,7 +242,7 @@ class Twy_rw:
                         durls = tent['urls']
 
                         # will this survive json if not str?
-                        dt_str = "%s" % bigbox.tools.db_datetime_utc()
+                        dt_str = "%s" % bigbox.tools.dt.db_datetime_utc()
 
                         #---
                         # data structure for storage
@@ -251,18 +256,21 @@ class Twy_rw:
                         return False
                     return py_data
         return False
-    def save(self, tid, tmsg, tent):
+    def save(self, tid, tmsg, tent, fp_rel=REL_PATH):
         """save message to somewhere"""
         # save to file system/rest api? where?
         # save to filesystem
         # TODO what day is this? localtime?
-        fn = bigbox.tools.fn_current_day(ext='json')
-        fp = os.path.join(os.getcwd(), "tweet")
+        fn = bigbox.tools.dt.fn_current_day(ext='json')
+
+        # TODO fix: warning on hard coded file paths
+        fp = os.path.join(fp_rel, "feed", "tweet")   
+
         if os.path.isdir(fp):
-            fpn = os.path.join(fp, fn)            
+            fpn = os.path.join(fp, fn)
             with open(fpn, 'a') as f:
                 line_py = self.build_data(tid, tmsg, tent)
-                line_json = bigbox.tools.py2json(line_py)
+                line_json = bigbox.tools.file.py2json(line_py)
                 f.write(line_json)
                 f.write('\n')  # stops braces butting up
             return True       

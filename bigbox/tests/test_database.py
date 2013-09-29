@@ -10,14 +10,12 @@
 import unittest
 
 
-import bigbox.db.server_a
-
-
 class TestDatabase(unittest.TestCase):
     def setUp(self):
-        [ass
+        pass
     def tearDown(self):
         pass
+
 
     def test_db_config_ok(self):
         pass

@@ -13,6 +13,7 @@
 #===
 
 
+import sys
 import os.path
 
 
@@ -20,23 +21,47 @@ import bottle
 from bottle.ext import sqlite
 
 
-#--- configuration ---
-app = bottle.default_app()
-app.config.load_config(os.path('database','server_a.ini'))
+import bigbox.tools.file
+from bigbox.tools.config import SERVER_DIR
+from bigbox.tools.config import SERVER_FILE
 
 
-# --- database --
-plugin = sqlite.Plugin(dbfile=app.config['sqlite.db'])
-app.install(plugin)
+# configure: configure server
+def configure(fp_config):
+    """configure server. load configuration and plugins"""
+    app = bottle.Bottle()
+
+    # load configurations from file
+    # TODO test sane app.config settings
+    #      return app or F
+    app.config.load_config(fp_config)
+    dbf = app.config['sqlite.db']
+
+    # load sqlite plugin via config sqlite details
+    # TODO test app plugin works, return app or F
+    plugin = sqlite.Plugin(dbfile=dbf)
+    app.install(plugin)
+
+    return app
+# run: configure then run server or exit(1)
+def run(filepath_conf):
+    """run the server or exit(1)"""
+    if filepath_conf: 
+        bba = configure(fp_conf)
+        bba.run(host = bba.config['app.host'],
+                port = bba.config['app.port'],
+                reloader = bba.config['app.reloader'],
+                debug = bba.config['sqlite.db'])
+    else:
+        return False
 
 
 # main: cli entry point
 def main():
     """main cli entry point"""
-    app.run(host = app.config['app.host'], 
-            port = app.config['app.port'], 
-            reloader = app.config['app.reloader'], 
-            debug = app.config['app.debug'])
+    fp_conf = bigbox.tools.file.path_absolute(SERVER_DIR, 
+                                              SERVER_FILE)
+    run(fp_conf)
 
 
 if __name__ == "__main__":

@@ -7,7 +7,7 @@ __author__ = 'Peter Renshaw'
 __license__ = 'GNU GPL 3.0'
 
 
-__all__ = ['bigbox','db','feed','server_a','tools']
+__all__ = ['db','server','feed','tests','tools']
 
 
 # vim: ff=unix:ts=4:sw=4:tw=78:noai:expandtab
