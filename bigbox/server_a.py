@@ -22,6 +22,7 @@ from bottle.ext import sqlite
 
 
 import bigbox.tools.file
+import bigbox.tools.server
 from bigbox.tools.config import SERVER_DIR
 from bigbox.tools.config import SERVER_FILE
 
@@ -43,7 +44,7 @@ def configure(fp_config):
     app.install(plugin)
 
     return app
-# run: configure then run server or exit(1)
+# run: configure then run server or F
 def run(filepath_conf):
     """run the server or exit(1)"""
     if filepath_conf: 
