@@ -3,10 +3,10 @@
 
 
 #===
-# name  tools.py
+# name  bigbox.tools.system.py
 # date: 2013AUG30
 # prog: pr
-# desc: tools work with bigbox
+# desc: file and conversion tools for bigbox
 # lisc: moving towards GPL3
 #
 # copy: copyright (C) 2013 Peter Renshaw
@@ -15,16 +15,16 @@
 
 import os
 import json
-import time
 import os.path
-import datetime
 
 
 # TODO testing #$@%^@^!
 
+
+REL_PATH = os.path.join('e:\\', 'code', 'bigbox', 'bigbox')
+
+
 #--- filesystem tools ---
-# some testing
-#
 def save(filepathname, data):
     """save a file to filesystem"""
     filepath = os.path.dirname(filepathname)
@@ -46,11 +46,20 @@ def load(filepathname):
             f.close()
             return data
     return False
-#
+
+# TODO confusing - returns filepath built from
+#                  relative path + directory + filename
+# path_absolute: return valid filepath or F
+def path_absolute(filepath_directory, filename, filepath_relative=REL_PATH):
+    """return valid abolute filepath or F"""
+    if filepath_relative and filepath_directory and filename:
+        fpr = os.path.join(filepath_relative, filepath_directory, filename)
+        if os.path.isfile(fpr):
+            return fpr
+    return False
 #--- end filesystem tools ---
 
-#--- conversion tools ---
-#
+
 #---
 # convert: bi-directional conversion of data from
 #          py=>json or json=>py. indent_sz arg 
@@ -75,26 +84,28 @@ def json2py(data):
 def py2json(data, indent=4):
     """convert python structure to json"""
     return convert(data, to_json=True, indent_sz=indent)
-#
 #--- end conversion tools ---
 
 
-#--- datetime tools ---
+# TODO testing please 2013OCT02
+#--- boolean string conversion ---
 #
-
+def str2bool_false(v):
+    return v.lower() in ("", "no", "false", "f", "0")
+def str2bool_true(v):
+  return v.lower() in ("yes", "true", "t", "1")
 #---
-# db_datetime_utc: return epoch in utc
+# str2bool: test if str value is T/F
 #---
-def db_datetime_utc():
-    """store datetime in UTC epoch format"""
-    t = datetime.datetime.utcnow()
-    return time.mktime(t.timetuple())
-def dt_datetime_strf(strf_fmt="%Y%b%d"):
-    return datetime.datetime.now().strftime(strf_fmt).upper()
-def fn_current_day(ext="json"):
-    return "%s.%s" % (dt_datetime_strf(), ext)
-#
-#--- end datetime tools---
+def str2bool(v, is_test_true=True):
+    """is input str input boolean T/F, toggle is_test_true"""
+    if is_test_true:
+        # if str tests explicit T, return True
+        return True if str2bool_true(v) else False
+    else:
+        # if str tests explicit F, return False
+        return False if str2bool_false(v) else True
+#--- end boolean string conversion ---
 
 
 # main: cli entry point

@@ -33,9 +33,9 @@ from twython import TwythonError
 
 
 import bigbox.tools.dt
-import bigbox.tools.file
 import bigbox.feed.config
-from bigbox.tools.file import REL_PATH
+import bigbox.tools.system
+from bigbox.tools.system import REL_PATH
 
 
 # TODO 
@@ -178,7 +178,7 @@ class Twy_r:
                 with open(fpn, 'a') as f:
                     dt = "%s" % bigbox.tools.dt.db_datetime_utc()
                     line_py = self.build_data(self.query, self.result, dt)
-                    line_json = bigbox.tools.file.py2json(line_py)
+                    line_json = bigbox.tools.system.py2json(line_py)
                     f.write(line_json)
                     f.write('\n')  # stops braces butting up
                 return True       
@@ -270,7 +270,7 @@ class Twy_rw:
             fpn = os.path.join(fp, fn)
             with open(fpn, 'a') as f:
                 line_py = self.build_data(tid, tmsg, tent)
-                line_json = bigbox.tools.file.py2json(line_py)
+                line_json = bigbox.tools.system.py2json(line_py)
                 f.write(line_json)
                 f.write('\n')  # stops braces butting up
             return True       

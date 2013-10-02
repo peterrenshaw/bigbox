@@ -12,10 +12,10 @@ import os.path
 import unittest
 
 
-import bigbox.tools
+import bigbox.tools.system
 
 
-class TestTools(unittest.TestCase):
+class TestSystem(unittest.TestCase):
     def setUp(self):
         self.my_py = ['1','2','3']
         self.my_json = """[
@@ -30,42 +30,42 @@ class TestTools(unittest.TestCase):
     # py2json
     def test_py2json_ok(self):
         """input python, get out json"""
-        json = bigbox.tools.py2json(self.my_py)
+        json = bigbox.tools.system.py2json(self.my_py)
         self.assertTrue(json)
         self.assertEqual(json, self.my_json)
     def test_py2json_empty_arg_fail(self):
         """empty arg should return F"""
-        self.assertFalse(bigbox.tools.py2json(""))
+        self.assertFalse(bigbox.tools.system.py2json(""))
     # json2py
     def test_json2py_ok(self):
         """input json, get out python"""
-        py = bigbox.tools.json2py(self.my_json)
+        py = bigbox.tools.system.json2py(self.my_json)
         self.assertTrue(py)
         self.assertEqual(py, self.my_py)
     def test_json2py_empyt_arg_fail(self):
         """empty arg should return F"""
-        self.assertFalse(bigbox.tools.json2py(""))
+        self.assertFalse(bigbox.tools.system.json2py(""))
     # convert
     def test_convert_empty_arg_fail(self):
         """empty arg should fail"""
-        self.assertFalse(bigbox.tools.convert(""))
+        self.assertFalse(bigbox.tools.system.convert(""))
 
     #---
     # save
     def test_save_empty_path_arg_fail(self):
         """empty arg/s for read, F"""
-        self.assertFalse(bigbox.tools.save("","data"))
+        self.assertFalse(bigbox.tools.system.save("","data"))
     def test_save_empty_data_arg_fail(self):
         """empty data arg, F"""
         fp = os.path.join("")
-        self.assertFalse(bigbox.tools.save(fp, ""))
+        self.assertFalse(bigbox.tools.system.save(fp, ""))
     #--- filepaths
     #--- filenames
     #--- extensions
     # read
     def test_read_empty_fpn_arg_fail(self):
         """empty filepathname, F"""
-        self.assertFalse(bigbox.tools.load(""))
+        self.assertFalse(bigbox.tools.system.load(""))
 
 
 #---
@@ -82,7 +82,7 @@ def suite():
              'test_save_empty_data_arg_fail',
              'test_read_empty_fpn_arg_fail']
 
-    return unittest.TestSuite(map(TestTools, tests))
+    return unittest.TestSuite(map(TestSystem, tests))
 
 
 if __name__ == "__main__":
