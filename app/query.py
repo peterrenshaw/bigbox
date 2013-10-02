@@ -157,7 +157,8 @@ def main():
             
             # read from cache
             print("reading <%s> from cache...\n" % options.filepath)
-            with file(options.filepath, 'r') as f:
+            #with file(options.filepath, 'r') as f:
+            with open(options.filepath, 'r') as f:
                 data = f.read()
             
             pydat = json2py(data)

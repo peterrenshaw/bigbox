@@ -1,0 +1,71 @@
+
+⌨ bigbox
+bb is ... ? bigbox
+... !bigbird, bb is ?
+bigbox
+... !brigitte bardot?
+bigbox
+bb isn't BB King :(
+bb is literally, '... a box & a buffer', a big box.
+bigbox
+is about 'local' search & storage because:
+
+    users are considered ☠
+    the cloud is ☢
+    say ✖ to spying... :)
+programmers ♥ complex things, users simplicity. bb is about 'simplicity' and... 'speed' users want this...
+but end up with this...
+is this fast enough? bb is about 'speed' & ...
+bb is about text :)
+& processing text ...
+bb is about manipulating data
+... lots of data ...
+bb is about 'sharing'...
+bb is all about will be about sharing data ...
+bb is about 'search'
+bb is about searching 'locally' & on the 'Internet' ...
+bb is a "tool" and work is ongoing
+more hacking is needed ...
+bb is a "open source"... 
+
+
+    ⌨ bigbox
+    bb is a "open source"...
+    opensource
+    gpl3.0:
+        you can view it
+        download it
+        add to it
+an "elegant solution"...
+from a more civilised time ...
+summary: bb is?
+
+
+    ⌨ bigbox
+    summary: bb is?
+    elegant
+        buffer & a box
+        storage
+        local & WWW
+        simplicity
+        speed
+        text
+        search
+        sharing
+        ongoing
+        open source
+happy hacking
+ fsf.org
+Isaac Newton: 'If I have seen further it is by standing on the shoulders of giants'
+
+    Adam Abrons
+    MiÅ¡ko Hevery
+    D. Richard Hipp
+    Brendan Eich
+    Guido van Rossum
+    Marc Andreessen
+    Linus Torvalds
+    Tim Berners-Lee
+    Richard Stallman
+
+
