@@ -90,15 +90,18 @@ def py2json(data, indent=4):
 # TODO testing please 2013OCT02
 #--- boolean string conversion ---
 #
-def str2bool_false(v):
+def str2bool_false(v=""):
+    v = str(v)  # TODO check if this is a good idea - probably not
     return v.lower() in ("", "no", "false", "f", "0")
-def str2bool_true(v):
-  return v.lower() in ("yes", "true", "t", "1")
+def str2bool_true(v=""):
+    v = str(v)
+    return v.lower() in ("yes", "true", "t", "1")
 #---
 # str2bool: test if str value is T/F
 #---
 def str2bool(v, is_test_true=True):
     """is input str input boolean T/F, toggle is_test_true"""
+    v = str(v)
     if is_test_true:
         # if str tests explicit T, return True
         return True if str2bool_true(v) else False
