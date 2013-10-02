@@ -1,0 +1,98 @@
+
+        __     _         __                
+       / /_   (_)____ _ / /_   ____   _  __
+      / __ \ / // __ `// __ \ / __ \ | |/_/
+     / /_/ // // /_/ // /_/ // /_/ /_>  <
+    /_.___//_/ \__, //_.___/ \____//_/|_| [1]
+              /____/                       
+
+
+  name hack-bigbox-what-is-bigbox-2.txt
+  date 2013OCT02
+  prog @peterrenshaw
+  desc BIGBOX: A easy to use front end for socsim. This 
+       hack, BIGBOX search allows for search within or external 
+       to you local system.
+  
+abstract
+
+       More hacking of words and process stuff in D3.js :)
+
+
+Had some food and decided to process the text and see what would happen to the text. The above image is post processed text. Is there any difference between this image and the previous?
+
+Here’s the original text I used:
+
+    ⌨ bigbox
+    bb is … ? bigbox
+    … !bigbird, bb is ?
+    bigbox
+    … !brigitte bardot?
+    bigbox
+    bb isn’t BB King :(
+    bb is literally, ‘… a box & a buffer’, a big box.
+    bigbox
+    is about ‘local’ search & storage because:
+
+    users are considered ☠
+    the cloud is ☢
+    say ✖ to spying… :)
+    programmers ♥ complex things, users simplicity. bb is about ‘simplicity’ and… ‘speed’ users want this…
+    but end up with this…
+    is this fast enough? bb is about ‘speed’ & …
+    bb is about text :)
+    & processing text …
+    bb is about manipulating data
+    … lots of data …
+    bb is about ‘sharing’…
+    bb is all about will be about sharing data …
+    bb is about ‘search’
+    bb is about searching ‘locally’ & on the ‘Internet’ …
+    bb is a “tool” and work is ongoing
+    more hacking is needed …
+    bb is a “open source”…
+
+    ⌨ bigbox
+    bb is a “open source”…
+    opensource
+    gpl3.0:
+    you can view it
+    download it
+    add to it
+    an “elegant solution”…
+    from a more civilised time …
+    summary: bb is?
+
+    ⌨ bigbox
+    summary: bb is?
+    elegant
+    buffer & a box
+    storage
+    local & WWW
+    simplicity
+    speed
+    text
+    search
+    sharing
+    ongoing
+    open source
+    happy hacking
+    fsf.org
+    Isaac Newton: ‘If I have seen further it is by standing on the shoulders of giants’
+
+    Adam Abrons
+    MiÅ¡ko Hevery
+    D. Richard Hipp
+    Brendan Eich
+    Guido van Rossum
+    Marc Andreessen
+    Linus Torvalds
+    Tim Berners-Lee
+    Richard Stallman
+
+This is messy, so I hacked a quick program that you can find here and processed the text so it looks like this:
+
+    & & & & & & & ( ) ) Abrons Adam Andreessen BB BernersLee Brendan D Eich Guido Hevery Hipp I If Internet Isaac King Linus Marc MiÅ¡ko Newton Richard Richard Rossum Stallman Tim Torvalds WWW a a a a a a a a about about about about about about about about about about add all an and and are bardot bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb bb be because big bigbird bigbox bigbox bigbox bigbox bigbox bigbox bigbox box box box brigitte buffer buffer but by can civilised cloud complex considered data data data download elegant elegant end enough fast from fsforg further giants gpl30 hacking hacking happy have is is is is is is is is is is is is is is is is is is is is is is isnt it it it it literally local local locally lots manipulating more more needed of of on on ongoing ongoing open open open opensource processing programmers say search search search searching seen sharing sharing sharing shoulders simplicity simplicity simplicity solution source source source speed speed speed spying standing storage storage summary summary text text text the the the things this this this time to to tool up users users users van view want will with work you ⌨ ⌨ ⌨ ✖ ☠ ☢ ♥
+
+That’s all for, PR.
+

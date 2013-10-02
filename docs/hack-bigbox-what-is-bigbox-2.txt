@@ -1,0 +1,46 @@
+
+        __     _         __                
+       / /_   (_)____ _ / /_   ____   _  __
+      / __ \ / // __ `// __ \ / __ \ | |/_/
+     / /_/ // // /_/ // /_/ // /_/ /_>  <
+    /_.___//_/ \__, //_.___/ \____//_/|_| [1]
+              /____/                       
+
+
+  name hack-bigbox-what-is-bigbox-2.txt
+  date 2013OCT02
+  prog @peterrenshaw
+  desc BIGBOX: A easy to use front end for socsim. This 
+       hack, BIGBOX search allows for search within or external 
+       to you local system.
+  
+abstract
+
+       Hack words and process stuff in D3.js :)
+
+Lets have another go at describing Bigbox.
+
+For a talk I did a couple of weeks ago (yet to upload, do this plz), I did an 
+18 page html description of Bigbox.  Now if I gave you a quick glimpse of the 
+page I think it’d give you a good idea of what I described bb? What about if 
+you have little time? How do I describe what bb is to someone quickly? Looking 
+for way so describe information through images is one way. So how might I find 
+another way to describe Bigbox quickly?
+
+One idea could be to build a word cloud using the data captured. Above is the 
+result. [0] Now could I use this in Bigbox? I have the data and using the API 
+server to call for the latest data it’s quite possible I could implement some 
+browser side code using D3. [1] You could debate the usefulness of this idea, 
+what you can’t debate is having access to the data in the first place.
+
+I’m looking into capturing the input data into Bigbox as you type per topic, 
+allowing you to opportunity to try this. Bigbox is about text and data and this 
+is one thing you have the opportunity to try.
+
+
+Reference
+
+[0] Wordcloud is a D3 version of wordle.
+
+[1] D3, a javascript visualisation library.
+
