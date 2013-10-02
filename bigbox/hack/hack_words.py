@@ -22,7 +22,6 @@ from optparse import OptionParser
 #===
 def process(str1):
     if str1:
-        before = str1
         chars = ["'","\t","!",",",'"',"?","...",".",":","-"]
         str1.strip(" ")
         for c in chars:
