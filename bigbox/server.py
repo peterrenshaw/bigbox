@@ -3,10 +3,12 @@
 
 
 #===
-# name  server_a.py
+# name  server.py
 # date: 2013SEP28
 # prog: pr
 # desc: bottle api server for bigbox
+#       using wsgi limitations for the 
+#       moment. 
 # lisc: moving towards GPL3
 #
 # copy: copyright (C) 2013 Peter Renshaw
