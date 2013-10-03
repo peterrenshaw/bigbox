@@ -12,3 +12,6 @@ dist
 __pycache__
 data/
 *.json
+*.mp4
+*.j*g
+*.png

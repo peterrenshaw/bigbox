@@ -22,7 +22,9 @@ from optparse import OptionParser
 #===
 def process(str1):
     if str1:
-        chars = ["'","\t","!",",",'"',"?","...",".",":","-"]
+        chars = ["'","\t","!",",",'"',"?","...",".",":","-",
+                 ")","(","#","$","*","0","1","2","3","4","5",
+                 "6","7","8","9","%","_"]
         str1.strip(" ")
         for c in chars:
             str1 = str1.replace(c, "")
