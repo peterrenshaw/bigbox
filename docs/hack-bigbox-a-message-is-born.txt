@@ -1,0 +1,99 @@
+
+        __     _         __                
+       / /_   (_)____ _ / /_   ____   _  __
+      / __ \ / // __ `// __ \ / __ \ | |/_/
+     / /_/ // // /_/ // /_/ // /_/ /_>  <
+    /_.___//_/ \__, //_.___/ \____//_/|_| [1]
+              /____/                       
+
+
+  name hack-bigbox-a-message-is-born.txt
+  date 2013SEP28
+  prog @peterrenshaw
+  desc BIGBOX: A easy to use front end for socsim. This 
+       hack, BIGBOX search allows for search within or external 
+       to you local system. [0]
+
+
+abstract
+
+       Create a 'state machine' [1] to model message composition. 
+       Describe the state machine in in psuedo-code ready for 
+       implementation.
+
+
+First hack at some sort of way to handle messages that Bigbox will 
+handle. I say first hack, because it'll change. I have to take more 
+things into account. So here we go...
+
+ 
+    #
+    # message status has a value, why?
+    # as a message progresses, it increases
+    # in readiness to be sent. Zero it's born/dead, 
+    # at 100 it's read to be sent
+    #
+    MESSAGE_STATUS = 0         # health or message status
+    ALIVE    = True | False    # alive or dead, nothing else
+    BORN     = 0               # message idea created
+    SEARCH   = 25              # active search for data
+    COMPOSE  = 50              # building message from data/head
+    VERIFY   = 75              # check data for validity
+    SEND     = 100             # dispatch message off
+    DEPARTED = 0               # message is now dead
+
+    #
+    # continue looping until dead
+    #
+    while MESSAGE_STATUS > 0:
+        # a new message is born
+        if MESSAGE_STATUS == BORN:
+            pass
+
+        # searching for components to 
+        # compose new message
+        elif MESSAGE_STATUS == SEARCH:
+            pass
+
+        # compose a message from many peaces 
+        elif MESSAGE_STATUS == COMPOSE:
+            pass
+     
+        # verify the message components
+        elif MESSAGE_STATUS == VERIFY:
+            pass
+   
+        # dispatch message
+        elif MESSAGE_STATUS == SEND:
+            pass
+    
+        # a message has been born, send & 
+        # now dies
+        elif MESSAGE_STATUS == DEPARTED:
+            ALIVE = False
+    
+        # slipped thru the cracks, can't
+        # handle, so die
+        else:
+            ALIVE = False
+
+
+I can imagine quite a few more of these to handle different situations
+that might come up. So getting this one worked out will help later.
+
+Enough for now, PR. 
+
+
+Reference
+
+[0] Title created with an ASCII text generator using 'slant' and 
+'stretch=Yes". The code is based on Figlet which can be found 
+here: <http://www.figlet.org/>
+
+[1] "A state machine is a device that has memory and a system of rules
+     that dictate how the state machine changes states as a function of
+     time and input." 
+    
+    Andre` LeMonthe, Playing Dr, Frankenstein, Ch 10., P 550, 
+    "Teach Yourself Game Programming in 21 Days", SAMS Publishing,
+    1994. 
