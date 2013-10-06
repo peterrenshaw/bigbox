@@ -17,9 +17,12 @@
 
 abstract
 
-       Create a 'state machine' [1] to model message composition. 
-       Describe the state machine in in psuedo-code ready for 
-       implementation.
+       ♬ something inside, that was always denied, for so many years
+       she's leaving home... bye, bye. ♬
+
+       Create a 'state machine' [1] to model message composition & 
+       processing. Describe the state machine in in psuedo-code ready 
+       for implementation.
 
 
 First hack at some sort of way to handle messages that Bigbox will 
@@ -40,7 +43,7 @@ things into account. So here we go...
     COMPOSE  = 50              # building message from data/head
     VERIFY   = 75              # check data for validity
     SEND     = 100             # dispatch message off
-    DEPARTED = 0               # message is now dead
+    DEPARTED = 0               # message has left home
 
     #
     # continue looping until dead
