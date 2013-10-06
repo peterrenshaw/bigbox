@@ -17,8 +17,7 @@
 
 abstract
 
-       ♬ something inside, that was always denied, for so many years
-       she's leaving home... bye, bye. ♬
+       ♬ something inside, that was always denied, for so many years / she's leaving home... bye, bye. ♬
 
        Create a 'state machine' [1] to model message composition & 
        processing. Describe the state machine in in psuedo-code ready 
@@ -33,9 +32,11 @@ things into account. So here we go...
     #
     # message status has a value, why?
     # as a message progresses, it increases
-    # in readiness to be sent. Zero it's born/dead, 
-    # at 100 it's read to be sent
+    # in readiness to be sent. Zero it's born/ddead, 
+    # at 100 it's read to be sent. Any value below
+    # this and the message probably shouldn't.
     #
+
     MESSAGE_STATUS = 0         # health or message status
     ALIVE    = True | False    # alive or dead, nothing else
     BORN     = 0               # message idea created
@@ -82,7 +83,15 @@ things into account. So here we go...
 
 
 I can imagine quite a few more of these to handle different situations
-that might come up. So getting this one worked out will help later.
+that might come up. 
+
+    * sorting messages 
+    * input command processing
+    * input message breakdown 
+    * generating current status
+
+
+So getting this one worked out will help later.
 
 Enough for now, PR. 
 
